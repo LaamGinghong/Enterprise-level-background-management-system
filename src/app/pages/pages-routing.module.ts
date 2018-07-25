@@ -9,9 +9,12 @@ const routes: Routes = [{
     path: '',
     redirectTo: 'content',
     pathMatch: 'full'
-  },{
-    path:'content',
-    loadChildren:'./content/content.module#ContentModule'
+  }, {
+    path: 'content',
+    loadChildren: './content/content.module#ContentModule'
+  }, {
+    path: 'login',
+    loadChildren: './login/login.module#LoginModule'
   }]
 }];
 

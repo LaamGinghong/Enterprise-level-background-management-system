@@ -1,3 +1,60 @@
-<p>
-  content works!
-</p>
+<nz-layout>
+  <nz-header>
+    <div class="header-logo">
+      <img height="54px" src="https://cipchk.github.io/ng-alain/assets/logo.svg">
+    </div>
+    <div class="header-nav">
+      <ul>
+        <li>
+          <div class="header-icon"><i class="anticon anticon-menu-fold"></i></div>
+        </li>
+        <li>
+          <div class="header-icon"><i class="anticon anticon-share-alt"></i></div>
+        </li>
+        <li>
+          <div class="header-icon"><i class="anticon anticon-lock"></i></div>
+        </li>
+      </ul>
+    </div>
+    <div class="header-search">
+      <input nz-input placeholder="搜索员工、照片、文件等">
+      <span><i class="anticon anticon-search"></i></span>
+    </div>
+    <div class="header-box">
+      <ul>
+        <li>
+          <div>
+            <nz-badge [nzCount]="5">
+              <i class="anticon anticon-mail"></i>
+            </nz-badge>
+          </div>
+        </li>
+        <li>
+          <div>
+            <nz-badge [nzDot]="true">
+              <i class="anticon anticon-mail"></i>
+            </nz-badge>
+          </div>
+        </li>
+        <li>
+          <div><i class="anticon anticon-appstore-o"></i></div>
+        </li>
+        <li>
+          <div><i class="anticon anticon-setting"></i></div>
+        </li>
+        <li>
+          <div>
+            <nz-avatar nzIcon="anticon anticon-user"
+                       nzSrc="//cipchk.github.io/ng-alain/assets/tmp/img/avatar.jpg"></nz-avatar>
+            <span>Admin</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nz-header>
+  <nz-layout>
+    <nz-sider></nz-sider>
+    <nz-content></nz-content>
+  </nz-layout>
+  <nz-footer></nz-footer>
+</nz-layout>
