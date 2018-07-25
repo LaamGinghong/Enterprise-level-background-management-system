@@ -1,3 +1,7 @@
+a{
+  display: inline-block;
+}
+
 :host /deep/ .ant-layout-header {
   background: #1890ff;
 }
@@ -83,6 +87,9 @@
 
 .header-box {
   margin-left: 55px;
+  &-loading {
+    margin: 0!important;
+  }
   ul {
     margin: 0;
     li {
@@ -107,11 +114,11 @@
         }
 
       }
-      &:last-child{
-        div{
+      &:last-child {
+        div {
           padding: 0 10px;
           height: 35px;
-          span{
+          span {
             display: inline-block;
             height: 100%;
             vertical-align: top;

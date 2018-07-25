@@ -43,10 +43,13 @@
           <div><i class="anticon anticon-setting"></i></div>
         </li>
         <li>
-          <div>
+          <div *ngIf="loadingStatus">
             <nz-avatar nzIcon="anticon anticon-user"
                        nzSrc="//cipchk.github.io/ng-alain/assets/tmp/img/avatar.jpg"></nz-avatar>
             <span>Admin</span>
+          </div>
+          <div *ngIf="!loadingStatus">
+            <a routerLink="/pages/login"><span class="header-box-loading">登录</span></a>
           </div>
         </li>
       </ul>
