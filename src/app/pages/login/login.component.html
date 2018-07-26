@@ -1,3 +1,77 @@
-<p>
-  login works!
-</p>
+<div class="login">
+  <div class="login-container">
+    <div class="login-container-top">
+      <img height="54px" src="http://localhost:4000/assets/logo-color.svg" alt="NG-ZORRO">
+      <span>NG-ZORRO</span>
+    </div>
+    <div class="login-container-desc">
+      武林中最具有影响力的《葵花宝典》：欲练神功，必先自宫！
+    </div>
+    <div class="login-container-inputBox">
+      <nz-tabset>
+        <nz-tab nzTitle="账号密码登录" (nzSelect)="Mode='password'">
+          <div class="login-container-inputBox-userName">
+            <nz-input-group [nzPrefixIcon]="'anticon anticon-user'">
+              <input type="text" nz-input placeholder="admin" [(ngModel)]="inputValue">
+            </nz-input-group>
+          </div>
+          <div class="login-container-inputBox-password">
+            <nz-input-group [nzPrefixIcon]="'anticon anticon-lock'">
+              <input type="text" nz-input placeholder="123456">
+            </nz-input-group>
+          </div>
+        </nz-tab>
+        <nz-tab nzTitle="手机验证码登录" (nzSelect)="Mode='message'">
+          <div class="login-container-inputBox-phone">
+            <nz-input-group [nzPrefixIcon]="'anticon anticon-mobile'">
+              <input type="text" nz-input placeholder="请输入手机号">
+            </nz-input-group>
+          </div>
+          <div class="login-container-inputBox-number">
+            <nz-input-group [nzPrefixIcon]="'anticon anticon-mail'">
+              <input type="text" nz-input placeholder="请输入验证码">
+            </nz-input-group>
+          </div>
+          <div class="login-container-inputBox-button">
+            <button nz-button nzType="default" (click)="getMessage()" [disabled]="time<10&&time>0">
+              {{time===10||time<=0?default:time+'s'}}
+            </button>
+          </div>
+        </nz-tab>
+      </nz-tabset>
+    </div>
+    <div class="login-container-select">
+      <span class="login-container-select-checkbox">
+        <label nz-checkbox [(ngModel)]="checked">自动登录</label>
+      </span>
+      <span class="login-container-select-message" (click)="fake()">忘记密码？</span>
+    </div>
+    <div class="login-container-button">
+      <button nz-button nzType="primary" [routerLink]="['/pages/content']" [queryParams]="{name:inputValue}">登录</button>
+    </div>
+    <div class="login-container-help">
+      <div class="login-container-help-otherType">
+        <span>其他登录方式</span>
+        <span class="login-container-help-otherType-icon" (click)="fake()"><i class="anticon anticon-github"></i></span>
+        <span class="login-container-help-otherType-icon" (click)="fake()"><i class="anticon anticon-weibo-circle"></i></span>
+        <span class="login-container-help-otherType-icon" (click)="fake()"><i class="anticon anticon-alipay-circle"></i></span>
+        <span class="login-container-help-otherType-icon" (click)="fake()"><i class="anticon anticon-taobao-circle"></i></span>
+        <span class="login-container-help-otherType-icon" (click)="fake()"><i class="anticon anticon-wechat"></i></span>
+        <span class="login-container-help-otherType-icon" (click)="fake()"><i class="anticon anticon-qq"></i></span>
+      </div>
+      <div class="login-container-help-register" (click)="fake()">注册账号</div>
+    </div>
+    <div class="login-container-law">
+      <span (click)="fake()">帮助</span>
+      <span (click)="fake()">隐私</span>
+      <span (click)="fake()">条款</span>
+    </div>
+    <div class="login-container-publish">
+      Copyright
+      <span><i class="anticon anticon-copyright"></i></span>
+      2018
+      <span class="login-container-publish-name"><a href="https://github.com/laamginghong">LaamGinghong</a></span>
+      出品
+    </div>
+  </div>
+</div>

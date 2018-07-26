@@ -1,0 +1,124 @@
+.login {
+  width: 100vw;
+  height: 100vh;
+  background: #f0f2f5;
+  background-image: url(https://gw.alipayobjects.com/zos/rmsportal/TVYTbAXWheQpRcWDaDMu.svg);
+  &-container {
+    padding-top: 200px;
+    text-align: center;
+    &-top {
+      width: 100%;
+      span {
+        font-size: 33px;
+        font-weight: bold;
+        margin-left: 10px;
+        vertical-align: middle;
+      }
+    }
+    &-desc {
+      margin: 20px 0 40px;
+      color: rgba(0, 0, 0, 0.45);
+    }
+    &-inputBox {
+      width: 400px;
+      margin: 0 auto;
+      &-userName {
+        margin-bottom: 20px;
+      }
+      &-phone {
+        margin-bottom: 20px;
+      }
+      &-number {
+        width: 60%;
+        display: inline-block;
+      }
+      &-button {
+        display: inline-block;
+        button {
+          width: 140px;
+          margin-left: 20px;
+          height: 40px;
+        }
+      }
+
+    }
+    &-select {
+      width: 400px;
+      margin: 20px auto;
+      text-align: left;
+      position: relative;
+      &-message {
+        position: absolute;
+        cursor: pointer;
+        right: 0;
+        color: #1890ff;
+        vertical-align: middle;
+      }
+    }
+    &-button {
+      button {
+        width: 400px;
+        height: 40px;
+      }
+    }
+    &-help {
+      width: 400px;
+      margin: 20px auto;
+      text-align: left;
+      position: relative;
+      &-otherType {
+        display: inline-block;
+        span {
+          vertical-align: middle;
+        }
+        &-icon {
+          font-size: 24px;
+          color: rgba(0, 0, 0, 0.2);
+          margin-left: 12px;
+          cursor: pointer;
+          transition: color 0.3s;
+          &:hover{
+            color: #1890ff;
+          }
+        }
+      }
+      &-register{
+        position: absolute;
+        right: 0;
+        color: #1890ff;
+        display: inline-block;
+        height: 100%;
+        line-height: 36px;
+        cursor: pointer;
+        vertical-align: middle;
+      }
+    }
+    &-law{
+      span{
+        display: inline-block;
+        margin: 20px 25px;
+        color: rgba(0, 0, 0, 0.45);
+        transition: all 0.3s;
+        cursor: pointer;
+      }
+    }
+    &-publish{
+      margin: 20px 0;
+      color: rgba(0, 0, 0, 0.45);
+      span{
+        margin: 0 2px;
+      }
+      &-name{
+        color: #1890ff;
+      }
+    }
+  }
+}
+
+:host /deep/ .ant-tabs-bar {
+  border-bottom: none;
+}
+
+:host /deep/ .ant-input {
+  height: 40px;
+}

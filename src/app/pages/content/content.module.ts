@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 import {ContentComponent} from './content.component';
 import {ContentRoutingModule} from './content-routing.module';
 import {NzAvatarModule, NzBadgeModule, NzInputModule, NzLayoutModule} from 'ng-zorro-antd';
+import { ContentPipe } from './content.pipe';
 
 @NgModule({
   imports: [
@@ -13,7 +14,7 @@ import {NzAvatarModule, NzBadgeModule, NzInputModule, NzLayoutModule} from 'ng-z
     NzBadgeModule,
     NzAvatarModule
   ],
-  declarations: [ContentComponent]
+  declarations: [ContentComponent, ContentPipe]
 })
 export class ContentModule {
 }

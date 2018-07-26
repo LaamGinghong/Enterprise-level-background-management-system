@@ -1,7 +1,7 @@
 <nz-layout>
   <nz-header>
     <div class="header-logo">
-      <img height="54px" src="https://cipchk.github.io/ng-alain/assets/logo.svg">
+      <img height="54px" src="http://localhost:4000/assets/logo.svg">
     </div>
     <div class="header-nav">
       <ul>
@@ -43,10 +43,10 @@
           <div><i class="anticon anticon-setting"></i></div>
         </li>
         <li>
-          <div *ngIf="loadingStatus">
+          <div *ngIf="loadingStatus" [title]="name">
             <nz-avatar nzIcon="anticon anticon-user"
                        nzSrc="//cipchk.github.io/ng-alain/assets/tmp/img/avatar.jpg"></nz-avatar>
-            <span>Admin</span>
+            <span>{{name|content}}</span>
           </div>
           <div *ngIf="!loadingStatus">
             <a routerLink="/pages/login"><span class="header-box-loading">登录</span></a>
