@@ -34,4 +34,10 @@ export class ContentComponent implements OnInit {
     });
   }
 
+  openHandler(item: { id: string, name: string, icon: string, children: Array<object>, isOpen: boolean }) {
+    this.menuData.forEach((val: { id: string, name: string, icon: string, children: Array<object>, isOpen: boolean }) => {
+      val.isOpen = item.id === val.id;
+    });
+  }
 }
+
