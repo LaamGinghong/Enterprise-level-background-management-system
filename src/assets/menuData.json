@@ -1,0 +1,84 @@
+{
+    "success": true,
+    "value": [{
+        "id": 0,
+        "name": "主导航",
+        "isTitle": true,
+        "icon": ""
+    }, {
+        "id": 1,
+        "name": "仪表盘",
+        "isTitle": false,
+        "icon": "anticon anticon-dashboard"
+    }, {
+        "id": 2,
+        "name": "快捷菜单",
+        "isTitle": false,
+        "icon": "anticon anticon-rocket"
+    }, {
+        "id": 3,
+        "name": "小部件",
+        "isTitle": false,
+        "icon": "anticon anticon-appstore-o"
+    }, {
+        "id": 4,
+        "name": "Alain",
+        "isTitle": true,
+        "icon": ""
+    }, {
+        "id": 5,
+        "name": "样式",
+        "isTitle": false,
+        "icon": "anticon anticon-disconnect"
+    }, {
+        "id": 6,
+        "name": "@Delon",
+        "isTitle": false,
+        "icon": "anticon anticon-bell"
+    }, {
+        "id": 7,
+        "name": "Ant Design Pro",
+        "isTitle": true,
+        "icon": ""
+    }, {
+        "id": 8,
+        "name": "表单页",
+        "isTitle": false,
+        "icon": "anticon anticon-database"
+    }, {
+        "id": 9,
+        "name": "列表页",
+        "isTitle": false,
+        "icon": "anticon anticon-bars"
+    }, {
+        "id": 10,
+        "name": "结果",
+        "isTitle": false,
+        "icon": "anticon anticon-check-circle-o"
+    }, {
+        "id": 11,
+        "name": "异常",
+        "isTitle": false,
+        "icon": "anticon anticon-exception"
+    }, {
+        "id": 12,
+        "name": "账户",
+        "isTitle": false,
+        "icon": "anticon anticon-user"
+    }, {
+        "id": 13,
+        "name": "更多",
+        "isTitle": true,
+        "icon": ""
+    }, {
+        "id": 14,
+        "name": "报表",
+        "isTitle": false,
+        "icon": "anticon anticon-cloud-o"
+    }, {
+        "id": 15,
+        "name": "扩展",
+        "isTitle": false,
+        "icon": "anticon anticon-coffee"
+    }]
+}
