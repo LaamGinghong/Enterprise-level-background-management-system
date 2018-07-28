@@ -55,7 +55,7 @@
         </div>
     </nz-header>
     <nz-layout>
-        <nz-sider [nzWidth]='200' style="background: #ffffff">
+        <nz-sider [nzWidth]='200' style="background: #ffffff;height: calc(100vh - 64px);overflow: auto">
             <ul nz-menu [nzMode]="'inline'" style="height:100%">
                 <ng-template ngFor let-item [ngForOf]="menuData">
                     <li nz-menu-item *ngIf="item['isTitle']" [nzDisabled]='true' style="cursor: default">{{item['name']}}</li>
@@ -73,5 +73,5 @@
         </nz-sider>
         <nz-content></nz-content>
     </nz-layout>
-    <nz-footer></nz-footer>
+    <!-- <nz-footer></nz-footer> -->
 </nz-layout>
