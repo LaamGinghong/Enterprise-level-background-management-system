@@ -11,6 +11,7 @@ export class ContentComponent implements OnInit {
   loadingStatus = false;
   name: string;
   menuData: Array<object>;
+  email = 'laamginghong1996@gmail.com';
 
   constructor(private route: ActivatedRoute,
     private contentService: ContentService) {
