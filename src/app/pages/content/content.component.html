@@ -1,63 +1,77 @@
 <nz-layout>
-  <nz-header>
-    <div class="header-logo">
-      <img height="54px" src="http://localhost:4000/assets/logo.svg">
-    </div>
-    <div class="header-nav">
-      <ul>
-        <li>
-          <div class="header-icon"><i class="anticon anticon-menu-fold"></i></div>
-        </li>
-        <li>
-          <div class="header-icon"><i class="anticon anticon-share-alt"></i></div>
-        </li>
-        <li>
-          <div class="header-icon"><i class="anticon anticon-lock"></i></div>
-        </li>
-      </ul>
-    </div>
-    <div class="header-search">
-      <input nz-input placeholder="搜索员工、照片、文件等">
-      <span><i class="anticon anticon-search"></i></span>
-    </div>
-    <div class="header-box">
-      <ul>
-        <li>
-          <div>
-            <nz-badge [nzCount]="5">
-              <i class="anticon anticon-mail"></i>
-            </nz-badge>
-          </div>
-        </li>
-        <li>
-          <div>
-            <nz-badge [nzDot]="true">
-              <i class="anticon anticon-mail"></i>
-            </nz-badge>
-          </div>
-        </li>
-        <li>
-          <div><i class="anticon anticon-appstore-o"></i></div>
-        </li>
-        <li>
-          <div><i class="anticon anticon-setting"></i></div>
-        </li>
-        <li>
-          <div *ngIf="loadingStatus" [title]="name">
-            <nz-avatar nzIcon="anticon anticon-user"
-                       nzSrc="//cipchk.github.io/ng-alain/assets/tmp/img/avatar.jpg"></nz-avatar>
-            <span>{{name|content}}</span>
-          </div>
-          <div *ngIf="!loadingStatus">
-            <a routerLink="/pages/login"><span class="header-box-loading">登录</span></a>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </nz-header>
-  <nz-layout>
-    <nz-sider></nz-sider>
-    <nz-content></nz-content>
-  </nz-layout>
-  <nz-footer></nz-footer>
+    <nz-header>
+        <div class="header-logo">
+            <img height="54px" src="../../../assets/logo.svg">
+        </div>
+        <div class="header-nav">
+            <ul>
+                <li>
+                    <div class="header-icon"><i class="anticon anticon-menu-fold"></i></div>
+                </li>
+                <li>
+                    <div class="header-icon"><i class="anticon anticon-share-alt"></i></div>
+                </li>
+                <li>
+                    <div class="header-icon"><i class="anticon anticon-lock"></i></div>
+                </li>
+            </ul>
+        </div>
+        <div class="header-search">
+            <input nz-input placeholder="搜索员工、照片、文件等">
+            <span><i class="anticon anticon-search"></i></span>
+        </div>
+        <div class="header-box">
+            <ul>
+                <li>
+                    <div>
+                        <nz-badge [nzCount]="5">
+                            <i class="anticon anticon-mail"></i>
+                        </nz-badge>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <nz-badge [nzDot]="true">
+                            <i class="anticon anticon-mail"></i>
+                        </nz-badge>
+                    </div>
+                </li>
+                <li>
+                    <div><i class="anticon anticon-appstore-o"></i></div>
+                </li>
+                <li>
+                    <div><i class="anticon anticon-setting"></i></div>
+                </li>
+                <li>
+                    <div *ngIf="loadingStatus" [title]="name">
+                        <nz-avatar nzIcon="anticon anticon-user" nzSrc="//cipchk.github.io/ng-alain/assets/tmp/img/avatar.jpg"></nz-avatar>
+                        <span>{{name|content}}</span>
+                    </div>
+                    <div *ngIf="!loadingStatus">
+                        <a routerLink="/pages/login"><span class="header-box-loading">登录</span></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nz-header>
+    <nz-layout>
+        <nz-sider [nzWidth]='200' style="background: #ffffff">
+            <ul nz-menu [nzMode]="'inline'" style="height:100%">
+                <ng-template ngFor let-item [ngForOf]="menuData">
+                    <li nz-menu-item *ngIf="item['isTitle']" [nzDisabled]='true' style="cursor: default">{{item['name']}}</li>
+                    <li nz-submenu *ngIf="!item['isTitle']">
+                        <span title><i [className]="item['icon']"></i>{{item['name']}}</span>
+                        <ul>
+                            <li nz-menu-item>option1</li>
+                            <li nz-menu-item>option2</li>
+                            <li nz-menu-item>option3</li>
+                            <li nz-menu-item>option4</li>
+                        </ul>
+                    </li>
+                </ng-template>
+            </ul>
+        </nz-sider>
+        <nz-content></nz-content>
+    </nz-layout>
+    <nz-footer></nz-footer>
 </nz-layout>

@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, ParamMap, Router} from '@angular/router';
-import {switchMap} from 'rxjs/operators';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ContentService } from './content.service';
 
 @Component({
   selector: 'app-content',
@@ -10,14 +10,28 @@ import {switchMap} from 'rxjs/operators';
 export class ContentComponent implements OnInit {
   loadingStatus = false;
   name: string;
+  menuData: Array<object>;
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute,
+    private contentService: ContentService) {
   }
 
   ngOnInit() {
-    console.log(this.route);
+    this.initLoadStatus();
+    this.initMenuData();
+  }
+
+  initLoadStatus() {
     this.loadingStatus = this.route.snapshot.queryParams.name ? true : false;
     this.name = this.route.snapshot.queryParams.name;
+  }
+
+  initMenuData() {
+    this.contentService.getData().subscribe((data: { success: boolean, value: Array<object> }) => {
+      if (data.success) {
+        this.menuData = data.value;
+      }
+    });
   }
 
 }

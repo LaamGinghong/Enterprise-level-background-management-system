@@ -1,22 +1,18 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {LoginComponent} from './login.component';
-import {LoginRoutingModule} from './login-routing.module';
-import {NzButtonModule, NzCheckboxModule, NzInputModule, NzMessageService, NzTabsModule} from 'ng-zorro-antd';
-import {FormsModule} from '@angular/forms';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { LoginComponent } from './login.component';
+import { LoginRoutingModule } from './login-routing.module';
+import { FormsModule } from '@angular/forms';
+import { NgZorroAntdModule } from 'ng-zorro-antd';
 
 @NgModule({
   imports: [
     CommonModule,
     LoginRoutingModule,
     FormsModule,
-    NzTabsModule,
-    NzInputModule,
-    NzButtonModule,
-    NzCheckboxModule
+    NgZorroAntdModule
   ],
-  declarations: [LoginComponent],
-  providers: [NzMessageService]
+  declarations: [LoginComponent]
 })
 export class LoginModule {
 }

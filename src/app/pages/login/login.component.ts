@@ -1,5 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {NzMessageService} from 'ng-zorro-antd';
+import { Component, OnInit } from '@angular/core';
+import { NzMessageService } from 'ng-zorro-antd';
+import { NzTabsModule } from 'ng-zorro-antd';
 
 @Component({
   selector: 'app-login',
@@ -31,6 +32,6 @@ export class LoginComponent implements OnInit {
 
   fake() {
     this.message.remove();
-    this.message.error('这些都是骗人的', {nzDuration: 2000});
+    this.message.error('这些都是骗人的', { nzDuration: 2000 });
   }
 }
