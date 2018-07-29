@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ContentService } from './content.service';
 import { MobxAngularModule } from 'mobx-angular';
 import { DataStoreService } from '../../store/dataStore.service';
+import { DefaultMenuComponent } from './default-menu/default-menu.component';
 
 @NgModule({
   imports: [
@@ -17,7 +18,7 @@ import { DataStoreService } from '../../store/dataStore.service';
     HttpClientModule,
     MobxAngularModule
   ],
-  declarations: [ContentComponent, ContentPipe],
+  declarations: [ContentComponent, ContentPipe, DefaultMenuComponent],
   providers: [ContentService, DataStoreService]
 })
 export class ContentModule {

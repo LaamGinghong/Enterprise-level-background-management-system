@@ -11,8 +11,6 @@ import { DataStoreService } from '../../store/dataStore.service';
 export class ContentComponent implements OnInit {
   loadingStatus = false;
   name: string;
-  menuData: Array<object>;
-  email = 'laamginghong1996@gmail.com';
 
   constructor(
     private route: ActivatedRoute,
@@ -35,15 +33,9 @@ export class ContentComponent implements OnInit {
     this.contentService.getData().subscribe((data: { success: boolean, value: Array<object> }) => {
       if (data.success) {
         this.dataStore.setMenuData(data.value);
-        this.menuData = this.dataStore.getMenuData;
       }
     });
   }
 
-  openHandler(item: { id: string, name: string, icon: string, children: Array<object>, isOpen: boolean }) {
-    this.menuData.forEach((val: { id: string, name: string, icon: string, children: Array<object>, isOpen: boolean }) => {
-      val.isOpen = item.id === val.id;
-    });
-  }
 }
 

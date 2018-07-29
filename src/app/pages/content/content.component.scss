@@ -140,20 +140,3 @@ a {
         }
     }
 }
-
-.personal-message {
-    width: 100%;
-    padding: 24px;
-    cursor: pointer;
-    &>div {
-        display: inline-block;
-        vertical-align: middle;
-        &:last-child {
-            margin-left: 12px;
-        }
-    }
-    &-name {
-        font-weight: bold;
-        font-size: 15px
-    }
-}

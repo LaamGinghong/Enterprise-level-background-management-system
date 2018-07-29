@@ -55,28 +55,7 @@
         </div>
     </nz-header>
     <nz-layout>
-        <nz-sider [nzWidth]='200' style="background: #ffffff;height: calc(100vh - 64px);overflow-y: auto">
-            <div class="personal-message" *ngIf="name">
-                <div>
-                    <nz-avatar nzIcon="anticon anticon-user" nzSrc="//cipchk.github.io/ng-alain/assets/tmp/img/avatar.jpg"></nz-avatar>
-                </div>
-                <div>
-                    <div class="personal-message-name">{{name}}</div>
-                    <div class="personal-message-email" [title]="email">{{email|content}}</div>
-                </div>
-            </div>
-            <ul nz-menu [nzMode]="'inline'" style="height:100%">
-                <ng-template ngFor let-item [ngForOf]="menuData">
-                    <li nz-menu-item *ngIf="!item['children'].length" [nzDisabled]="item['isTitle']" style="cursor: default">{{item['name']}}</li>
-                    <li nz-submenu *ngIf="item['children'].length" [(nzOpen)]="item['isOpen']" (nzOpenChange)="openHandler(item)">
-                        <span title><i [className]="item['icon']"></i>{{item['name']}}</span>
-                        <ul>
-                            <li nz-menu-item *ngFor="let value of item['children']">{{value['name']}}</li>
-                        </ul>
-                    </li>
-                </ng-template>
-            </ul>
-        </nz-sider>
+        <app-default-menu></app-default-menu>
         <nz-content></nz-content>
     </nz-layout>
     <!-- <nz-footer></nz-footer> -->
