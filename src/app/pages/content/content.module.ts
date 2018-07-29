@@ -6,16 +6,19 @@ import { ContentPipe } from './content.pipe';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { HttpClientModule } from '@angular/common/http';
 import { ContentService } from './content.service';
+import { MobxAngularModule } from 'mobx-angular';
+import { DataStoreService } from '../../store/dataStore.service';
 
 @NgModule({
   imports: [
     CommonModule,
     ContentRoutingModule,
     NgZorroAntdModule,
-    HttpClientModule
+    HttpClientModule,
+    MobxAngularModule
   ],
   declarations: [ContentComponent, ContentPipe],
-  providers: [ContentService]
+  providers: [ContentService, DataStoreService]
 })
 export class ContentModule {
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ContentService } from './content.service';
+import { DataStoreService } from '../../store/dataStore.service';
 
 @Component({
   selector: 'app-content',
@@ -13,8 +14,11 @@ export class ContentComponent implements OnInit {
   menuData: Array<object>;
   email = 'laamginghong1996@gmail.com';
 
-  constructor(private route: ActivatedRoute,
-    private contentService: ContentService) {
+  constructor(
+    private route: ActivatedRoute,
+    private contentService: ContentService,
+    private dataStore: DataStoreService
+  ) {
   }
 
   ngOnInit() {
@@ -30,7 +34,8 @@ export class ContentComponent implements OnInit {
   initMenuData() {
     this.contentService.getData().subscribe((data: { success: boolean, value: Array<object> }) => {
       if (data.success) {
-        this.menuData = data.value;
+        this.dataStore.setMenuData(data.value);
+        this.menuData = this.dataStore.getMenuData;
       }
     });
   }

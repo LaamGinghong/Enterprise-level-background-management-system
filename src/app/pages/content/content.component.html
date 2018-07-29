@@ -1,4 +1,4 @@
-<nz-layout>
+<nz-layout *mobxAutorun>
     <nz-header>
         <div class="header-logo">
             <img height="54px" src="../../../assets/logo.svg">
@@ -56,7 +56,7 @@
     </nz-header>
     <nz-layout>
         <nz-sider [nzWidth]='200' style="background: #ffffff;height: calc(100vh - 64px);overflow-y: auto">
-            <div class="personal-message">
+            <div class="personal-message" *ngIf="name">
                 <div>
                     <nz-avatar nzIcon="anticon anticon-user" nzSrc="//cipchk.github.io/ng-alain/assets/tmp/img/avatar.jpg"></nz-avatar>
                 </div>
