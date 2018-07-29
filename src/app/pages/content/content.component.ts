@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ContentService } from './content.service';
 import { DataStoreService } from '../../store/dataStore.service';
+import { NzMessageService } from '../../../../node_modules/ng-zorro-antd';
 
 @Component({
   selector: 'app-content',
@@ -16,9 +17,12 @@ export class ContentComponent implements OnInit {
   menuStatus = true;
   email = 'laamginghong1996@gmail.com';
 
-  constructor(private route: ActivatedRoute,
+  constructor(
+    private route: ActivatedRoute,
     private contentService: ContentService,
-    private dataStore: DataStoreService) {
+    private dataStore: DataStoreService,
+    private message: NzMessageService
+  ) {
   }
 
   ngOnInit() {
@@ -48,6 +52,11 @@ export class ContentComponent implements OnInit {
 
   changeMenu() {
     this.menuStatus = !this.menuStatus;
+  }
+
+  openMessage(word: string) {
+    this.message.remove();
+    this.message.success(`您点击了${word}！`, { nzDuration: 2000 });
   }
 }
 

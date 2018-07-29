@@ -46,10 +46,18 @@
                     <div><i class="anticon anticon-setting"></i></div>
                 </li>
                 <li>
-                    <div *ngIf="loadingStatus" [title]="name">
-                        <nz-avatar nzIcon="anticon anticon-user" nzSrc="//cipchk.github.io/ng-alain/assets/tmp/img/avatar.jpg"></nz-avatar>
-                        <span>{{name|content}}</span>
-                    </div>
+                    <nz-dropdown [nzTrigger]="'click'">
+                        <div *ngIf="loadingStatus" [title]="name" nz-dropdown>
+                            <nz-avatar nzIcon="anticon anticon-user" nzSrc="//cipchk.github.io/ng-alain/assets/tmp/img/avatar.jpg"></nz-avatar>
+                            <span>{{name|content}}</span>
+                        </div>
+                        <ul nz-menu>
+                            <li nz-menu-item style="width: 160px" (click)="openMessage('个人资料')">个人资料</li>
+                            <li nz-menu-item style="width: 160px" (click)="openMessage('设置')">设置</li>
+                            <li nz-menu-divider style="width: 160px"></li>
+                            <li nz-menu-item style="width: 160px" (click)="openMessage('登出')">登出</li>
+                        </ul>
+                    </nz-dropdown>
                     <div *ngIf="!loadingStatus">
                         <a routerLink="/pages/login"><span class="header-box-loading">登录</span></a>
                     </div>
@@ -63,11 +71,20 @@
                 <div>
                     <nz-avatar nzIcon="anticon anticon-user" nzSrc="//cipchk.github.io/ng-alain/assets/tmp/img/avatar.jpg"></nz-avatar>
                 </div>
-                <div>
-                    <div class="personal-message-name">{{name}}</div>
-                    <div class="personal-message-email" [title]="email">{{email|content}}</div>
-                </div>
+                <nz-dropdown [nzTrigger]="'click'">
+                    <div nz-dropdown class="personal-message-box">
+                        <div class="personal-message-name">{{name}}</div>
+                        <div class="personal-message-email" [title]="email">{{email|content}}</div>
+                    </div>
+                    <ul nz-menu>
+                        <li nz-menu-item style="width: 160px" (click)="openMessage('个人资料')">个人资料</li>
+                        <li nz-menu-item style="width: 160px" (click)="openMessage('设置')">设置</li>
+                        <li nz-menu-divider style="width: 160px"></li>
+                        <li nz-menu-item style="width: 160px" (click)="openMessage('登出')">登出</li>
+                    </ul>
+                </nz-dropdown>
             </div>
+
             <ul nz-menu [nzMode]="'inline'" style="height:100%">
                 <ng-template ngFor let-item [ngForOf]="menuData">
                     <li nz-menu-item *ngIf="!item['children'].length" [nzDisabled]="item['isTitle']" style="cursor: default">{{item['name']}}</li>

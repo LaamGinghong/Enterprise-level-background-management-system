@@ -122,6 +122,8 @@ a {
                 }
             }
             &:last-child {
+                height: 35px;
+                vertical-align: top;
                 div {
                     padding: 0 10px;
                     height: 35px;
@@ -144,6 +146,10 @@ a {
     padding: 24px;
     cursor: pointer;
     &>div {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    &-box {
         display: inline-block;
         vertical-align: middle;
         &:last-child {
