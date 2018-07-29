@@ -8,18 +8,17 @@ import { DataStoreService } from '../../store/dataStore.service';
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.scss']
 })
+
 export class ContentComponent implements OnInit {
   loadingStatus = false;
   name: string;
   menuData: Array<object>;
-  email = 'laamginghong1996@gmail.com';
   menuStatus = true;
+  email = 'laamginghong1996@gmail.com';
 
-  constructor(
-    private route: ActivatedRoute,
+  constructor(private route: ActivatedRoute,
     private contentService: ContentService,
-    private dataStore: DataStoreService
-  ) {
+    private dataStore: DataStoreService) {
   }
 
   ngOnInit() {
