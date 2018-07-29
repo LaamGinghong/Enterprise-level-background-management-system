@@ -1,22 +1,25 @@
 <nz-layout *mobxAutorun>
     <nz-header>
-        <div class="header-logo">
+        <div class="header-logo" [style.margin-left]="menuStatus?'10px':'-38px'">
             <img height="54px" src="../../../assets/logo.svg">
         </div>
         <div class="header-nav">
             <ul>
-                <li>
-                    <div class="header-icon"><i class="anticon anticon-menu-fold"></i></div>
+                <li (click)="changeMenu()">
+                    <div class="header-icon" *ngIf="menuStatus"><i class="anticon anticon-menu-fold"></i></div>
+                    <div class="header-icon" *ngIf="!menuStatus"><i class="anticon anticon-menu-unfold"></i></div>
                 </li>
                 <li>
-                    <div class="header-icon"><i class="anticon anticon-share-alt"></i></div>
+                    <a href="https://www.github.com/laamginghong">
+                        <div class="header-icon"><i class="anticon anticon-github"></i></div>
+                    </a>
                 </li>
                 <li>
                     <div class="header-icon"><i class="anticon anticon-lock"></i></div>
                 </li>
             </ul>
         </div>
-        <div class="header-search">
+        <div class="header-search" [style.width]="menuStatus?'1100px':'1148px'">
             <input nz-input placeholder="搜索员工、照片、文件等">
             <span><i class="anticon anticon-search"></i></span>
         </div>
@@ -55,7 +58,7 @@
         </div>
     </nz-header>
     <nz-layout>
-        <nz-sider [nzWidth]='200' style="background: #ffffff;height: calc(100vh - 64px);overflow-y: auto">
+        <nz-sider [nzWidth]='200' style="background: #ffffff;height: calc(100vh - 64px);overflow-y: auto" *ngIf="menuStatus">
             <div class="personal-message" *ngIf="name">
                 <div>
                     <nz-avatar nzIcon="anticon anticon-user" nzSrc="//cipchk.github.io/ng-alain/assets/tmp/img/avatar.jpg"></nz-avatar>
@@ -72,6 +75,20 @@
                         <span title><i [className]="item['icon']"></i>{{item['name']}}</span>
                         <ul>
                             <li nz-menu-item *ngFor="let value of item['children']">{{value['name']}}</li>
+                        </ul>
+                    </li>
+                </ng-template>
+            </ul>
+        </nz-sider>
+        <nz-sider [nzWidth]='80' style="background: #ffffff;height: calc(100vh - 64px);overflow-y: auto" *ngIf="!menuStatus">
+            <ul nz-menu [nzMode]="'vertical'" style="height: 100%;">
+                <ng-template ngFor let-item [ngForOf]="menuData">
+                    <li nz-submenu *ngIf="item['children'].length">
+                        <span title [title]="item['name']"><i [className]="item['icon']"></i></span>
+                        <ul>
+                            <li *ngFor="let value of item['children']" nz-menu-item>
+                                {{value['name']}}
+                            </li>
                         </ul>
                     </li>
                 </ng-template>

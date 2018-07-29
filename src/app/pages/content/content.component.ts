@@ -13,6 +13,7 @@ export class ContentComponent implements OnInit {
   name: string;
   menuData: Array<object>;
   email = 'laamginghong1996@gmail.com';
+  menuStatus = true;
 
   constructor(
     private route: ActivatedRoute,
@@ -44,6 +45,10 @@ export class ContentComponent implements OnInit {
     this.menuData.forEach((val: { id: string, name: string, icon: string, children: Array<object>, isOpen: boolean }) => {
       val.isOpen = item.id === val.id;
     });
+  }
+
+  changeMenu() {
+    this.menuStatus = !this.menuStatus;
   }
 }
 
