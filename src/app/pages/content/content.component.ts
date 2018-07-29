@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ContentService } from './content.service';
-import { DataStoreService } from '../../store/dataStore.service';
 
 @Component({
   selector: 'app-content',
@@ -11,12 +10,10 @@ import { DataStoreService } from '../../store/dataStore.service';
 export class ContentComponent implements OnInit {
   loadingStatus = false;
   name: string;
+  menuData: Array<object>;
 
-  constructor(
-    private route: ActivatedRoute,
-    private contentService: ContentService,
-    private dataStore: DataStoreService
-  ) {
+  constructor(private route: ActivatedRoute,
+    private contentService: ContentService) {
   }
 
   ngOnInit() {
@@ -32,10 +29,15 @@ export class ContentComponent implements OnInit {
   initMenuData() {
     this.contentService.getData().subscribe((data: { success: boolean, value: Array<object> }) => {
       if (data.success) {
-        this.dataStore.setMenuData(data.value);
+        this.menuData = data.value;
       }
     });
   }
 
+  openHandler(item: { id: string, name: string, icon: string, children: Array<object>, isOpen: boolean }) {
+    this.menuData.forEach((val: { id: string, name: string, icon: string, children: Array<object>, isOpen: boolean }) => {
+      val.isOpen = item.id === val.id;
+    });
+  }
 }
 

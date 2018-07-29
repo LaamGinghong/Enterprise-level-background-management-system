@@ -1,4 +1,4 @@
-<nz-layout *mobxAutorun>
+<nz-layout>
     <nz-header>
         <div class="header-logo">
             <img height="54px" src="../../../assets/logo.svg">
@@ -55,7 +55,19 @@
         </div>
     </nz-header>
     <nz-layout>
-        <app-default-menu></app-default-menu>
+        <nz-sider [nzWidth]='200' style="background: #ffffff;height: calc(100vh - 64px);overflow-y: auto">
+            <ul nz-menu [nzMode]="'inline'" style="height:100%">
+                <ng-template ngFor let-item [ngForOf]="menuData">
+                    <li nz-menu-item *ngIf="!item['children'].length" [nzDisabled]="item['isTitle']" style="cursor: default">{{item['name']}}</li>
+                    <li nz-submenu *ngIf="item['children'].length" [(nzOpen)]="item['isOpen']" (nzOpenChange)="openHandler(item)">
+                        <span title><i [className]="item['icon']"></i>{{item['name']}}</span>
+                        <ul>
+                            <li nz-menu-item *ngFor="let value of item['children']">{{value['name']}}</li>
+                        </ul>
+                    </li>
+                </ng-template>
+            </ul>
+        </nz-sider>
         <nz-content></nz-content>
     </nz-layout>
     <!-- <nz-footer></nz-footer> -->
