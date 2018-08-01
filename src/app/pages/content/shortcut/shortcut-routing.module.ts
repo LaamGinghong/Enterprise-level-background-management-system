@@ -8,6 +8,18 @@ const routes: Routes = [{
   children: [{
     path: 'typography',
     loadChildren: './typography/typography.module#TypographyModule'
+  }, {
+    path: 'basicForm',
+    loadChildren: './basic-form/basic-form.module#BasicFormModule'
+  }, {
+    path: 'tableList',
+    loadChildren: './table-list/table-list.module#TableListModule'
+  }, {
+    path: 'search',
+    loadChildren: './search/search.module#SearchModule'
+  }, {
+    path: 'advanced',
+    loadChildren: './advanced/advanced.module#AdvancedModule'
   }]
 }];
 
