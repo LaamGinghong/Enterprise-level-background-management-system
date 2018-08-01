@@ -15,6 +15,9 @@ const routes: Routes = [{
   }, {
     path: 'shortcut',
     loadChildren: './shortcut/shortcut.module#ShortcutModule'
+  }, {
+    path: 'widgets',
+    loadChildren: './widgets/widgets.module#WidgetsModule'
   }]
 }];
 
