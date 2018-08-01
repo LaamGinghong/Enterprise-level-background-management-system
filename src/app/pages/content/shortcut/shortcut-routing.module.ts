@@ -7,11 +7,11 @@ const routes: Routes = [{
   component: ShortcutComponent,
   children: [{
     path: '',
-    redirectTo: 'typography',
+    redirectTo: 'printing',
     pathMatch: 'full'
   }, {
-    path: 'typographys',
-    loadChildren: './typographys/typographys.module#TypographyModule'
+    path: 'printing',
+    loadChildren: './printing/printing.module#PrintingModule'
   }, {
     path: 'basicForm',
     loadChildren: './basic-form/basic-form.module#BasicFormModule'
