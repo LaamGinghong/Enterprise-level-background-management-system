@@ -12,6 +12,9 @@ const routes: Routes = [{
   }, {
     path: 'home',
     loadChildren: './home/home.module#HomeModule'
+  }, {
+    path: 'shortcut',
+    loadChildren: './shortcut/shortcut.module#ShortcutModule'
   }]
 }];
 
