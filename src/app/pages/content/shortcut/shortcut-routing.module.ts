@@ -6,6 +6,10 @@ const routes: Routes = [{
   path: '',
   component: ShortcutComponent,
   children: [{
+    path: '',
+    redirectTo: 'typography',
+    pathMatch: 'full'
+  }, {
     path: 'typography',
     loadChildren: './typography/typography.module#TypographyModule'
   }, {

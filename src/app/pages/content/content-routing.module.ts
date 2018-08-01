@@ -18,6 +18,9 @@ const routes: Routes = [{
   }, {
     path: 'widgets',
     loadChildren: './widgets/widgets.module#WidgetsModule'
+  }, {
+    path: 'style',
+    loadChildren: './style/style.module#StyleModule'
   }]
 }];
 
