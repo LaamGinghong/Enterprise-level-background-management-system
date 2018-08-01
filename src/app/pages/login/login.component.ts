@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { NzMessageService } from 'ng-zorro-antd';
-import { NzTabsModule } from 'ng-zorro-antd';
+import {Component, OnInit} from '@angular/core';
+import {NzMessageService} from 'ng-zorro-antd';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +14,8 @@ export class LoginComponent implements OnInit {
   checked = false;
   inputValue: string;
 
-  constructor(private message: NzMessageService) {
+  constructor(private message: NzMessageService,
+              private router: Router) {
   }
 
   ngOnInit() {
@@ -32,6 +33,18 @@ export class LoginComponent implements OnInit {
 
   fake() {
     this.message.remove();
-    this.message.error('这些都是骗人的', { nzDuration: 2000 });
+    this.message.error('这些都是骗人的', {nzDuration: 2000});
+  }
+
+  login(str: string) {
+    if (str) {
+      const date = new Date();
+      date.setTime(date.getTime() + 10 * 24 * 60 * 60 * 1000);
+      document.cookie = `username=${str};expires=${date};path=/`;
+      this.router.navigate(['/pages/content']);
+    } else {
+      this.message.remove();
+      this.message.error('请登录', {nzDuration: 2000});
+    }
   }
 }

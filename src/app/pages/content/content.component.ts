@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {ContentService} from './content.service';
 import {DataStoreService} from '../../store/dataStore.service';
-import {NzMessageService} from 'ng-zorro-antd';
+import {NzMessageService, NzTabComponent} from 'ng-zorro-antd';
 import {flyIn, flyOut} from '../../../assets/sim-animations';
 
 @Component({
@@ -37,8 +37,8 @@ export class ContentComponent implements OnInit {
   }
 
   initLoadStatus() { // 初始化登陆状态
-    this.loadingStatus = this.route.snapshot.queryParams.name;
-    this.name = this.route.snapshot.queryParams.name;
+    this.loadingStatus = !!document.cookie;
+    this.name = document.cookie.split('=')[1];
   }
 
   initMenuData() { // 初始化菜单
@@ -71,9 +71,15 @@ export class ContentComponent implements OnInit {
   openMessage(word: string) { // 点击个人头像
     this.message.remove();
     this.message.success(`您点击了${word}！`, {nzDuration: 2000});
+    if (word === '登出') {
+      const date = new Date();
+      date.setTime(0);
+      document.cookie = `username=;expires=${date};path=/`;
+      location.reload();
+    }
   }
 
-  openItem(item: { id: string, name: string, icon?: string, children?: Array<object>, isOpen?: boolean, url?: string }) {
+  openItem(item: { id: string, name: string, icon?: string, children?: Array<object>, isOpen?: boolean, url?: string }) { // 打开菜单item
     const index = this.tabArray.findIndex(value => item.id === value.id);
     if (index === -1) {
       this.tabArray.push(item);
@@ -84,6 +90,22 @@ export class ContentComponent implements OnInit {
       });
     }
     this.router.navigate([`/pages/content${item.url}`]);
+  }
+
+  closeTab(item: { id: string, name: string, icon?: string, children?: Array<object>, isOpen?: boolean, url?: string, isHover?: boolean }) { // 删除tab栏item
+    item.isHover = false;
+    this.tabArray.forEach((value, index, array) => {
+      if (value.id === item.id) {
+        array.splice(index, 1);
+        if (index < this.selectedIndex) {
+          this.selectedIndex--;
+        }
+      }
+    });
+  }
+
+  changeSelectedIndex(e: { index: number, tab: NzTabComponent }) {
+    this.selectedIndex = e.index;
   }
 }
 

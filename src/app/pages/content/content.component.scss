@@ -165,3 +165,8 @@ a {
 .content{
   padding: 20px 30px;
 }
+
+:host /deep/ .ant-tabs-tab{
+  margin: 0;
+  padding: 0;
+}
