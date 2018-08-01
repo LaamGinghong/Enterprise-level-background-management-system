@@ -120,8 +120,8 @@
     </nz-sider>
     <nz-content>
       <div class="content">
-        <nz-tabset>
-          <nz-tab nzTitle="Tab 1">
+        <nz-tabset [nzSelectedIndex]="selectedIndex">
+          <nz-tab [nzTitle]="item.name" *ngFor="let item of tabArray">
             <router-outlet></router-outlet>
           </nz-tab>
         </nz-tabset>

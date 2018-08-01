@@ -11,28 +11,28 @@
     },
     {
       "id": "001",
-      "name": "仪表盘",
+      "name": "主页",
       "icon": "anticon anticon-dashboard",
       "children": [
         {
           "id": "00101",
           "name": "仪表盘",
-          "url": "/dashboard"
+          "url": "/home/dashboard"
         },
         {
           "id": "00102",
           "name": "分析页",
-          "url": "/analysis"
+          "url": "/home/analysis"
         },
         {
           "id": "00103",
           "name": "监控页",
-          "url": "/monitor"
+          "url": "/home/monitor"
         },
         {
           "id": "00104",
           "name": "工作台",
-          "url": "/workPlace"
+          "url": "/home/workPlace"
         }
       ],
       "isOpen": false,
@@ -46,27 +46,27 @@
         {
           "id": "00201",
           "name": "字体排印",
-          "url": "/typography"
+          "url": "/shortcut/typography"
         },
         {
           "id": "00202",
           "name": "基础表单",
-          "url": "/basicForm"
+          "url": "/shortcut/basicForm"
         },
         {
           "id": "00203",
           "name": "查询表格",
-          "url": "/tableList"
+          "url": "/shortcut/tableList"
         },
         {
           "id": "00204",
           "name": "搜索列表（项目）",
-          "url": "/search"
+          "url": "/shortcut/search"
         },
         {
           "id": "00205",
           "name": "高级详情页",
-          "url": "/advanced"
+          "url": "/shortcut/advanced"
         }
       ],
       "isOpen": false,
@@ -97,17 +97,17 @@
         {
           "id": "00504",
           "name": "字体排印",
-          "url": "/typography"
+          "url": "/style/typography"
         },
         {
           "id": "00502",
           "name": "瀑布流",
-          "url": "/gridMasonry"
+          "url": "/style/gridMasonry"
         },
         {
           "id": "00503",
           "name": "色彩",
-          "url": "/colors"
+          "url": "/style/colors"
         }
       ],
       "isOpen": false,
@@ -121,57 +121,57 @@
         {
           "id": "00601",
           "name": "动态表单",
-          "url": "/pageName"
+          "url": "/delon/pageName"
         },
         {
           "id": "00602",
           "name": "简易表格",
-          "url": "/fullScreenTable"
+          "url": "/delon/fullScreenTable"
         },
         {
           "id": "00603",
           "name": "工具集",
-          "url": "/util"
+          "url": "/delon/util"
         },
         {
           "id": "00604",
           "name": "打印",
-          "url": "/print"
+          "url": "/delon/print"
         },
         {
           "id": "00605",
           "name": "二维码",
-          "url": "/QR"
+          "url": "/delon/QR"
         },
         {
           "id": "00606",
           "name": "基于角色控制访问",
-          "url": "/ACL"
+          "url": "/delon/ACL"
         },
         {
           "id": "00607",
           "name": "路由守卫",
-          "url": "/routeGuard"
+          "url": "/delon/routeGuard"
         },
         {
           "id": "00608",
           "name": "字典缓存",
-          "url": "/cache"
+          "url": "/delon/cache"
         },
         {
           "id": "00609",
           "name": "下载文件",
-          "url": "/download"
+          "url": "/delon/download"
         },
         {
           "id": "00610",
           "name": "Excel操作",
-          "url": "/excel"
+          "url": "/delon/excel"
         },
         {
           "id": "00611",
           "name": "本地解压缩",
-          "url": "/zip"
+          "url": "/delon/zip"
         }
       ],
       "isOpen": false,
@@ -193,17 +193,17 @@
         {
           "id": "00801",
           "name": "基础表单",
-          "url": "/basicForm"
+          "url": "/formPage/basicForm"
         },
         {
           "id": "00802",
           "name": "分步表单",
-          "url": "/stepForm"
+          "url": "/formPage/stepForm"
         },
         {
           "id": "00803",
           "name": "高级表单",
-          "url": "/advancedForm"
+          "url": "/formPage/advancedForm"
         }
       ],
       "isOpen": false,
@@ -217,22 +217,22 @@
         {
           "id": "00901",
           "name": "查询表格",
-          "url": "/tableList"
+          "url": "/listPage/tableList"
         },
         {
           "id": "00902",
           "name": "标准列表",
-          "url": "/basicList"
+          "url": "/listPage/basicList"
         },
         {
           "id": "00903",
           "name": "卡片列表",
-          "url": "/cardList"
+          "url": "/listPage/cardList"
         },
         {
           "id": "00904",
           "name": "搜索列表",
-          "url": "/search"
+          "url": "/listPage/search"
         }
       ],
       "isOpen": false,
@@ -246,12 +246,12 @@
         {
           "id": "01001",
           "name": "基础详情页",
-          "url": "/basic"
+          "url": "/profilePage/basic"
         },
         {
           "id": "01002",
           "name": "高级详情页",
-          "url": "/advanced"
+          "url": "/profilePage/advanced"
         }
       ],
       "isOpen": false,
@@ -265,12 +265,12 @@
         {
           "id": "01101",
           "name": "成功",
-          "url": "/success"
+          "url": "/resultPage/success"
         },
         {
           "id": "01102",
           "name": "失败",
-          "url": "/fail"
+          "url": "/resultPage/fail"
         }
       ],
       "isOpen": false,
@@ -284,17 +284,17 @@
         {
           "id": "01201",
           "name": "403",
-          "url": "/403"
+          "url": "/exception/403"
         },
         {
           "id": "01202",
           "name": 404,
-          "url": "/404"
+          "url": "/exception/404"
         },
         {
           "id": "01203",
           "name": 500,
-          "url": "/500"
+          "url": "/exception/500"
         }
       ],
       "isOpen": false,
@@ -308,17 +308,17 @@
         {
           "id": "01301",
           "name": "登录",
-          "url": "/login"
+          "url": "/account/login"
         },
         {
           "id": "01302",
           "name": "注册",
-          "url": "/register"
+          "url": "/account/register"
         },
         {
           "id": "01303",
           "name": "注册结果",
-          "url": "/registerResult"
+          "url": "/account/registerResult"
         }
       ],
       "isOpen": false,
@@ -340,7 +340,7 @@
         {
           "id": "01501",
           "name": "全屏关系图",
-          "url": "/relation"
+          "url": "/report/relation"
         }
       ],
       "isOpen": false,
@@ -354,17 +354,17 @@
         {
           "id": "01601",
           "name": "帮助中心",
-          "url": "/helpCenter"
+          "url": "/extras/helpCenter"
         },
         {
           "id": "01602",
           "name": "设置",
-          "url": "/setting"
+          "url": "/extras/setting"
         },
         {
           "id": "01603",
           "name": "门店",
-          "url": "/store"
+          "url": "/extras/store"
         }
       ],
       "isOpen": false,
