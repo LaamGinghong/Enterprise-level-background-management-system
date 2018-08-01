@@ -1,17 +1,17 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {ContentComponent} from './content.component';
+import {HomeComponent} from './home.component';
 
 const routes: Routes = [{
   path: '',
-  component: ContentComponent,
+  component: HomeComponent,
   children: [{
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'dashboard',
     pathMatch: 'full'
   }, {
-    path: 'home',
-    loadChildren: './home/home.module#HomeModule'
+    path: 'dashboard',
+    loadChildren: './dashboard/dashboard.module#DashboardModule'
   }]
 }];
 
@@ -20,5 +20,5 @@ const routes: Routes = [{
   exports: [RouterModule]
 })
 
-export class ContentRoutingModule {
+export class HomeRoutingModule {
 }

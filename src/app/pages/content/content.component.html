@@ -89,13 +89,15 @@
       </div>
       <ul nz-menu [nzMode]="'inline'" style="height:100%">
         <ng-template ngFor let-item [ngForOf]="menuData">
-          <li nz-menu-item *ngIf="!item['children'].length" [nzDisabled]="item['isTitle']" style="cursor: default">
+          <li nz-menu-item *ngIf="!item['children'].length" [nzDisabled]="item['isTitle']" style="cursor: default"
+              (click)="openItem(item)" [style.cursor]="!item['isTitle']?'pointer':'default'">
+            <i [className]="item['icon']"></i>
             {{item['name']}}
           </li>
           <li nz-submenu *ngIf="item['children'].length" [(nzOpen)]="item['isOpen']" (nzOpenChange)="openHandler(item)">
             <span title><i [className]="item['icon']"></i>{{item['name']}}</span>
             <ul>
-              <li nz-menu-item *ngFor="let value of item['children']">{{value['name']}}</li>
+              <li nz-menu-item *ngFor="let value of item['children']" (click)="openItem(value)">{{value['name']}}</li>
             </ul>
           </li>
         </ng-template>
@@ -116,7 +118,15 @@
         </ng-template>
       </ul>
     </nz-sider>
-    <nz-content></nz-content>
+    <nz-content>
+      <div class="content">
+        <nz-tabset>
+          <nz-tab nzTitle="Tab 1">
+            <router-outlet></router-outlet>
+          </nz-tab>
+        </nz-tabset>
+      </div>
+    </nz-content>
   </nz-layout>
   <!-- <nz-footer></nz-footer> -->
 </nz-layout>

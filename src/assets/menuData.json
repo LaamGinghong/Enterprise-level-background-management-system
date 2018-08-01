@@ -1,265 +1,374 @@
 {
-    "success": true,
-    "value": [{
-            "id": "000",
-            "name": "主导航",
-            "icon": "",
-            "children": [],
-            "isOpen": false,
-            "isTitle": true
-        }, {
-            "id": "001",
-            "name": "仪表盘",
-            "icon": "anticon anticon-dashboard",
-            "children": [{
-                "id": "00101",
-                "name": "仪表盘"
-            }, {
-                "id": "00102",
-                "name": "分析页"
-            }, {
-                "id": "00103",
-                "name": "监控页"
-            }, {
-                "id": "00104",
-                "name": "工作台"
-            }],
-            "isOpen": false,
-            "isTitle": false
-        }, {
-            "id": "002",
-            "name": "快捷菜单",
-            "icon": "anticon anticon-rocket",
-            "children": [{
-                "id": "00201",
-                "name": "字体排印"
-            }, {
-                "id": "00202",
-                "name": "基础表单"
-            }, {
-                "id": "00203",
-                "name": "查询表格"
-            }, {
-                "id": "00204",
-                "name": "搜索列表（项目）"
-            }, {
-                "id": "00205",
-                "name": "高级详情页"
-            }],
-            "isOpen": false,
-            "isTitle": false
-        }, {
-            "id": "003",
-            "name": "小部件",
-            "icon": "anticon anticon-appstore-o",
-            "children": [],
-            "isOpen": false,
-            "isTitle": true
-        }, {
-            "id": "004",
-            "name": "Alain",
-            "icon": "",
-            "children": [],
-            "isOpen": false,
-            "isTitle": false
-        }, {
-            "id": "005",
-            "name": "样式",
-            "icon": "anticon anticon-disconnect",
-            "children": [{
-                "id": "00504",
-                "name": "字体排印"
-            }, {
-                "id": "00502",
-                "name": "瀑布流"
-            }, {
-                "id": "00503",
-                "name": "色彩"
-            }],
-            "isOpen": false,
-            "isTitle": false
-        }, {
-            "id": "006",
-            "name": "@Delon",
-            "icon": "anticon anticon-bell",
-            "children": [{
-                "id": "00601",
-                "name": "动态表单"
-            }, {
-                "id": "00602",
-                "name": "简易表格"
-            }, {
-                "id": "00603",
-                "name": "工具集"
-            }, {
-                "id": "00604",
-                "name": "打印"
-            }, {
-                "id": "00605",
-                "name": "二维码"
-            }, {
-                "id": "00606",
-                "name": "基于角色控制访问"
-            }, {
-                "id": "00607",
-                "name": "路由守卫"
-            }, {
-                "id": "00608",
-                "name": "字典缓存"
-            }, {
-                "id": "00609",
-                "name": "下载文件"
-            }, {
-                "id": "00610",
-                "name": "Excal操作"
-            }, {
-                "id": "00611",
-                "name": "本地解压缩"
-            }],
-            "isOpen": false,
-            "isTitle": false
+  "success": true,
+  "value": [
+    {
+      "id": "000",
+      "name": "主导航",
+      "icon": "",
+      "children": [],
+      "isOpen": false,
+      "isTitle": true
+    },
+    {
+      "id": "001",
+      "name": "仪表盘",
+      "icon": "anticon anticon-dashboard",
+      "children": [
+        {
+          "id": "00101",
+          "name": "仪表盘",
+          "url": "/dashboard"
         },
         {
-            "id": "007",
-            "name": "Ant Design Pro",
-            "icon": "",
-            "children": [],
-            "isOpen": false,
-            "isTitle": true
+          "id": "00102",
+          "name": "分析页",
+          "url": "/analysis"
         },
         {
-            "id": "008",
-            "name": "表单页",
-            "icon": "anticon anticon-database",
-            "children": [{
-                "id": "00801",
-                "name": "基础表单"
-            }, {
-                "id": "00802",
-                "name": "分步表单"
-            }, {
-                "id": "00803",
-                "name": "高级表单"
-            }],
-            "isOpen": false,
-            "isTitle": false
+          "id": "00103",
+          "name": "监控页",
+          "url": "/monitor"
         },
         {
-            "id": "009",
-            "name": "列表页",
-            "icon": "anticon anticon-bars",
-            "children": [{
-                "id": "00901",
-                "name": "查询表格"
-            }, {
-                "id": "00902",
-                "name": "标准列表"
-            }, {
-                "id": "00903",
-                "name": "卡片列表"
-            }, {
-                "id": "00904",
-                "name": "搜索列表"
-            }],
-            "isOpen": false,
-            "isTitle": false
-        }, {
-            "id": "010",
-            "name": "详情页",
-            "icon": "anticon anticon-idcard",
-            "children": [{
-                "id": "01001",
-                "name": "基础详情页"
-            }, {
-                "id": "01002",
-                "name": "高级详情页"
-            }],
-            "isOpen": false,
-            "isTitle": false
-        },
-        {
-            "id": "011",
-            "name": "结果",
-            "icon": "anticon anticon-check-circle-o",
-            "children": [{
-                "id": "01101",
-                "name": "成功"
-            }, {
-                "id": "01102",
-                "name": "失败"
-            }],
-            "isOpen": false,
-            "isTitle": false
-        },
-        {
-            "id": "012",
-            "name": "异常",
-            "icon": "anticon anticon-exception",
-            "children": [{
-                "id": "01201",
-                "name": "403"
-            }, {
-                "id": "01202",
-                "name": 404
-            }, {
-                "id": "01203",
-                "name": 500
-            }],
-            "isOpen": false,
-            "isTitle": false
-        },
-        {
-            "id": "013",
-            "name": "账户",
-            "icon": "anticon anticon-user",
-            "children": [{
-                "id": "01301",
-                "name": "登录"
-            }, {
-                "id": "01302",
-                "name": "注册"
-            }, {
-                "id": "01303",
-                "name": "注册结果"
-            }],
-            "isOpen": false,
-            "isTitle": false
-        },
-        {
-            "id": "014",
-            "name": "更多",
-            "icon": "",
-            "children": [],
-            "isOpen": false,
-            "isTitle": true
-        },
-        {
-            "id": "015",
-            "name": "报表",
-            "icon": "anticon anticon-cloud-o",
-            "children": [{
-                "id": "01501",
-                "name": "全屏关系图"
-            }],
-            "isOpen": false,
-            "isTitle": false
-        },
-        {
-            "id": "016",
-            "name": "扩展",
-            "icon": "anticon anticon-coffee",
-            "children": [{
-                "id": "01601",
-                "name": "帮助中心"
-            }, {
-                "id": "01602",
-                "name": "设置"
-            }, {
-                "id": "01603",
-                "name": "门店"
-            }],
-            "isOpen": false,
-            "isTitle": false
+          "id": "00104",
+          "name": "工作台",
+          "url": "/workPlace"
         }
-    ]
+      ],
+      "isOpen": false,
+      "isTitle": false
+    },
+    {
+      "id": "002",
+      "name": "快捷菜单",
+      "icon": "anticon anticon-rocket",
+      "children": [
+        {
+          "id": "00201",
+          "name": "字体排印",
+          "url": "/typography"
+        },
+        {
+          "id": "00202",
+          "name": "基础表单",
+          "url": "/basicForm"
+        },
+        {
+          "id": "00203",
+          "name": "查询表格",
+          "url": "/tableList"
+        },
+        {
+          "id": "00204",
+          "name": "搜索列表（项目）",
+          "url": "/search"
+        },
+        {
+          "id": "00205",
+          "name": "高级详情页",
+          "url": "/advanced"
+        }
+      ],
+      "isOpen": false,
+      "isTitle": false
+    },
+    {
+      "id": "003",
+      "name": "小部件",
+      "icon": "anticon anticon-appstore-o",
+      "children": [],
+      "isOpen": false,
+      "isTitle": false,
+      "url": "/widgets"
+    },
+    {
+      "id": "004",
+      "name": "Alain",
+      "icon": "",
+      "children": [],
+      "isOpen": false,
+      "isTitle": true
+    },
+    {
+      "id": "005",
+      "name": "样式",
+      "icon": "anticon anticon-disconnect",
+      "children": [
+        {
+          "id": "00504",
+          "name": "字体排印",
+          "url": "/typography"
+        },
+        {
+          "id": "00502",
+          "name": "瀑布流",
+          "url": "/gridMasonry"
+        },
+        {
+          "id": "00503",
+          "name": "色彩",
+          "url": "/colors"
+        }
+      ],
+      "isOpen": false,
+      "isTitle": false
+    },
+    {
+      "id": "006",
+      "name": "@Delon",
+      "icon": "anticon anticon-bell",
+      "children": [
+        {
+          "id": "00601",
+          "name": "动态表单",
+          "url": "/pageName"
+        },
+        {
+          "id": "00602",
+          "name": "简易表格",
+          "url": "/fullScreenTable"
+        },
+        {
+          "id": "00603",
+          "name": "工具集",
+          "url": "/util"
+        },
+        {
+          "id": "00604",
+          "name": "打印",
+          "url": "/print"
+        },
+        {
+          "id": "00605",
+          "name": "二维码",
+          "url": "/QR"
+        },
+        {
+          "id": "00606",
+          "name": "基于角色控制访问",
+          "url": "/ACL"
+        },
+        {
+          "id": "00607",
+          "name": "路由守卫",
+          "url": "/routeGuard"
+        },
+        {
+          "id": "00608",
+          "name": "字典缓存",
+          "url": "/cache"
+        },
+        {
+          "id": "00609",
+          "name": "下载文件",
+          "url": "/download"
+        },
+        {
+          "id": "00610",
+          "name": "Excel操作",
+          "url": "/excel"
+        },
+        {
+          "id": "00611",
+          "name": "本地解压缩",
+          "url": "/zip"
+        }
+      ],
+      "isOpen": false,
+      "isTitle": false
+    },
+    {
+      "id": "007",
+      "name": "Ant Design Pro",
+      "icon": "",
+      "children": [],
+      "isOpen": false,
+      "isTitle": true
+    },
+    {
+      "id": "008",
+      "name": "表单页",
+      "icon": "anticon anticon-database",
+      "children": [
+        {
+          "id": "00801",
+          "name": "基础表单",
+          "url": "/basicForm"
+        },
+        {
+          "id": "00802",
+          "name": "分步表单",
+          "url": "/stepForm"
+        },
+        {
+          "id": "00803",
+          "name": "高级表单",
+          "url": "/advancedForm"
+        }
+      ],
+      "isOpen": false,
+      "isTitle": false
+    },
+    {
+      "id": "009",
+      "name": "列表页",
+      "icon": "anticon anticon-bars",
+      "children": [
+        {
+          "id": "00901",
+          "name": "查询表格",
+          "url": "/tableList"
+        },
+        {
+          "id": "00902",
+          "name": "标准列表",
+          "url": "/basicList"
+        },
+        {
+          "id": "00903",
+          "name": "卡片列表",
+          "url": "/cardList"
+        },
+        {
+          "id": "00904",
+          "name": "搜索列表",
+          "url": "/search"
+        }
+      ],
+      "isOpen": false,
+      "isTitle": false
+    },
+    {
+      "id": "010",
+      "name": "详情页",
+      "icon": "anticon anticon-idcard",
+      "children": [
+        {
+          "id": "01001",
+          "name": "基础详情页",
+          "url": "/basic"
+        },
+        {
+          "id": "01002",
+          "name": "高级详情页",
+          "url": "/advanced"
+        }
+      ],
+      "isOpen": false,
+      "isTitle": false
+    },
+    {
+      "id": "011",
+      "name": "结果",
+      "icon": "anticon anticon-check-circle-o",
+      "children": [
+        {
+          "id": "01101",
+          "name": "成功",
+          "url": "/success"
+        },
+        {
+          "id": "01102",
+          "name": "失败",
+          "url": "/fail"
+        }
+      ],
+      "isOpen": false,
+      "isTitle": false
+    },
+    {
+      "id": "012",
+      "name": "异常",
+      "icon": "anticon anticon-exception",
+      "children": [
+        {
+          "id": "01201",
+          "name": "403",
+          "url": "/403"
+        },
+        {
+          "id": "01202",
+          "name": 404,
+          "url": "/404"
+        },
+        {
+          "id": "01203",
+          "name": 500,
+          "url": "/500"
+        }
+      ],
+      "isOpen": false,
+      "isTitle": false
+    },
+    {
+      "id": "013",
+      "name": "账户",
+      "icon": "anticon anticon-user",
+      "children": [
+        {
+          "id": "01301",
+          "name": "登录",
+          "url": "/login"
+        },
+        {
+          "id": "01302",
+          "name": "注册",
+          "url": "/register"
+        },
+        {
+          "id": "01303",
+          "name": "注册结果",
+          "url": "/registerResult"
+        }
+      ],
+      "isOpen": false,
+      "isTitle": false
+    },
+    {
+      "id": "014",
+      "name": "更多",
+      "icon": "",
+      "children": [],
+      "isOpen": false,
+      "isTitle": true
+    },
+    {
+      "id": "015",
+      "name": "报表",
+      "icon": "anticon anticon-cloud-o",
+      "children": [
+        {
+          "id": "01501",
+          "name": "全屏关系图",
+          "url": "/relation"
+        }
+      ],
+      "isOpen": false,
+      "isTitle": false
+    },
+    {
+      "id": "016",
+      "name": "扩展",
+      "icon": "anticon anticon-coffee",
+      "children": [
+        {
+          "id": "01601",
+          "name": "帮助中心",
+          "url": "/helpCenter"
+        },
+        {
+          "id": "01602",
+          "name": "设置",
+          "url": "/setting"
+        },
+        {
+          "id": "01603",
+          "name": "门店",
+          "url": "/store"
+        }
+      ],
+      "isOpen": false,
+      "isTitle": false
+    }
+  ]
 }

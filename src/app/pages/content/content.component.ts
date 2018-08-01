@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {ContentService} from './content.service';
 import {DataStoreService} from '../../store/dataStore.service';
 import {NzMessageService} from 'ng-zorro-antd';
@@ -23,7 +23,8 @@ export class ContentComponent implements OnInit {
     private route: ActivatedRoute,
     private contentService: ContentService,
     private dataStore: DataStoreService,
-    private message: NzMessageService
+    private message: NzMessageService,
+    private router: Router
   ) {
   }
 
@@ -59,6 +60,10 @@ export class ContentComponent implements OnInit {
   openMessage(word: string) {
     this.message.remove();
     this.message.success(`您点击了${word}！`, {nzDuration: 2000});
+  }
+
+  openItem(item: { id: string, name: string, icon?: string, children?: Array<object>, isOpen?: boolean }) {
+    // this.router.navigate(['/dashboard']);
   }
 }
 
