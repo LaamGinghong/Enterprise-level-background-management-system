@@ -79,18 +79,21 @@ export class ContentComponent implements OnInit {
     }
   }
 
-  openItem(item: { id: string, name: string, icon?: string, children?: Array<object>, isOpen?: boolean, url?: string }) { // 打开菜单item
-    const index = this.tabArray.findIndex(value => item.id === value.id);
-    if (index === -1) {
-      this.tabArray.push(item);
-      this.selectedIndex = this.tabArray.length - 1;
-    } else {
-      this.tabArray.forEach((value, index) => {
-        this.selectedIndex = value.id === item.id ? index : this.selectedIndex;
-      });
+  openItem(item: { id: string, name: string, icon?: string, children?: Array<object>, isOpen?: boolean, url?: string, isTitle?: boolean }) { // 打开菜单item
+    if (!item.isTitle) {
+      const index = this.tabArray.findIndex(value => item.id === value.id);
+      if (index === -1) {
+        this.tabArray.push(item);
+        this.selectedIndex = this.tabArray.length - 1;
+      } else {
+        this.tabArray.forEach((value, index) => {
+          this.selectedIndex = value.id === item.id ? index : this.selectedIndex;
+        });
+      }
+      this.router.navigate([`/pages/content${item.url}`]);
     }
-    this.router.navigate([`/pages/content${item.url}`]);
   }
+
 
   closeTab(item: { id: string, name: string, icon?: string, children?: Array<object>, isOpen?: boolean, url?: string, isHover?: boolean }) { // 删除tab栏item
     item.isHover = false;

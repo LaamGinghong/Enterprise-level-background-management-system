@@ -21,6 +21,9 @@ const routes: Routes = [{
   }, {
     path: 'style',
     loadChildren: './style/style.module#StyleModule'
+  }, {
+    path: 'delon',
+    loadChildren: './delon/delon.module#DelonModule'
   }]
 }];
 
