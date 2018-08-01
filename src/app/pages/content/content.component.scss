@@ -23,12 +23,13 @@ a {
 
 .header-logo {
   width: 120px;
-  transition: width .2s cubic-bezier(.25, 0, .15, 1);
+  transition: margin-left .2s cubic-bezier(.25, 0, .15, 1);
 }
 
 .header-search {
   position: relative;
   margin-left: 50px;
+  transition: width .2s cubic-bezier(.25, 0, .15, 1);
   span {
     position: absolute;
     z-index: 10;

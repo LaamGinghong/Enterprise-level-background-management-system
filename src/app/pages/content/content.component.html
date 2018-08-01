@@ -68,7 +68,7 @@
   </nz-header>
   <nz-layout>
     <nz-sider [nzWidth]='200' style="background: #ffffff;height: calc(100vh - 64px);overflow-y: auto"
-              *ngIf="menuStatus">
+              *ngIf="menuStatus" @flyIn>
       <div class="personal-message" *ngIf="name">
         <div>
           <nz-avatar nzIcon="anticon anticon-user"
@@ -87,7 +87,6 @@
           </ul>
         </nz-dropdown>
       </div>
-
       <ul nz-menu [nzMode]="'inline'" style="height:100%">
         <ng-template ngFor let-item [ngForOf]="menuData">
           <li nz-menu-item *ngIf="!item['children'].length" [nzDisabled]="item['isTitle']" style="cursor: default">
@@ -103,7 +102,7 @@
       </ul>
     </nz-sider>
     <nz-sider [nzWidth]='80' style="background: #ffffff;height: calc(100vh - 64px);overflow-y: auto"
-              *ngIf="!menuStatus">
+              *ngIf="!menuStatus" @flyIn>
       <ul nz-menu [nzMode]="'vertical'" style="height: 100%;">
         <ng-template ngFor let-item [ngForOf]="menuData">
           <li nz-submenu *ngIf="item['children'].length">

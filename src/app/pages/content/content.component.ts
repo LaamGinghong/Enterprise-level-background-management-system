@@ -1,13 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { ContentService } from './content.service';
-import { DataStoreService } from '../../store/dataStore.service';
-import { NzMessageService } from '../../../../node_modules/ng-zorro-antd';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {ContentService} from './content.service';
+import {DataStoreService} from '../../store/dataStore.service';
+import {NzMessageService} from 'ng-zorro-antd';
+import {flyIn, flyOut} from '../../../assets/sim-animations';
 
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
-  styleUrls: ['./content.component.scss']
+  styleUrls: ['./content.component.scss'],
+  animations: [flyIn, flyOut]
 })
 
 export class ContentComponent implements OnInit {
@@ -56,7 +58,7 @@ export class ContentComponent implements OnInit {
 
   openMessage(word: string) {
     this.message.remove();
-    this.message.success(`您点击了${word}！`, { nzDuration: 2000 });
+    this.message.success(`您点击了${word}！`, {nzDuration: 2000});
   }
 }
 
