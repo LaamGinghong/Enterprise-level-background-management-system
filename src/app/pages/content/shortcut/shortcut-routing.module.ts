@@ -10,8 +10,8 @@ const routes: Routes = [{
     redirectTo: 'typography',
     pathMatch: 'full'
   }, {
-    path: 'typography',
-    loadChildren: './typography/typography.module#TypographyModule'
+    path: 'typographys',
+    loadChildren: './typographys/typographys.module#TypographyModule'
   }, {
     path: 'basicForm',
     loadChildren: './basic-form/basic-form.module#BasicFormModule'
