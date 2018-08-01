@@ -12,6 +12,15 @@ const routes: Routes = [{
   }, {
     path: 'dashboard',
     loadChildren: './dashboard/dashboard.module#DashboardModule'
+  }, {
+    path: 'analysis',
+    loadChildren: './analysis/analysis.module#AnalysisModule'
+  }, {
+    path: 'monitor',
+    loadChildren: './monitor/monitor.module#MonitorModule'
+  }, {
+    path: 'workPlace',
+    loadChildren: './work-place/work-place.module#WorkPlaceModule'
   }]
 }];
 
