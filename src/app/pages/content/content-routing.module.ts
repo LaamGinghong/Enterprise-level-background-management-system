@@ -33,6 +33,9 @@ const routes: Routes = [{
   }, {
     path: 'profilePage',
     loadChildren: './profile-page/profile-page.module#ProfilePageModule'
+  }, {
+    path: 'resultPage',
+    loadChildren: './result-page/result-page.module#ResultPageModule'
   }]
 }];
 
