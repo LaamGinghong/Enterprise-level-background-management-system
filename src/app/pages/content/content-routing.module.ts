@@ -27,6 +27,9 @@ const routes: Routes = [{
   }, {
     path: 'formPage',
     loadChildren: './form-page/form-page.module#FormPageModule'
+  }, {
+    path: 'listPage',
+    loadChildren: './list-page/list-page.module#ListPageModule'
   }]
 }];
 
