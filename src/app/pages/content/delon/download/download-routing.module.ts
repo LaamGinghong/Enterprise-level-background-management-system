@@ -1,10 +1,10 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {PageNameComponent} from './page-name.component';
+import {DownloadComponent} from './download.component';
 
 const routes: Routes = [{
   path: '',
-  component: PageNameComponent
+  component: DownloadComponent
 }];
 
 @NgModule({
@@ -12,5 +12,5 @@ const routes: Routes = [{
   exports: [RouterModule]
 })
 
-export class PageNameRoutingModule {
+export class DownloadRoutingModule {
 }
