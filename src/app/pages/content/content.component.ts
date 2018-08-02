@@ -81,6 +81,10 @@ export class ContentComponent implements OnInit {
 
   openItem(item: { id: string, name: string, icon?: string, children?: Array<object>, isOpen?: boolean, url?: string, isTitle?: boolean }) { // 打开菜单item
     if (!item.isTitle) {
+      if (item.name === '403' || '404' || '500' || '登录' || '注册' || '注册结果') {
+        this.router.navigate([`/pages${item.url}`]);
+        return;
+      }
       const index = this.tabArray.findIndex(value => item.id === value.id);
       if (index === -1) {
         this.tabArray.push(item);
@@ -90,6 +94,7 @@ export class ContentComponent implements OnInit {
           this.selectedIndex = value.id === item.id ? index : this.selectedIndex;
         });
       }
+
       this.router.navigate([`/pages/content${item.url}`]);
     }
   }

@@ -284,17 +284,17 @@
         {
           "id": "01201",
           "name": "403",
-          "url": "/exception/403"
+          "url": "/403"
         },
         {
           "id": "01202",
-          "name": 404,
-          "url": "/exception/404"
+          "name": "404",
+          "url": "/404"
         },
         {
           "id": "01203",
-          "name": 500,
-          "url": "/exception/500"
+          "name": "500",
+          "url": "/500"
         }
       ],
       "isOpen": false,
@@ -308,17 +308,17 @@
         {
           "id": "01301",
           "name": "登录",
-          "url": "/account/login"
+          "url": "/login"
         },
         {
           "id": "01302",
           "name": "注册",
-          "url": "/account/register"
+          "url": "/register"
         },
         {
           "id": "01303",
           "name": "注册结果",
-          "url": "/account/registerResult"
+          "url": "/registerResult"
         }
       ],
       "isOpen": false,

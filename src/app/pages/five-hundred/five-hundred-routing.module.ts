@@ -1,10 +1,10 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {ExceptionComponent} from './exception.component';
+import {FiveHundredComponent} from './five-hundred.component';
 
 const routes: Routes = [{
   path: '',
-  component: ExceptionComponent
+  component: FiveHundredComponent
 }];
 
 @NgModule({
@@ -12,5 +12,5 @@ const routes: Routes = [{
   exports: [RouterModule]
 })
 
-export class ExceptionRoutingModule {
+export class FiveHundredRoutingModule {
 }

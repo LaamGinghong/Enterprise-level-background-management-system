@@ -15,6 +15,15 @@ const routes: Routes = [{
   }, {
     path: 'login',
     loadChildren: './login/login.module#LoginModule'
+  }, {
+    path: '403',
+    loadChildren: './four-zero-three/four-zero-three.module#FourZeroThreeModule'
+  }, {
+    path: '404',
+    loadChildren: './four-zero-four/four-zero-four.module#FourZeroFourModule'
+  }, {
+    path: '500',
+    loadChildren: './five-hundred/five-hundred.module#FiveHundredModule'
   }]
 }];
 
