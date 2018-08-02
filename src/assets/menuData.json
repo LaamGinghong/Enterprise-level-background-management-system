@@ -246,12 +246,12 @@
         {
           "id": "01001",
           "name": "基础详情页",
-          "url": "/profilePage/basic"
+          "url": "/profilePage/basicPage"
         },
         {
           "id": "01002",
           "name": "高级详情页",
-          "url": "/profilePage/advanced"
+          "url": "/profilePage/advancedPage"
         }
       ],
       "isOpen": false,

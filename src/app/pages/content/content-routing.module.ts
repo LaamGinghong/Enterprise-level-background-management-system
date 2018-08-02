@@ -30,6 +30,9 @@ const routes: Routes = [{
   }, {
     path: 'listPage',
     loadChildren: './list-page/list-page.module#ListPageModule'
+  }, {
+    path: 'profilePage',
+    loadChildren: './profile-page/profile-page.module#ProfilePageModule'
   }]
 }];
 
