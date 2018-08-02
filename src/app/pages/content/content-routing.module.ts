@@ -36,6 +36,9 @@ const routes: Routes = [{
   }, {
     path: 'resultPage',
     loadChildren: './result-page/result-page.module#ResultPageModule'
+  }, {
+    path: 'exception',
+    loadChildren: './exception/exception.module#ExceptionModule'
   }]
 }];
 
