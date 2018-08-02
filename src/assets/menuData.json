@@ -216,8 +216,8 @@
       "children": [
         {
           "id": "00901",
-          "name": "查询表格",
-          "url": "/listPage/tableList"
+          "name": "查询列表",
+          "url": "/listPage/queryList"
         },
         {
           "id": "00902",
@@ -232,7 +232,7 @@
         {
           "id": "00904",
           "name": "搜索列表",
-          "url": "/listPage/search"
+          "url": "/listPage/searchList"
         }
       ],
       "isOpen": false,
