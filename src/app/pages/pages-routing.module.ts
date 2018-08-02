@@ -24,6 +24,12 @@ const routes: Routes = [{
   }, {
     path: '500',
     loadChildren: './five-hundred/five-hundred.module#FiveHundredModule'
+  }, {
+    path: 'register',
+    loadChildren: './register/register.module#RegisterModule'
+  }, {
+    path: 'registerResult',
+    loadChildren: './register-result/register-result.module#RegisterResultModule'
   }]
 }];
 
