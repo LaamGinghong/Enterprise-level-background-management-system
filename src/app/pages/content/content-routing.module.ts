@@ -36,6 +36,9 @@ const routes: Routes = [{
   }, {
     path: 'resultPage',
     loadChildren: './result-page/result-page.module#ResultPageModule'
+  }, {
+    path: 'extras',
+    loadChildren: './extras/extras.module#ExtrasModule'
   }]
 }];
 

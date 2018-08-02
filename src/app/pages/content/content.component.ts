@@ -88,7 +88,7 @@ export class ContentComponent implements OnInit {
         }
         return;
       }
-      if (item.name === '403' || '404' || '500' || '登录' || '注册' || '注册结果') {
+      if (item.name === ('403' || '404' || '500' || '登录' || '注册' || '注册结果')) {
         this.router.navigate([`/pages${item.url}`]);
         return;
       }
@@ -102,7 +102,6 @@ export class ContentComponent implements OnInit {
           this.selectedIndex = value.id === item.id ? index : this.selectedIndex;
         });
       }
-
       this.router.navigate([`/pages/content${item.url}`]);
     }
   }
@@ -113,15 +112,21 @@ export class ContentComponent implements OnInit {
     this.tabArray.forEach((value, index, array) => {
       if (value.id === item.id) {
         array.splice(index, 1);
-        if (index < this.selectedIndex) {
-          this.selectedIndex--;
+        if (index < array.length - 1) {
+          if (index < this.selectedIndex) {
+            this.selectedIndex--;
+          }
+        } else {
+          this.selectedIndex = array.length - 1;
         }
       }
     });
+    this.router.navigate([`/pages/content${this.tabArray[this.selectedIndex].url}`]);
   }
 
   changeSelectedIndex(e: { index: number, tab: NzTabComponent }) {
     this.selectedIndex = e.index;
+    this.router.navigate([`/pages/content${this.tabArray[this.selectedIndex].url}`]);
   }
 }
 
