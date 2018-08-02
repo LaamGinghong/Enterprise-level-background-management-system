@@ -24,6 +24,9 @@ const routes: Routes = [{
   }, {
     path: 'delon',
     loadChildren: './delon/delon.module#DelonModule'
+  }, {
+    path: 'formPage',
+    loadChildren: './form-page/form-page.module#FormPageModule'
   }]
 }];
 
