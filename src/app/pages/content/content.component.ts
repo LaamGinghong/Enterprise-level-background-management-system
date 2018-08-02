@@ -88,7 +88,7 @@ export class ContentComponent implements OnInit {
         }
         return;
       }
-      if (item.name === ('403' || '404' || '500' || '登录' || '注册' || '注册结果')) {
+      if (item.name === '403' || item.name === '404' || item.name === '500' || item.name === '登录' || item.name === '注册' || item.name === '注册结果') {
         this.router.navigate([`/pages${item.url}`]);
         return;
       }

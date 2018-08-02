@@ -114,7 +114,7 @@
             <li nz-submenu *ngIf="item['children'].length">
               <span title [title]="item['name']"><i [className]="item['icon']"></i></span>
               <ul>
-                <li *ngFor="let value of item['children']" nz-menu-item>
+                <li *ngFor="let value of item['children']" nz-menu-item (click)="openItem(value,content)">
                   {{value['name']}}
                 </li>
               </ul>
