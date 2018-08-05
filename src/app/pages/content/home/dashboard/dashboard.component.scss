@@ -1,4 +1,50 @@
 .dashboard {
-    height: calc(100vh - 160px);
+    height: calc(100vh - 170px);
     background: #fff;
+    padding: 10px 20px;
+    &-header {
+        margin-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+        p {
+            margin-bottom: 5px;
+        }
+        h2 {
+            margin: 0;
+        }
+    }
+    &-card {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 0;
+        &-item {
+            width: 400px;
+            height: 100px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            &-left {
+                color: #fff;
+                width: 50%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                div {
+                    padding-left: 20px;
+                }
+            }
+            &-right {
+                width: 50%;
+                height: 100%;
+                line-height: 70px;
+                &-item {
+                    width: 4px;
+                    margin: 7px;
+                    background: rgba(255, 255, 255, .8);
+                    display: inline-block;
+                    vertical-align: bottom;
+                }
+            }
+        }
+    }
 }
