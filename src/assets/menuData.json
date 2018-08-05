@@ -1,374 +1,398 @@
 {
-  "success": true,
-  "value": [
-    {
-      "id": "000",
-      "name": "主导航",
-      "icon": "",
-      "children": [],
-      "isOpen": false,
-      "isTitle": true
-    },
-    {
-      "id": "001",
-      "name": "主页",
-      "icon": "anticon anticon-dashboard",
-      "children": [
-        {
-          "id": "00101",
-          "name": "仪表盘",
-          "url": "/home/dashboard"
+    "success": true,
+    "value": [{
+            "id": "000",
+            "name": "主导航",
+            "icon": "",
+            "children": [],
+            "isOpen": false,
+            "isTitle": true
         },
         {
-          "id": "00102",
-          "name": "分析页",
-          "url": "/home/analysis"
+            "id": "001",
+            "name": "主页",
+            "icon": "anticon anticon-dashboard",
+            "children": [{
+                    "id": "00101",
+                    "name": "仪表盘",
+                    "url": "/home/dashboard",
+                    "breadCrumb": ["Home", "Dashboard"]
+                },
+                {
+                    "id": "00102",
+                    "name": "分析页",
+                    "url": "/home/analysis",
+                    "breadCrumb": ["Home", "Analysis"]
+                },
+                {
+                    "id": "00103",
+                    "name": "监控页",
+                    "url": "/home/monitor",
+                    "breadCrumb": ["Home", "Monitor"]
+                },
+                {
+                    "id": "00104",
+                    "name": "工作台",
+                    "url": "/home/workPlace",
+                    "breadCrumb": ["Home", "WorkPlace"]
+                }
+            ],
+            "isOpen": false,
+            "isTitle": false
         },
         {
-          "id": "00103",
-          "name": "监控页",
-          "url": "/home/monitor"
+            "id": "002",
+            "name": "快捷菜单",
+            "icon": "anticon anticon-rocket",
+            "children": [{
+                    "id": "00201",
+                    "name": "字体排印",
+                    "url": "/shortcut/printing",
+                    "breadCrumb": ["Shortcut", "Printing"]
+                },
+                {
+                    "id": "00202",
+                    "name": "基础表单",
+                    "url": "/shortcut/basicForm",
+                    "breadCrumb": ["Shortcut", "BasicForm"]
+                },
+                {
+                    "id": "00203",
+                    "name": "查询表格",
+                    "url": "/shortcut/tableList",
+                    "breadCrumb": ["Shortcut", "TableList"]
+                },
+                {
+                    "id": "00204",
+                    "name": "搜索列表（项目）",
+                    "url": "/shortcut/search",
+                    "breadCrumb": ["Shortcut", "Search"]
+                },
+                {
+                    "id": "00205",
+                    "name": "高级详情页",
+                    "url": "/shortcut/advanced",
+                    "breadCrumb": ["Shortcut", "Advanced"]
+                }
+            ],
+            "isOpen": false,
+            "isTitle": false
         },
         {
-          "id": "00104",
-          "name": "工作台",
-          "url": "/home/workPlace"
+            "id": "003",
+            "name": "小部件",
+            "icon": "anticon anticon-appstore-o",
+            "children": [],
+            "isOpen": false,
+            "isTitle": false,
+            "url": "/widgets",
+            "breadCrumb": ["Widgets"]
+        },
+        {
+            "id": "004",
+            "name": "Alain",
+            "icon": "",
+            "children": [],
+            "isOpen": false,
+            "isTitle": true
+        },
+        {
+            "id": "005",
+            "name": "样式",
+            "icon": "anticon anticon-disconnect",
+            "children": [{
+                    "id": "00504",
+                    "name": "字体排印",
+                    "url": "/style/typography",
+                    "breadCrumb": ["Style", "Typography"]
+                },
+                {
+                    "id": "00502",
+                    "name": "瀑布流",
+                    "url": "/style/gridMasonry",
+                    "breadCrumb": ["Style", "GridMasonry"]
+                },
+                {
+                    "id": "00503",
+                    "name": "色彩",
+                    "url": "/style/colors",
+                    "breadCrumb": ["Style", "Colors"]
+                }
+            ],
+            "isOpen": false,
+            "isTitle": false
+        },
+        {
+            "id": "006",
+            "name": "@Delon",
+            "icon": "anticon anticon-bell",
+            "children": [{
+                    "id": "00601",
+                    "name": "动态表单",
+                    "url": "/delon/pageName",
+                    "breadCrumb": ["Delon", "PageName"]
+                },
+                {
+                    "id": "00602",
+                    "name": "简易表格",
+                    "url": "/delon/fullScreenTable",
+                    "breadCrumb": ["Delon", "FullScreenTable"]
+                },
+                {
+                    "id": "00603",
+                    "name": "工具集",
+                    "url": "/delon/util",
+                    "breadCrumb": ["Delon", "Util"]
+                },
+                {
+                    "id": "00604",
+                    "name": "打印",
+                    "url": "/delon/print",
+                    "breadCrumb": ["Delon", "Print"]
+                },
+                {
+                    "id": "00605",
+                    "name": "二维码",
+                    "url": "/delon/QR",
+                    "breadCrumb": ["Delon", "QR"]
+                },
+                {
+                    "id": "00606",
+                    "name": "基于角色控制访问",
+                    "url": "/delon/ACL",
+                    "breadCrumb": ["Delon", "ACL"]
+                },
+                {
+                    "id": "00607",
+                    "name": "路由守卫",
+                    "url": "/delon/routeGuard",
+                    "breadCrumb": ["Delon", "RouteGuard"]
+                },
+                {
+                    "id": "00608",
+                    "name": "字典缓存",
+                    "url": "/delon/cache",
+                    "breadCrumb": ["Delon", "Cache"]
+                },
+                {
+                    "id": "00609",
+                    "name": "下载文件",
+                    "url": "/delon/download",
+                    "breadCrumb": ["Delon", "Download"]
+                },
+                {
+                    "id": "00610",
+                    "name": "Excel操作",
+                    "url": "/delon/excel",
+                    "breadCrumb": ["Delon", "Excel"]
+                },
+                {
+                    "id": "00611",
+                    "name": "本地解压缩",
+                    "url": "/delon/zip",
+                    "breadCrumb": ["Delon", "Zip"]
+                }
+            ],
+            "isOpen": false,
+            "isTitle": false
+        },
+        {
+            "id": "007",
+            "name": "Ant Design Pro",
+            "icon": "",
+            "children": [],
+            "isOpen": false,
+            "isTitle": true
+        },
+        {
+            "id": "008",
+            "name": "表单页",
+            "icon": "anticon anticon-database",
+            "children": [{
+                    "id": "00801",
+                    "name": "基础表单",
+                    "url": "/formPage/basisForm",
+                    "breadCrumb": ["FormPage", "BasisForm"]
+                },
+                {
+                    "id": "00802",
+                    "name": "分步表单",
+                    "url": "/formPage/stepForm",
+                    "breadCrumb": ["FormPage", "StepForm"]
+                },
+                {
+                    "id": "00803",
+                    "name": "高级表单",
+                    "url": "/formPage/advancedForm",
+                    "breadCrumb": ["FormPage", "AdvancedForm"]
+                }
+            ],
+            "isOpen": false,
+            "isTitle": false
+        },
+        {
+            "id": "009",
+            "name": "列表页",
+            "icon": "anticon anticon-bars",
+            "children": [{
+                    "id": "00901",
+                    "name": "查询列表",
+                    "url": "/listPage/queryList",
+                    "breadCrumb": ["ListPage", "QueryList"]
+                },
+                {
+                    "id": "00902",
+                    "name": "标准列表",
+                    "url": "/listPage/basicList",
+                    "breadCrumb": ["ListPage", "BasicList"]
+                },
+                {
+                    "id": "00903",
+                    "name": "卡片列表",
+                    "url": "/listPage/cardList",
+                    "breadCrumb": ["ListPage", "CardList"]
+                },
+                {
+                    "id": "00904",
+                    "name": "搜索列表",
+                    "url": "/listPage/searchList",
+                    "breadCrumb": ["ListPage", "SearchList"]
+                }
+            ],
+            "isOpen": false,
+            "isTitle": false
+        },
+        {
+            "id": "010",
+            "name": "详情页",
+            "icon": "anticon anticon-idcard",
+            "children": [{
+                    "id": "01001",
+                    "name": "基础详情页",
+                    "url": "/profilePage/basicPage",
+                    "breadCrumb": ["ProfilePage", "BasicPage"]
+                },
+                {
+                    "id": "01002",
+                    "name": "高级详情页",
+                    "url": "/profilePage/advancedPage",
+                    "breadCrumb": ["ProfilePage", "AdvancedPage"]
+                }
+            ],
+            "isOpen": false,
+            "isTitle": false
+        },
+        {
+            "id": "011",
+            "name": "结果",
+            "icon": "anticon anticon-check-circle-o",
+            "children": [{
+                    "id": "01101",
+                    "name": "成功",
+                    "url": "/resultPage/success",
+                    "breadCrumb": ["ResultPage", "Success"]
+                },
+                {
+                    "id": "01102",
+                    "name": "失败",
+                    "url": "/resultPage/fail",
+                    "breadCrumb": ["ResultPage", "Fail"]
+                }
+            ],
+            "isOpen": false,
+            "isTitle": false
+        },
+        {
+            "id": "012",
+            "name": "异常",
+            "icon": "anticon anticon-exception",
+            "children": [{
+                    "id": "01201",
+                    "name": "403",
+                    "url": "/403"
+                },
+                {
+                    "id": "01202",
+                    "name": "404",
+                    "url": "/404"
+                },
+                {
+                    "id": "01203",
+                    "name": "500",
+                    "url": "/500"
+                }
+            ],
+            "isOpen": false,
+            "isTitle": false
+        },
+        {
+            "id": "013",
+            "name": "账户",
+            "icon": "anticon anticon-user",
+            "children": [{
+                    "id": "01301",
+                    "name": "登录",
+                    "url": "/login"
+                },
+                {
+                    "id": "01302",
+                    "name": "注册",
+                    "url": "/register"
+                },
+                {
+                    "id": "01303",
+                    "name": "注册结果",
+                    "url": "/registerResult"
+                }
+            ],
+            "isOpen": false,
+            "isTitle": false
+        },
+        {
+            "id": "014",
+            "name": "更多",
+            "icon": "",
+            "children": [],
+            "isOpen": false,
+            "isTitle": true
+        },
+        {
+            "id": "015",
+            "name": "报表",
+            "icon": "anticon anticon-cloud-o",
+            "children": [{
+                "id": "01501",
+                "name": "全屏",
+                "url": ""
+            }],
+            "isOpen": false,
+            "isTitle": false
+        },
+        {
+            "id": "016",
+            "name": "扩展",
+            "icon": "anticon anticon-coffee",
+            "children": [{
+                    "id": "01601",
+                    "name": "帮助中心",
+                    "url": "/extras/helpCenter",
+                    "breadCrumb": ["Extras", "HelpCenter"]
+                },
+                {
+                    "id": "01602",
+                    "name": "设置",
+                    "url": "/extras/setting",
+                    "breadCrumb": ["Extras", "Setting"]
+                },
+                {
+                    "id": "01603",
+                    "name": "门店",
+                    "url": "/extras/store",
+                    "breadCrumb": ["Extras", "Store"]
+                }
+            ],
+            "isOpen": false,
+            "isTitle": false
         }
-      ],
-      "isOpen": false,
-      "isTitle": false
-    },
-    {
-      "id": "002",
-      "name": "快捷菜单",
-      "icon": "anticon anticon-rocket",
-      "children": [
-        {
-          "id": "00201",
-          "name": "字体排印",
-          "url": "/shortcut/printing"
-        },
-        {
-          "id": "00202",
-          "name": "基础表单",
-          "url": "/shortcut/basicForm"
-        },
-        {
-          "id": "00203",
-          "name": "查询表格",
-          "url": "/shortcut/tableList"
-        },
-        {
-          "id": "00204",
-          "name": "搜索列表（项目）",
-          "url": "/shortcut/search"
-        },
-        {
-          "id": "00205",
-          "name": "高级详情页",
-          "url": "/shortcut/advanced"
-        }
-      ],
-      "isOpen": false,
-      "isTitle": false
-    },
-    {
-      "id": "003",
-      "name": "小部件",
-      "icon": "anticon anticon-appstore-o",
-      "children": [],
-      "isOpen": false,
-      "isTitle": false,
-      "url": "/widgets"
-    },
-    {
-      "id": "004",
-      "name": "Alain",
-      "icon": "",
-      "children": [],
-      "isOpen": false,
-      "isTitle": true
-    },
-    {
-      "id": "005",
-      "name": "样式",
-      "icon": "anticon anticon-disconnect",
-      "children": [
-        {
-          "id": "00504",
-          "name": "字体排印",
-          "url": "/style/typography"
-        },
-        {
-          "id": "00502",
-          "name": "瀑布流",
-          "url": "/style/gridMasonry"
-        },
-        {
-          "id": "00503",
-          "name": "色彩",
-          "url": "/style/colors"
-        }
-      ],
-      "isOpen": false,
-      "isTitle": false
-    },
-    {
-      "id": "006",
-      "name": "@Delon",
-      "icon": "anticon anticon-bell",
-      "children": [
-        {
-          "id": "00601",
-          "name": "动态表单",
-          "url": "/delon/pageName"
-        },
-        {
-          "id": "00602",
-          "name": "简易表格",
-          "url": "/delon/fullScreenTable"
-        },
-        {
-          "id": "00603",
-          "name": "工具集",
-          "url": "/delon/util"
-        },
-        {
-          "id": "00604",
-          "name": "打印",
-          "url": "/delon/print"
-        },
-        {
-          "id": "00605",
-          "name": "二维码",
-          "url": "/delon/QR"
-        },
-        {
-          "id": "00606",
-          "name": "基于角色控制访问",
-          "url": "/delon/ACL"
-        },
-        {
-          "id": "00607",
-          "name": "路由守卫",
-          "url": "/delon/routeGuard"
-        },
-        {
-          "id": "00608",
-          "name": "字典缓存",
-          "url": "/delon/cache"
-        },
-        {
-          "id": "00609",
-          "name": "下载文件",
-          "url": "/delon/download"
-        },
-        {
-          "id": "00610",
-          "name": "Excel操作",
-          "url": "/delon/excel"
-        },
-        {
-          "id": "00611",
-          "name": "本地解压缩",
-          "url": "/delon/zip"
-        }
-      ],
-      "isOpen": false,
-      "isTitle": false
-    },
-    {
-      "id": "007",
-      "name": "Ant Design Pro",
-      "icon": "",
-      "children": [],
-      "isOpen": false,
-      "isTitle": true
-    },
-    {
-      "id": "008",
-      "name": "表单页",
-      "icon": "anticon anticon-database",
-      "children": [
-        {
-          "id": "00801",
-          "name": "基础表单",
-          "url": "/formPage/basisForm"
-        },
-        {
-          "id": "00802",
-          "name": "分步表单",
-          "url": "/formPage/stepForm"
-        },
-        {
-          "id": "00803",
-          "name": "高级表单",
-          "url": "/formPage/advancedForm"
-        }
-      ],
-      "isOpen": false,
-      "isTitle": false
-    },
-    {
-      "id": "009",
-      "name": "列表页",
-      "icon": "anticon anticon-bars",
-      "children": [
-        {
-          "id": "00901",
-          "name": "查询列表",
-          "url": "/listPage/queryList"
-        },
-        {
-          "id": "00902",
-          "name": "标准列表",
-          "url": "/listPage/basicList"
-        },
-        {
-          "id": "00903",
-          "name": "卡片列表",
-          "url": "/listPage/cardList"
-        },
-        {
-          "id": "00904",
-          "name": "搜索列表",
-          "url": "/listPage/searchList"
-        }
-      ],
-      "isOpen": false,
-      "isTitle": false
-    },
-    {
-      "id": "010",
-      "name": "详情页",
-      "icon": "anticon anticon-idcard",
-      "children": [
-        {
-          "id": "01001",
-          "name": "基础详情页",
-          "url": "/profilePage/basicPage"
-        },
-        {
-          "id": "01002",
-          "name": "高级详情页",
-          "url": "/profilePage/advancedPage"
-        }
-      ],
-      "isOpen": false,
-      "isTitle": false
-    },
-    {
-      "id": "011",
-      "name": "结果",
-      "icon": "anticon anticon-check-circle-o",
-      "children": [
-        {
-          "id": "01101",
-          "name": "成功",
-          "url": "/resultPage/success"
-        },
-        {
-          "id": "01102",
-          "name": "失败",
-          "url": "/resultPage/fail"
-        }
-      ],
-      "isOpen": false,
-      "isTitle": false
-    },
-    {
-      "id": "012",
-      "name": "异常",
-      "icon": "anticon anticon-exception",
-      "children": [
-        {
-          "id": "01201",
-          "name": "403",
-          "url": "/403"
-        },
-        {
-          "id": "01202",
-          "name": "404",
-          "url": "/404"
-        },
-        {
-          "id": "01203",
-          "name": "500",
-          "url": "/500"
-        }
-      ],
-      "isOpen": false,
-      "isTitle": false
-    },
-    {
-      "id": "013",
-      "name": "账户",
-      "icon": "anticon anticon-user",
-      "children": [
-        {
-          "id": "01301",
-          "name": "登录",
-          "url": "/login"
-        },
-        {
-          "id": "01302",
-          "name": "注册",
-          "url": "/register"
-        },
-        {
-          "id": "01303",
-          "name": "注册结果",
-          "url": "/registerResult"
-        }
-      ],
-      "isOpen": false,
-      "isTitle": false
-    },
-    {
-      "id": "014",
-      "name": "更多",
-      "icon": "",
-      "children": [],
-      "isOpen": false,
-      "isTitle": true
-    },
-    {
-      "id": "015",
-      "name": "报表",
-      "icon": "anticon anticon-cloud-o",
-      "children": [
-        {
-          "id": "01501",
-          "name": "全屏",
-          "url": ""
-        }
-      ],
-      "isOpen": false,
-      "isTitle": false
-    },
-    {
-      "id": "016",
-      "name": "扩展",
-      "icon": "anticon anticon-coffee",
-      "children": [
-        {
-          "id": "01601",
-          "name": "帮助中心",
-          "url": "/extras/helpCenter"
-        },
-        {
-          "id": "01602",
-          "name": "设置",
-          "url": "/extras/setting"
-        },
-        {
-          "id": "01603",
-          "name": "门店",
-          "url": "/extras/store"
-        }
-      ],
-      "isOpen": false,
-      "isTitle": false
-    }
-  ]
+    ]
 }
