@@ -1,172 +1,175 @@
 a {
-  display: inline-block;
+    display: inline-block;
 }
 
 :host /deep/ .ant-layout-header {
-  background: #1890ff;
+    background: #1890ff;
 }
 
 :host /deep/ .ant-menu-submenu-disabled {
-  cursor: default;
+    cursor: default;
 }
 
 :host /deep/ .ant-layout-sider::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 .header-logo,
 .header-nav,
 .header-search,
 .header-box {
-  display: inline-block;
+    display: inline-block;
 }
 
 .header-logo {
-  width: 120px;
-  transition: margin-left .2s cubic-bezier(.25, 0, .15, 1);
+    width: 120px;
+    transition: margin-left .2s cubic-bezier(.25, 0, .15, 1);
 }
 
 .header-search {
-  position: relative;
-  margin-left: 50px;
-  transition: width .2s cubic-bezier(.25, 0, .15, 1);
-  span {
-    position: absolute;
-    z-index: 10;
-    display: inline-block;
-    width: 40px;
-    height: 32px;
-    text-align: center;
-    line-height: 68px;
-    left: 0;
-    color: #ffffff;
-    i {
-      font-size: 20px;
-      transition: color .3s, transform .4s, -webkit-transform .4s;
-      font-weight: bold;
+    position: relative;
+    margin-left: 50px;
+    transition: width .2s cubic-bezier(.25, 0, .15, 1);
+    span {
+        position: absolute;
+        z-index: 10;
+        display: inline-block;
+        width: 40px;
+        height: 32px;
+        text-align: center;
+        line-height: 68px;
+        left: 0;
+        color: #ffffff;
+        i {
+            font-size: 20px;
+            transition: color .3s, transform .4s, -webkit-transform .4s;
+            font-weight: bold;
+        }
     }
-  }
-  input {
-    padding-left: 60px;
-    background: rgba(255, 255, 255, .2);
-    border: none;
-    &::-webkit-input-placeholder {
-      color: #fff;
+    input {
+        padding-left: 60px;
+        background: rgba(255, 255, 255, .2);
+        border: none;
+        &::-webkit-input-placeholder {
+            color: #fff;
+        }
+        &:focus {
+            background: #f3f3f3;
+            color: #736768;
+            &::-webkit-input-placeholder {
+                color: #736768;
+            }
+            &+span {
+                color: #736768;
+            }
+        }
     }
-    &:focus {
-      background: #f3f3f3;
-      color: #736768;
-      &::-webkit-input-placeholder {
-        color: #736768;
-      }
-      & + span {
-        color: #736768;
-      }
-    }
-  }
 }
 
 .header-nav {
-  ul {
-    margin: 0;
-    li {
-      display: inline-block;
-      vertical-align: middle;
-      div {
-        color: #fff;
-        border-radius: 4px;
-        text-align: center;
-        line-height: 100%;
-        padding: 12px 20px;
-        min-width: 50px;
-        transition: background-color .3s;
-        cursor: pointer;
-        outline: 0;
-        &:hover {
-          background: rgba(255, 255, 255, .2);
+    ul {
+        margin: 0;
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            div {
+                color: #fff;
+                border-radius: 4px;
+                text-align: center;
+                line-height: 100%;
+                padding: 12px 20px;
+                min-width: 50px;
+                transition: background-color .3s;
+                cursor: pointer;
+                outline: 0;
+                &:hover {
+                    background: rgba(255, 255, 255, .2);
+                }
+                i {
+                    font-size: 22px;
+                    line-height: 18px;
+                }
+            }
         }
-        i {
-          font-size: 22px;
-          line-height: 18px;
-        }
-      }
     }
-  }
 }
 
 .header-box {
-  margin-left: 50px;
-  &-loading {
-    margin: 0 !important;
-  }
-  ul {
-    margin: 0;
-    li {
-      display: inline-block;
-      vertical-align: middle;
-      div {
-        border-radius: 4px;
-        text-align: center;
-        line-height: 100%;
-        padding: 8px 10px;
-        min-width: 50px;
-        transition: background-color .3s;
-        cursor: pointer;
-        outline: 0;
-        &:hover {
-          background: rgba(255, 255, 255, .2);
-        }
-        i {
-          font-size: 22px;
-          line-height: 18px;
-          color: #fff;
-        }
-      }
-      &:last-child {
-        //height: 35px;
-        div {
-          padding: 0 10px;
-          height: 35px;
-          span {
-            display: inline-block;
-            height: 100%;
-            vertical-align: top;
-            line-height: 35px;
-            margin-left: 6px;
-            color: #fff;
-          }
-        }
-      }
+    margin-left: 50px;
+    &-loading {
+        margin: 0 !important;
     }
-  }
+    ul {
+        margin: 0;
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            div {
+                border-radius: 4px;
+                text-align: center;
+                line-height: 100%;
+                padding: 8px 10px;
+                min-width: 50px;
+                transition: background-color .3s;
+                cursor: pointer;
+                outline: 0;
+                &:hover {
+                    background: rgba(255, 255, 255, .2);
+                }
+                i {
+                    font-size: 22px;
+                    line-height: 18px;
+                    color: #fff;
+                }
+            }
+            &:last-child {
+                //height: 35px;
+                div {
+                    padding: 0 10px;
+                    height: 35px;
+                    span {
+                        display: inline-block;
+                        height: 100%;
+                        vertical-align: top;
+                        line-height: 35px;
+                        margin-left: 6px;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .personal-message {
-  width: 100%;
-  padding: 24px;
-  cursor: pointer;
-  & > div {
-    display: inline-block;
-    vertical-align: middle;
-  }
-  &-box {
-    display: inline-block;
-    vertical-align: middle;
-    &:last-child {
-      margin-left: 12px;
+    width: 100%;
+    padding: 24px;
+    cursor: pointer;
+    &>div {
+        display: inline-block;
+        vertical-align: middle;
     }
-  }
-  &-name {
-    font-weight: bold;
-    font-size: 15px
-  }
+    &-box {
+        display: inline-block;
+        vertical-align: middle;
+        &:last-child {
+            margin-left: 12px;
+        }
+    }
+    &-name {
+        font-weight: bold;
+        font-size: 15px
+    }
 }
 
-.content{
-  padding: 20px 30px;
+.content {
+    padding: 0px 10px;
+    &-breadcrumb {
+        margin: 0 20px 10px;
+    }
 }
 
-:host /deep/ .ant-tabs-tab{
-  margin: 0;
-  padding: 0;
+:host /deep/ .ant-tabs-tab {
+    margin: 0;
+    padding: 0;
 }

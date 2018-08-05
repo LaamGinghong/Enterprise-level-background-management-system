@@ -1,9 +1,9 @@
-import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, Router} from '@angular/router';
-import {ContentService} from './content.service';
-import {DataStoreService} from '../../store/dataStore.service';
-import {NzMessageService, NzTabComponent} from 'ng-zorro-antd';
-import {flyIn, flyOut} from '../../../assets/sim-animations';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ContentService } from './content.service';
+import { DataStoreService } from '../../store/dataStore.service';
+import { NzMessageService, NzTabComponent } from 'ng-zorro-antd';
+import { flyIn, flyOut } from '../../../assets/sim-animations';
 
 @Component({
   selector: 'app-content',
@@ -20,6 +20,7 @@ export class ContentComponent implements OnInit {
   email = 'laamginghong1996@gmail.com';
   tabArray = [];
   selectedIndex = 0;
+  breadCrumb = ['Home', 'Dashboard'];
 
   constructor(
     private route: ActivatedRoute,
@@ -34,6 +35,11 @@ export class ContentComponent implements OnInit {
     this.initLoadStatus();
     this.initMenuData();
     this.initTabArray();
+    this.contentService.selectItem$.subscribe((data: { id: string, url: string, breadCrumb: Array<string>, name: string }) => {
+      if (data) {
+        this.breadCrumb = data.breadCrumb;
+      }
+    });
   }
 
   initLoadStatus() { // 初始化登陆状态
@@ -70,7 +76,7 @@ export class ContentComponent implements OnInit {
 
   openMessage(word: string) { // 点击个人头像
     this.message.remove();
-    this.message.success(`您点击了${word}！`, {nzDuration: 2000});
+    this.message.success(`您点击了${word}！`, { nzDuration: 2000 });
     if (word === '登出') {
       const date = new Date();
       date.setTime(0);
@@ -79,7 +85,7 @@ export class ContentComponent implements OnInit {
     }
   }
 
-  openItem(item: { id: string, name: string, icon?: string, children?: Array<object>, isOpen?: boolean, url?: string, isTitle?: boolean }, content) { // 打开菜单item
+  openItem(item: { id: string, name: string, icon?: string, children?: Array<object>, isOpen?: boolean, url?: string, isTitle?: boolean, breadCrumb: Array<string> }, content) { // 打开菜单item
     if (!item.isTitle) {
       if (item.name === '全屏') {
         const fullScreen = content.requestFullscreen || content.webkitRequestFullScreen || content.mozRequestFullScreen || content.msRequestFullScreen;
@@ -98,10 +104,11 @@ export class ContentComponent implements OnInit {
         this.tabArray.push(item);
         this.selectedIndex = this.tabArray.length - 1;
       } else {
-        this.tabArray.forEach((value, index) => {
-          this.selectedIndex = value.id === item.id ? index : this.selectedIndex;
+        this.tabArray.forEach((value, i) => {
+          this.selectedIndex = value.id === item.id ? i : this.selectedIndex;
         });
       }
+      this.contentService.broadcastSelectItem(item);
       this.router.navigate([`/pages/content${item.url}`]);
     }
   }
