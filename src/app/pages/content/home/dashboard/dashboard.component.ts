@@ -86,6 +86,31 @@ export class DashboardComponent implements OnInit {
         end: 70
       }]
   };
+  messageArray = [{
+    name: '苏先生',
+    message: '请告诉我，我应该说点什么好？',
+    url: '../../../../../assets/1.png'
+  }, {
+    name: 'はなさき',
+    message: 'ハルカソラトキヘダツヒカリ',
+    url: '../../../../../assets/2.png'
+  }, {
+    name: 'cipchk',
+    message: 'this world was never meant for one as beautiful as you.',
+    url: '../../../../../assets/3.png'
+  }, {
+    name: 'Kent',
+    message: 'my heart is beating with hers',
+    url: '../../../../../assets/4.png'
+  }, {
+    name: 'Are you',
+    message: 'They always said that I love beautiful girl than my friends',
+    url: '../../../../../assets/5.png'
+  }, {
+    name: 'Forever',
+    message: 'Walking through green fields ，sunshine in my eyes.',
+    url: '../../../../../assets/6.png'
+  }];
 
   constructor() {
   }
@@ -121,5 +146,14 @@ export class DashboardComponent implements OnInit {
       this.lineOrdinate1.push(Math.floor(Math.random() * 10));
       this.lineOrdinate2.push(Math.floor(Math.random() * 10));
     }
+  }
+
+  operateItem(mark: number, index: number, item: object) {
+    if (mark) {
+      this.messageArray.splice(index, 1);
+    } else {
+      item['isActive'] = !item['isActive'];
+    }
+    console.log(this.messageArray);
   }
 }
