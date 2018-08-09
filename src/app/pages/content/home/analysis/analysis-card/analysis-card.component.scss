@@ -1,0 +1,60 @@
+.analysis-card {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #F5F7FA;
+  &-item {
+    width: 24%;
+    background-color: #fff;
+    &-top {
+      padding: 20px 20px 0 20px;
+      position: relative;
+      &-title {
+        color: rgba(0, 0, 0, 0.45);
+        margin: 0;
+      }
+      &-number {
+        color: rgba(0, 0, 0, 0.85);
+        font-size: 30px;
+        margin: 0;
+      }
+      &-icon {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        cursor: pointer;
+      }
+    }
+    &-middle {
+      margin: 0 20px 0 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+      & > div {
+        margin-top: 5px;
+        position: relative;
+        span {
+          margin-left: 16px;
+          &:first-child {
+            margin: 0;
+          }
+          &:last-child {
+            margin: 8px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    &-bottom {
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      span {
+        color: rgba(0, 0, 0, 0.65);
+        &:last-child {
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+}

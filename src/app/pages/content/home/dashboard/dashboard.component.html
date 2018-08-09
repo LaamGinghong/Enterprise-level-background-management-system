@@ -3,60 +3,8 @@
     <h2>Dashboard</h2>
     <p>Welcome!</p>
   </div>
-  <div class="dashboard-card">
-    <div class="dashboard-card-item" style="background: #1890ff">
-      <div class="dashboard-card-item-left">
-        <div style="font-size: 26px">123,456</div>
-        <div>Website Traffics</div>
-      </div>
-      <div class="dashboard-card-item-right">
-        <div class="dashboard-card-item-right-item" *ngFor="let item of cardArray" [style.height]="item.number*3+'px'"
-             nz-tooltip [nzTitle]="item.date+'      '+item.number">
-        </div>
-      </div>
-    </div>
-    <div class="dashboard-card-item" style="background: #52c41a ">
-      <div class="dashboard-card-item-left">
-        <div style="font-size: 26px">234,567K</div>
-        <div>Website Impressions</div>
-      </div>
-      <div class="dashboard-card-item-right">
-        <div class="dashboard-card-item-right-item" *ngFor="let item of cardArray" [style.height]="item.number*3+'px'"
-             nz-tooltip [nzTitle]="item.date+'      '+item.number">
-        </div>
-      </div>
-    </div>
-    <div class="dashboard-card-item" style="background: #fa8c16">
-      <div class="dashboard-card-item-left">
-        <div style="font-size: 26px">$458,778</div>
-        <div>Total Sales</div>
-      </div>
-      <div class="dashboard-card-item-right">
-        <div class="dashboard-card-item-right-item" *ngFor="let item of cardArray" [style.height]="item.number*3+'px'"
-             nz-tooltip [nzTitle]="item.date+'      '+item.number">
-        </div>
-      </div>
-    </div>
-    <div class="dashboard-card-item" style="background: #eb2f96">
-      <div class="dashboard-card-item-left">
-        <div style="font-size: 26px">456</div>
-        <div>Support Tickets</div>
-      </div>
-      <div class="dashboard-card-item-right">
-        <div class="dashboard-card-item-right-item" *ngFor="let item of cardArray" [style.height]="item.number*3+'px'"
-             nz-tooltip [nzTitle]="item.date+'      '+item.number">
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="dashboard-chart">
-    <nz-card style="width: 49.4%" [nzTitle]="'最新文章柱状图'">
-      <div class="dashboard-chart-bar" echarts [options]="barChart"></div>
-    </nz-card>
-    <nz-card style="width: 49.4%" [nzTitle]="'最新文章折线图'">
-      <div class="dashboard-chart-line" echarts [options]="lineChart"></div>
-    </nz-card>
-  </div>
+  <app-dashboard-card></app-dashboard-card>
+  <app-dashboard-chart></app-dashboard-chart>
   <div class="dashboard-bottom">
     <div class="dashboard-bottom-summary">
       <nz-card>
