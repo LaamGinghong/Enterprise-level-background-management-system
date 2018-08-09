@@ -158,7 +158,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
 
   initTodo() {
     setTimeout(() => {
-      const top = this.chatBox.nativeElement.offsetTop + this.chatBox.nativeElement.childNodes[0].offsetHeight + 10;
+      const top = this.chatBox.nativeElement.offsetTop + this.chatBox.nativeElement.childNodes[0].offsetHeight;
       const left = this.chatBox.nativeElement.offsetLeft;
       this.renderer2.setStyle(this.todo.nativeElement, 'top', `${top}px`);
       this.renderer2.setStyle(this.todo.nativeElement, 'left', `${left}px`);
