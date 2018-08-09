@@ -134,7 +134,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
       const date = new Date();
       date.setTime(date.getTime() + i * 24 * 60 * 60 * 1000);
       const option = {
-        number: Math.floor(Math.random() * 10),
+        number: Math.round(Math.random() * 10),
         date: date.toLocaleDateString()
       };
       this.cardArray.push(option);
@@ -144,15 +144,15 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   initBar() {
     for (let i = 1; i < 13; i++) {
       this.barAbscissa.push(`${i}月`);
-      this.barOrdinate.push(Math.floor(Math.random() * 1000));
+      this.barOrdinate.push(Math.round(Math.random() * 1000));
     }
   }
 
   initLine() {
     for (let i = 0; i < 24; i++) {
       this.lineAbscissa.push(i < 10 ? `0${i}:00` : `${i}:00`);
-      this.lineOrdinate1.push(Math.floor(Math.random() * 10));
-      this.lineOrdinate2.push(Math.floor(Math.random() * 10));
+      this.lineOrdinate1.push(Math.round(Math.random() * 10));
+      this.lineOrdinate2.push(Math.round(Math.random() * 10));
     }
   }
 
