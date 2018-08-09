@@ -1,11 +1,11 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit, AfterViewInit {
   cardArray = [];
   barAbscissa = []; //柱状图横坐标
   barOrdinate = []; //柱状图纵坐标
@@ -111,14 +111,22 @@ export class DashboardComponent implements OnInit {
     message: 'Walking through green fields ，sunshine in my eyes.',
     url: '../../../../../assets/6.png'
   }];
+  @ViewChild('chatBox') chatBox: ElementRef;
+  @ViewChild('todo') todo: ElementRef;
 
-  constructor() {
+  constructor(
+    private renderer2: Renderer2
+  ) {
   }
 
   ngOnInit() {
     this.initCardArray();
     this.initBar();
     this.initLine();
+  }
+
+  ngAfterViewInit() {
+    this.initTodo();
   }
 
   initCardArray() {
@@ -148,12 +156,21 @@ export class DashboardComponent implements OnInit {
     }
   }
 
+  initTodo() {
+    setTimeout(() => {
+      const top = this.chatBox.nativeElement.offsetTop + this.chatBox.nativeElement.childNodes[0].offsetHeight + 10;
+      const left = this.chatBox.nativeElement.offsetLeft;
+      this.renderer2.setStyle(this.todo.nativeElement, 'top', `${top}px`);
+      this.renderer2.setStyle(this.todo.nativeElement, 'left', `${left}px`);
+    });
+  }
+
   operateItem(mark: number, index: number, item: object) {
     if (mark) {
       this.messageArray.splice(index, 1);
     } else {
       item['isActive'] = !item['isActive'];
     }
-    console.log(this.messageArray);
   }
+
 }

@@ -79,7 +79,7 @@
         </div>
       </nz-card>
     </div>
-    <div class="dashboard-bottom-message">
+    <div class="dashboard-bottom-message" #chatBox>
       <nz-card [nzTitle]="'聊天室'">
         <div class="dashboard-bottom-message-item" *ngFor="let item of messageArray">
           <div class="dashboard-bottom-message-item-left">
@@ -93,7 +93,7 @@
       </nz-card>
     </div>
   </div>
-  <div class="dashboard-todo">
+  <div class="dashboard-todo" #todo>
     <nz-card [nzTitle]="'未读信息'">
       <div class="dashboard-todo-item" *ngFor="let item of messageArray;let i=index">
         <div class="dashboard-todo-item-left">
