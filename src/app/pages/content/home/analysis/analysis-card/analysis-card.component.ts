@@ -30,7 +30,8 @@ export class AnalysisCardComponent implements OnInit {
     },
     dataZoom: {
       type: 'inside'
-    }
+    },
+    color:['#975FE4']
   };
 
   barChart = {

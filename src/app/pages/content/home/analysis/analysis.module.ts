@@ -4,7 +4,9 @@ import {AnalysisComponent} from './analysis.component';
 import {AnalysisRoutingModule} from './analysis-routing.module';
 import {NgZorroAntdModule} from 'ng-zorro-antd';
 import {NgxEchartsModule} from 'ngx-echarts';
-import { AnalysisCardComponent } from './analysis-card/analysis-card.component';
+import {AnalysisCardComponent} from './analysis-card/analysis-card.component';
+import {AnalysisBarComponent} from './analysis-bar/analysis-bar.component';
+import { AnalysisMiddleComponent } from './analysis-middle/analysis-middle.component';
 
 @NgModule({
   imports: [
@@ -13,7 +15,7 @@ import { AnalysisCardComponent } from './analysis-card/analysis-card.component';
     NgZorroAntdModule,
     NgxEchartsModule
   ],
-  declarations: [AnalysisComponent, AnalysisCardComponent]
+  declarations: [AnalysisComponent, AnalysisCardComponent, AnalysisBarComponent, AnalysisMiddleComponent]
 })
 export class AnalysisModule {
 }
