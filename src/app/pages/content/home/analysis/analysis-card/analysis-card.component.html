@@ -1,0 +1,83 @@
+<div class="analysis-card">
+  <div class="analysis-card-item">
+    <div class="analysis-card-item-top">
+      <p class="analysis-card-item-top-title">总销售额</p>
+      <p class="analysis-card-item-top-number">¥ 126,560</p>
+      <span class="analysis-card-item-top-icon" nz-tooltip nzTitle="指标说明">
+          <i class="anticon anticon-info-circle-o"></i>
+        </span>
+    </div>
+    <div class="analysis-card-item-middle">
+      <div>
+        <span>周同比</span>
+        <span>12%</span>
+        <span style="color: #f5222d"><i class="anticon anticon-caret-up"></i></span>
+      </div>
+      <div>
+        <span>日环比</span>
+        <span>11%</span>
+        <span style="color: #52c41a"><i class="anticon anticon-caret-down"></i></span>
+      </div>
+    </div>
+    <div class="analysis-card-item-bottom">
+      <span>日均销售额</span>
+      <span>￥12,423</span>
+    </div>
+  </div>
+  <div class="analysis-card-item">
+    <div class="analysis-card-item-top">
+      <p class="analysis-card-item-top-title">访问量</p>
+      <p class="analysis-card-item-top-number">8,848</p>
+      <span class="analysis-card-item-top-icon" nz-tooltip nzTitle="指标说明">
+          <i class="anticon anticon-info-circle-o"></i>
+        </span>
+    </div>
+    <div class="analysis-card-item-middle" style="height: 72px;padding: 0" echarts [options]="lineChart">
+
+    </div>
+    <div class="analysis-card-item-bottom">
+      <span>日访问量</span>
+      <span>1,234</span>
+    </div>
+  </div>
+  <div class="analysis-card-item">
+    <div class="analysis-card-item-top">
+      <p class="analysis-card-item-top-title">支付笔数</p>
+      <p class="analysis-card-item-top-number">6,560</p>
+      <span class="analysis-card-item-top-icon" nz-tooltip nzTitle="指标说明">
+          <i class="anticon anticon-info-circle-o"></i>
+        </span>
+    </div>
+    <div class="analysis-card-item-middle" style="height: 72px;padding: 0" echarts [options]="barChart">
+
+    </div>
+    <div class="analysis-card-item-bottom">
+      <span>转化率 </span>
+      <span>60%</span>
+    </div>
+  </div>
+  <div class="analysis-card-item">
+    <div class="analysis-card-item-top">
+      <p class="analysis-card-item-top-title">运营活动效果</p>
+      <p class="analysis-card-item-top-number">78%</p>
+      <span class="analysis-card-item-top-icon" nz-tooltip nzTitle="指标说明">
+          <i class="anticon anticon-info-circle-o"></i>
+        </span>
+    </div>
+    <div class="analysis-card-item-middle" style="height: 72px;padding: 0">
+      <nz-progress [nzSuccessPercent]="78" [nzPercent]="80" [nzShowInfo]="false"></nz-progress>
+    </div>
+    <div class="analysis-card-item-bottom" style="position: relative">
+        <span>
+          <span>周同比</span>
+          <span style="margin-left: 8px">12%</span>
+          <span style="color: #f5222d;margin: 4px;font-size: 12px"><i class="anticon anticon-caret-up"></i></span>
+        </span>
+      <span style="position: absolute;right: 16px">
+          <span>日环比</span>
+          <span style="margin-left: 8px">11%</span>
+          <span style="color: #52c41a;margin: 4px;font-size: 12px"><i class="anticon anticon-caret-down"></i></span>
+        </span>
+    </div>
+  </div>
+</div>

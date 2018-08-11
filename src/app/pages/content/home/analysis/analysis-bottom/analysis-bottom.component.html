@@ -1,0 +1,19 @@
+<div class="analysis-bottom">
+  <nz-tabset>
+    <nz-tab *ngFor="let item of tabArray" [nzTitle]="title">
+      <ng-template #title>
+        <div style="padding:15px 30px ">
+          <div>{{item.name}}</div>
+          <div style="display: flex;justify-content: space-between">
+            <div style="width: 40%">
+              <div>转化率</div>
+              <div><strong>{{item.percent}}</strong></div>
+            </div>
+            <div echarts [options]="item.pie" style="width:40%;height: 40px"></div>
+          </div>
+        </div>
+      </ng-template>
+      <div echarts [options]="lineChart"></div>
+    </nz-tab>
+  </nz-tabset>
+</div>

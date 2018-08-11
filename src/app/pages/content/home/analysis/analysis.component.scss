@@ -1,0 +1,19 @@
+.analysis {
+  height: calc(100vh - 170px);
+  background: #fff;
+  padding: 10px 20px;
+  overflow-y: auto;
+  position: relative;
+  &-header {
+    border-bottom: 1px solid #ccc;
+    p {
+      margin-bottom: 5px;
+      padding-left: 18px;
+    }
+    h2 {
+      margin: 0;
+      padding-left: 18px;
+    }
+  }
+
+}

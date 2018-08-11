@@ -1,50 +1,158 @@
 .dashboard {
-    height: calc(100vh - 170px);
-    background: #fff;
-    padding: 10px 20px;
-    &-header {
-        margin-bottom: 10px;
-        border-bottom: 1px solid #ccc;
+  height: calc(100vh - 170px);
+  background: #fff;
+  padding: 10px 20px;
+  overflow-y: auto;
+  position: relative;
+  &-header {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    p {
+      margin-bottom: 5px;
+    }
+    h2 {
+      margin: 0;
+    }
+  }
+
+  &-bottom {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    &-summary {
+      margin-top: 20px;
+      width: 49.4%;
+      &-pic {
+        img {
+          width: 100%;
+        }
+      }
+      &-word {
+        padding: 20px;
+        h3 {
+          color: rgba(0, 0, 0, 0.85);;
+        }
+        a {
+          font-size: 14px;
+          &:link {
+            color: #bfbfbf;
+          }
+          &:visited {
+            color: #bfbfbf;
+          }
+          &:hover {
+            color: #bfbfbf;
+          }
+          &:active {
+            color: #bfbfbf;
+          }
+        }
         p {
-            margin-bottom: 5px;
+          color: #bfbfbf;
         }
-        h2 {
-            margin: 0;
+        ul {
+          padding: 16px 0 0 18px;
+          margin-bottom: 18px;
+          li {
+            font-size: 18px;
+            color: rgba(0, 0, 0, 0.65);
+            text-indent: 2em;
+          }
         }
+      }
     }
-    &-card {
+    &-message {
+      margin-top: 20px;
+      width: 49.4%;
+      &-item {
+        width: 100%;
         display: flex;
-        justify-content: space-around;
-        margin: 20px 0;
-        &-item {
-            width: 400px;
-            height: 100px;
-            border-radius: 4px;
-            display: flex;
-            justify-content: center;
-            &-left {
-                color: #fff;
-                width: 50%;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                flex-direction: column;
-                div {
-                    padding-left: 20px;
-                }
-            }
-            &-right {
-                width: 50%;
-                height: 100%;
-                line-height: 70px;
-                &-item {
-                    width: 4px;
-                    margin: 7px;
-                    background: rgba(255, 255, 255, .8);
-                    display: inline-block;
-                    vertical-align: bottom;
-                }
-            }
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color .8s;
+        &:hover {
+          background: #e6d9d8;
         }
+        &-left {
+          width: 20%;
+          height: 58px;
+          line-height: 58px;
+          text-align: center;
+          img {
+            height: 80%;
+          }
+        }
+        &-right {
+          width: 80%;
+          height: 58px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          h4 {
+            color: rgba(0, 0, 0, 0.65);
+            font-weight: 700 !important;
+            margin: 0 !important;
+          }
+          p {
+            margin: 0 !important;
+          }
+        }
+      }
     }
+  }
+  &-todo {
+    width: 48.226%;
+    margin-top: 20px;
+    position: absolute;
+    &-item {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color .8s;
+      &:hover {
+        background: #e6d9d8;
+      }
+      &-left {
+        width: 20%;
+        height: 58px;
+        line-height: 58px;
+        text-align: center;
+        img {
+          height: 80%;
+        }
+      }
+      &-middle {
+        width: 70%;
+        height: 58px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        h4 {
+          color: rgba(0, 0, 0, 0.65);
+          font-weight: 700 !important;
+          margin: 0 !important;
+        }
+        p {
+          margin: 0 !important;
+        }
+      }
+      &-right {
+        width: 10%;
+        height: 58px;
+        line-height: 58px;
+        text-align: center;
+        span {
+          font-weight: bolder;
+          font-size: 22px;
+          transform: rotate(90deg);
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+:host /deep/ .ant-card-body {
+  padding: 0;
 }

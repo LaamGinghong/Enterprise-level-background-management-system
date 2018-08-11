@@ -1,48 +1,70 @@
 <div class="dashboard">
-    <div class="dashboard-header">
-        <h2>Dashboard</h2>
-        <p>Welcome!</p>
+  <div class="dashboard-header">
+    <h2>Dashboard</h2>
+    <p>Welcome!</p>
+  </div>
+  <app-dashboard-card></app-dashboard-card>
+  <app-dashboard-chart></app-dashboard-chart>
+  <div class="dashboard-bottom">
+    <div class="dashboard-bottom-summary">
+      <nz-card>
+        <div class="dashboard-bottom-summary-pic">
+          <img src="../../../../../assets/GhjqstwSgxBXrZS.png" alt="Ant-Design">
+        </div>
+        <div class="dashboard-bottom-summary-word">
+          <h3>
+            ANT DESIGN
+          </h3>
+          <p>A UI Design Language</p>
+          <ul>
+            <li>Designed by experienced team, and showcase dozens of inspiring projects.</li>
+            <li>Provide solutions for usual problems that may be encountered while developing enterprise-like complex
+              UIs.
+            </li>
+            <li>Dozens of flexible and practical reusable components that increase your productivity.</li>
+          </ul>
+          <a href="https://ng.ant.design/docs/introduce/zh">View Site...</a>
+        </div>
+      </nz-card>
     </div>
-    <div class="dashboard-card">
-        <div class="dashboard-card-item" style="background: #1890ff">
-            <div class="dashboard-card-item-left">
-                <div style="font-size: 26px">123,456</div>
-                <div>Website Traffics</div>
-            </div>
-            <div class="dashboard-card-item-right">
-                <div class="dashboard-card-item-right-item" *ngFor="let item of cardArray" [style.height]="item.number*3+'px'" nz-tooltip [nzTitle]="item.date+'      '+item.number">
-                </div>
-            </div>
+    <div class="dashboard-bottom-message" #chatBox>
+      <nz-card [nzTitle]="'聊天室'">
+        <div class="dashboard-bottom-message-item" *ngFor="let item of messageArray">
+          <div class="dashboard-bottom-message-item-left">
+            <img [src]="item.url">
+          </div>
+          <div class="dashboard-bottom-message-item-right">
+            <h4>{{item.name}}</h4>
+            <p>{{item.message}}</p>
+          </div>
         </div>
-        <div class="dashboard-card-item" style="background: #52c41a ">
-            <div class="dashboard-card-item-left">
-                <div style="font-size: 26px">234,567K</div>
-                <div>Website Impressions</div>
-            </div>
-            <div class="dashboard-card-item-right">
-                <div class="dashboard-card-item-right-item" *ngFor="let item of cardArray" [style.height]="item.number*3+'px'" nz-tooltip [nzTitle]="item.date+'      '+item.number">
-                </div>
-            </div>
-        </div>
-        <div class="dashboard-card-item" style="background: #fa8c16">
-            <div class="dashboard-card-item-left">
-                <div style="font-size: 26px">$458,778</div>
-                <div>Total Sales</div>
-            </div>
-            <div class="dashboard-card-item-right">
-                <div class="dashboard-card-item-right-item" *ngFor="let item of cardArray" [style.height]="item.number*3+'px'" nz-tooltip [nzTitle]="item.date+'      '+item.number">
-                </div>
-            </div>
-        </div>
-        <div class="dashboard-card-item" style="background: #eb2f96">
-            <div class="dashboard-card-item-left">
-                <div style="font-size: 26px">456</div>
-                <div>Support Tickets</div>
-            </div>
-            <div class="dashboard-card-item-right">
-                <div class="dashboard-card-item-right-item" *ngFor="let item of cardArray" [style.height]="item.number*3+'px'" nz-tooltip [nzTitle]="item.date+'      '+item.number">
-                </div>
-            </div>
-        </div>
+      </nz-card>
     </div>
+  </div>
+  <div class="dashboard-todo" #todo>
+    <nz-card [nzTitle]="'未读信息'">
+      <div class="dashboard-todo-item" *ngFor="let item of messageArray;let i=index">
+        <div class="dashboard-todo-item-left">
+          <img [src]="item.url">
+        </div>
+        <div class="dashboard-todo-item-middle">
+          <h4 [style.textDecoration]="item['isActive']?'line-through':'none'">{{item.name}}</h4>
+          <p [style.textDecoration]="item['isActive']?'line-through':'none'">{{item.message}}</p>
+        </div>
+        <div class="dashboard-todo-item-right">
+          <nz-dropdown [nzPlacement]="'topRight'" [nzClickHide]="false">
+            <span nz-dropdown><i class="anticon anticon-ellipsis"></i></span>
+            <ul nz-menu>
+              <li nz-menu-item (click)="operateItem(0,i,item)">
+                {{item['isActive']?'Active':'Complete'}}
+              </li>
+              <li nz-menu-item (click)="operateItem(1,i,item)">
+                Delete
+              </li>
+            </ul>
+          </nz-dropdown>
+        </div>
+      </div>
+    </nz-card>
+  </div>
 </div>

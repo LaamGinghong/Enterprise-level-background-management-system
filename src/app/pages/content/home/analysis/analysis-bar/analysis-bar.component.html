@@ -1,0 +1,51 @@
+<div class="analysis-bar">
+  <nz-tabset [nzTabBarExtraContent]="extraTemplate">
+    <nz-tab *ngFor="let tab of tabs" [nzTitle]="nzTitle">
+      <ng-template #nzTitle>
+        <div style="padding: 14px 16px">
+          {{tab}}
+        </div>
+      </ng-template>
+      <div class="analysis-bar-container">
+        <div class="analysis-bar-container-chart" echarts [options]="option"></div>
+        <div class="analysis-bar-container-table">
+          <nz-table
+            #table
+            [nzData]="tableData"
+            [nzTitle]="'门店销售额'"
+            [nzFrontPagination]="false"
+            [nzShowPagination]="false"
+          >
+            <thead>
+            <tr>
+              <th>排名</th>
+              <th>门店</th>
+              <th>销售额</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let item of table.data;let i=index">
+              <td>
+                <span
+                  style="display: inline-block;border-radius: 50%;width: 21px;text-align: center"
+                  [style.background]="i<=3?'#314659':'#f5f5f5'"
+                  [style.color]="i<=3?'#fff':'rgba(0, 0, 0, 0.65)'"
+                >
+                  {{i+1}}
+                </span>
+              </td>
+              <td>第{{item.id}}号门店</td>
+              <td>{{item.numberString}}</td>
+            </tr>
+            </tbody>
+          </nz-table>
+        </div>
+      </div>
+    </nz-tab>
+  </nz-tabset>
+  <ng-template #extraTemplate>
+    <nz-range-picker
+      [nzRanges]="ranges"
+    ></nz-range-picker>
+  </ng-template>
+</div>

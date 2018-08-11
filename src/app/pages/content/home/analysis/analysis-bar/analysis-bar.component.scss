@@ -1,0 +1,16 @@
+:host /deep/ .ant-tabs-extra-content {
+  line-height: 49px;
+}
+
+.analysis-bar {
+  &-container {
+    display: flex;
+    justify-content: center;
+    &-chart {
+      width: 65%;
+    }
+    &-table{
+      width: 35%;
+    }
+  }
+}

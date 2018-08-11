@@ -1,0 +1,23 @@
+.analysis-middle {
+  display: flex;
+  justify-content: space-between;
+  border-top: 10px solid #F5F7FA;
+  border-left: 10px solid #F5F7FA;
+  border-right: 10px solid #F5F7FA;
+  &-search {
+    width: 49.4%;
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      &-left {
+        width: 50%;
+      }
+      &-right {
+        width: 50%;
+      }
+    }
+  }
+  &-pie {
+    width: 49.4%;
+  }
+}

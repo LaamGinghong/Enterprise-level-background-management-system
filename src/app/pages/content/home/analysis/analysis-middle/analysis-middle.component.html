@@ -1,0 +1,86 @@
+<div class="analysis-middle">
+  <div class="analysis-middle-search">
+    <nz-card nzTitle="线上热门搜索" [nzExtra]="extraTemplate">
+      <div class="analysis-middle-search-top">
+        <div class="analysis-middle-search-top-left">
+          <div>
+            <span style="color: rgba(0,0,0,.65)">搜索用户数</span>
+            <span nz-tooltip nzTitle="指标文案" style="margin-left: 10px;color: rgba(0,0,0,.65)">
+            <i class="anticon anticon-info-circle-o"></i>
+          </span>
+          </div>
+          <div>
+            <span style="color: rgba(0,0,0,.65);font-size: 24px">12,321</span>
+            <span style="font-size: 16px;margin-left: 30px">17.1</span>
+            <span style="color: #f5222d;font-size: 12px"><i class="anticon anticon-caret-up"></i></span>
+          </div>
+          <div echarts [options]="line1" style="height: 150px"></div>
+        </div>
+        <div class="analysis-middle-search-top-right">
+          <div>
+            <span style="color: rgba(0,0,0,.65)">人均搜索次数</span>
+          </div>
+          <div>
+            <span style="color: rgba(0,0,0,.65);font-size: 24px">2.7</span>
+            <span style="font-size: 16px;margin-left: 30px">26.2</span>
+            <span style="color: #52c41a;font-size: 12px"><i class="anticon anticon-caret-down"></i></span>
+          </div>
+          <div echarts [options]="line2" style="height: 150px"></div>
+        </div>
+      </div>
+      <div class="analysis-middle-search-table">
+        <nz-table
+          #table
+          [nzData]="tableData"
+          [nzPageSize]="5"
+          [nzShowTotal]="showTotal"
+        >
+          <thead (nzSortChange)="sortTable($event)">
+          <tr>
+            <th>排名</th>
+            <th>搜索关键词</th>
+            <th [nzShowSort]="true" [nzSortKey]="'number'">用户数</th>
+            <th [nzShowSort]="true" [nzSortKey]="'percent'">周涨幅</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let item of table.data;let i=index">
+            <td>{{i+1}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.number}}</td>
+            <td>
+              {{item.percent}}%
+              <span style="margin-left: 5px" [style.color]="item.isUp?'#f5222d':'#52c41a'">
+                <i [className]="item.icon"></i>
+              </span>
+            </td>
+          </tr>
+          </tbody>
+          <ng-template #showTotal>
+            共{{tableData.length}}条
+          </ng-template>
+        </nz-table>
+      </div>
+    </nz-card>
+    <ng-template #extraTemplate>
+      <span style="display: inline-block;font-size: 18px;font-weight: bold">
+        <i class="anticon anticon-ellipsis"></i>
+      </span>
+    </ng-template>
+  </div>
+  <div class="analysis-middle-pie">
+    <nz-card [nzTitle]="title">
+      <div class="analysis-middle-pie-chart" echarts [options]="pieOption" [merge]="updatePieOption"></div>
+    </nz-card>
+    <ng-template #title>
+      <div style="margin-bottom: 10px">
+        销售额类别占比
+      </div>
+      <nz-button-group>
+        <button nz-button [nzType]="'default'" (click)="changePie(1)">全部渠道</button>
+        <button nz-button [nzType]="'default'" (click)="changePie(2)">线上</button>
+        <button nz-button [nzType]="'default'" (click)="changePie(3)">门店</button>
+      </nz-button-group>
+    </ng-template>
+  </div>
+</div>
