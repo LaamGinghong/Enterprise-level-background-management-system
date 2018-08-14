@@ -21,6 +21,7 @@
         "@angular/platform-browser-dynamic": "^6.0.3",
         "@angular/router": "^6.0.3",
         "@antv/data-set": "^0.9.1",
+        "@antv/g2": "^3.2.6",
         "common.js": "^1.1.1",
         "core-js": "^2.5.4",
         "mobx": "^4.3.1",

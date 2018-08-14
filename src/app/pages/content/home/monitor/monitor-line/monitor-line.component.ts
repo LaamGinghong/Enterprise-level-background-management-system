@@ -40,7 +40,7 @@ export class MonitorLineComponent implements OnInit, OnDestroy {
   average: number;
   variance: number;
   word: string;
-  clock: any;
+  clock: number;
 
   constructor() {
   }
