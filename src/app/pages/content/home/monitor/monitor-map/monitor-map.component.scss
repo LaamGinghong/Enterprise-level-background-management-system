@@ -1,0 +1,25 @@
+.monitor-map {
+  position: absolute;
+  padding: 10px;
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    &-item {
+      width: 25%;
+      &-title {
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.45);
+      }
+      &-number{
+        font-size: 24px;
+        color:rgba(0, 0, 0, 0.65);
+      }
+    }
+  }
+  &-bottom{
+    text-align: center;
+    img{
+      width: 60%;
+    }
+  }
+}
