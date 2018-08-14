@@ -1,5 +1,7 @@
 .monitor {
   width: 100%;
   height: calc(100vh - 155px);
-  position: relative;
+  &-top{
+    position: relative;
+  }
 }

@@ -1,6 +1,7 @@
-.monitor-map {
-  position: absolute;
+.monitor-top-map {
+  //position: absolute;
   padding: 10px;
+  float: left;
   &-top {
     display: flex;
     justify-content: space-between;
@@ -10,15 +11,15 @@
         font-size: 14px;
         color: rgba(0, 0, 0, 0.45);
       }
-      &-number{
+      &-number {
         font-size: 24px;
-        color:rgba(0, 0, 0, 0.65);
+        color: rgba(0, 0, 0, 0.65);
       }
     }
   }
-  &-bottom{
+  &-bottom {
     text-align: center;
-    img{
+    img {
       width: 60%;
     }
   }

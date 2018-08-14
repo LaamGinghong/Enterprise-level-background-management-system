@@ -1,28 +1,28 @@
-<div class="monitor-map">
+<div class="monitor-top-map">
   <nz-card
     style="width: 1250px"
     [nzTitle]="'活动实时交易情况'"
   >
-    <div class="monitor-map-top">
-      <div class="monitor-map-top-item">
-        <div class="monitor-map-top-item-title">今日交易总额</div>
-        <div class="monitor-map-top-item-number">{{allTurnoverString}}元</div>
+    <div class="monitor-top-map-top">
+      <div class="monitor-top-map-top-item">
+        <div class="monitor-top-map-top-item-title">今日交易总额</div>
+        <div class="monitor-top-map-top-item-number">{{allTurnoverString}}元</div>
       </div>
-      <div class="monitor-map-top-item">
-        <div class="monitor-map-top-item-title">销售目标完成率</div>
-        <div class="monitor-map-top-item-number">{{percent}}%</div>
+      <div class="monitor-top-map-top-item">
+        <div class="monitor-top-map-top-item-title">销售目标完成率</div>
+        <div class="monitor-top-map-top-item-number">{{percent}}%</div>
       </div>
-      <div class="monitor-map-top-item">
-        <div class="monitor-map-top-item-title">活动剩余时间</div>
-        <div class="monitor-map-top-item-number">00:00:{{secondString}}</div>
+      <div class="monitor-top-map-top-item">
+        <div class="monitor-top-map-top-item-title">活动剩余时间</div>
+        <div class="monitor-top-map-top-item-number">00:00:{{secondString}}</div>
       </div>
-      <div class="monitor-map-top-item">
-        <div class="monitor-map-top-item-title">每秒交易总额</div>
-        <div class="monitor-map-top-item-number">{{secondTurnoverString}}</div>
+      <div class="monitor-top-map-top-item">
+        <div class="monitor-top-map-top-item-title">每秒交易总额</div>
+        <div class="monitor-top-map-top-item-number">{{secondTurnoverString}}</div>
       </div>
     </div>
-    <div class="monitor-map-bottom" [nz-tooltip]="true" [nzTitle]="'全球实时营业额'">
-      <img src="../../../../../../assets/map.png" alt="map">
+    <div class="monitor-top-map-bottom">
+      <img src="../../../../../../assets/map.png" alt="map" [nz-tooltip]="true" [nzTitle]="'全球实时营业额'">
     </div>
   </nz-card>
 </div>

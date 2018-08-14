@@ -1,0 +1,17 @@
+.monitor-top-line {
+  //position: absolute;
+  padding: 10px;
+  float: left;
+  &-top {
+    margin: 10px 0;
+    &-title {
+      font-size: 14px;
+      color: rgba(0, 0, 0, .45);
+      margin-bottom: 10px;
+    }
+    &-word {
+      font-size: 24px;
+      color: rgba(0, 0, 0, .65);
+    }
+  }
+}
