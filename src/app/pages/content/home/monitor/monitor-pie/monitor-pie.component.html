@@ -1,0 +1,36 @@
+<div class="monitor-pie">
+  <nz-card
+    style="width: 750px"
+    [nzTitle]="'各类品占比'"
+  >
+    <div class="monitor-pie-container">
+      <div class="monitor-pie-container-item">
+        <v-chart [forceFit]="forceFit" [height]="height" [data]="food" [scale]="scale">
+          <v-tooltip [showTitle]="false"></v-tooltip>
+          <v-axis></v-axis>
+          <v-pie position="percent" color="item" [style]="pieStyle"></v-pie>
+          <v-coord type="theta" [radius]="0.75" [innerRadius]="0.6"></v-coord>
+          <v-legend dataKey="item"></v-legend>
+        </v-chart>
+      </div>
+      <div class="monitor-pie-container-item">
+        <v-chart [forceFit]="forceFit" [height]="height" [data]="music" [scale]="scale">
+          <v-tooltip [showTitle]="false"></v-tooltip>
+          <v-axis></v-axis>
+          <v-pie position="percent" color="item" [style]="pieStyle"></v-pie>
+          <v-coord type="theta" [radius]="0.75" [innerRadius]="0.6"></v-coord>
+          <v-legend dataKey="item"></v-legend>
+        </v-chart>
+      </div>
+      <div class="monitor-pie-container-item">
+        <v-chart [forceFit]="forceFit" [height]="height" [data]="film" [scale]="scale">
+          <v-tooltip [showTitle]="false"></v-tooltip>
+          <v-axis></v-axis>
+          <v-pie position="percent" color="item" [style]="pieStyle"></v-pie>
+          <v-coord type="theta" [radius]="0.75" [innerRadius]="0.6"></v-coord>
+          <v-legend dataKey="item"></v-legend>
+        </v-chart>
+      </div>
+    </div>
+  </nz-card>
+</div>

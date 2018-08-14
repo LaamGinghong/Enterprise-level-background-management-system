@@ -7,6 +7,8 @@ import {MonitorMapComponent} from './monitor-map/monitor-map.component';
 import {MonitorLineComponent} from './monitor-line/monitor-line.component';
 import {NgxEchartsModule} from 'ngx-echarts';
 import {MonitorDashboardComponent} from './monitor-dashboard/monitor-dashboard.component';
+import {MonitorPieComponent} from './monitor-pie/monitor-pie.component';
+import {ViserModule} from 'viser-ng';
 
 @NgModule({
   imports: [
@@ -14,8 +16,9 @@ import {MonitorDashboardComponent} from './monitor-dashboard/monitor-dashboard.c
     MonitorRoutingModule,
     NgZorroAntdModule,
     NgxEchartsModule,
+    ViserModule
   ],
-  declarations: [MonitorComponent, MonitorMapComponent, MonitorLineComponent, MonitorDashboardComponent]
+  declarations: [MonitorComponent, MonitorMapComponent, MonitorLineComponent, MonitorDashboardComponent, MonitorPieComponent]
 })
 export class MonitorModule {
 }

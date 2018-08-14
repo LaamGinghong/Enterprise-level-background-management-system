@@ -1,0 +1,11 @@
+.monitor-pie {
+  float: left;
+  padding: 10px;
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    &-item {
+      width: 33.3333333%;
+    }
+  }
+}
