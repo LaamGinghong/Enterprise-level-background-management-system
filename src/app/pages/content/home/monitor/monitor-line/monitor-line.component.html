@@ -1,11 +1,11 @@
-<div class="monitor-top-line">
+<div class="monitor-line">
   <nz-card
     style="width: 400px"
     [nzTitle]="'活动情况预测'"
   >
-    <div class="monitor-top-line-top">
-      <div class="monitor-top-line-top-title">目标评估</div>
-      <div class="monitor-top-line-top-word">{{word}}</div>
+    <div class="monitor-line-top">
+      <div class="monitor-line-top-title">目标评估</div>
+      <div class="monitor-line-top-word">{{word}}</div>
     </div>
     <div echarts [options]="option" style="height: 200px" [merge]="updateOption"></div>
   </nz-card>

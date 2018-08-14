@@ -1,4 +1,4 @@
-.monitor-top-map {
+.monitor-map {
   //position: absolute;
   padding: 10px;
   float: left;
@@ -20,7 +20,8 @@
   &-bottom {
     text-align: center;
     img {
-      width: 60%;
+      width: 100%;
+      margin: 7.5px 0;
     }
   }
 }
