@@ -9,6 +9,9 @@ import {NgxEchartsModule} from 'ngx-echarts';
 import {MonitorDashboardComponent} from './monitor-dashboard/monitor-dashboard.component';
 import {MonitorPieComponent} from './monitor-pie/monitor-pie.component';
 import {ViserModule} from 'viser-ng';
+import {MonitorWordComponent} from './monitor-word/monitor-word.component';
+import {HttpClientModule} from '@angular/common/http';
+import {MonitorService} from './monitor.service';
 
 @NgModule({
   imports: [
@@ -16,9 +19,11 @@ import {ViserModule} from 'viser-ng';
     MonitorRoutingModule,
     NgZorroAntdModule,
     NgxEchartsModule,
-    ViserModule
+    ViserModule,
+    HttpClientModule
   ],
-  declarations: [MonitorComponent, MonitorMapComponent, MonitorLineComponent, MonitorDashboardComponent, MonitorPieComponent]
+  declarations: [MonitorComponent, MonitorMapComponent, MonitorLineComponent, MonitorDashboardComponent, MonitorPieComponent, MonitorWordComponent],
+  providers: [MonitorService]
 })
 export class MonitorModule {
 }

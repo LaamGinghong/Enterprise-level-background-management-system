@@ -1,0 +1,14 @@
+<div class="monitor-word">
+  <nz-card
+    style="width: 480px"
+    [nzTitle]="'热门城市'"
+  >
+    <div >
+      <v-chart [width]="440" [height]="200" [data]="data" [scale]="scale" [padding]="padding">
+        <v-tooltip [showTitle]="false"></v-tooltip>
+        <v-coord type="rect" direction="TL"></v-coord>
+        <v-point position="x*y" [color]="'category'" shape="cloud" tooltip="value*category"></v-point>
+      </v-chart>
+    </div>
+  </nz-card>
+</div>
