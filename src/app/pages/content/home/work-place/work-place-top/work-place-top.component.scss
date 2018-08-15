@@ -1,0 +1,61 @@
+.work-place-top {
+  background: #fff;
+  padding: 20px;
+  border-bottom: 1px solid #e8e8e8;
+  &-summary {
+    display: flex;
+    justify-content: space-between;
+    &-personal {
+      width: 70%;
+      display: flex;
+      justify-content: space-between;
+      &-header {
+        width: 8%;
+      }
+      &-word {
+        width: 92%;
+        color: rgba(0, 0, 0, 0.45);
+      }
+    }
+    &-message {
+      width: 30%;
+      display: flex;
+      justify-content: space-between;
+      &-item {
+        width: 33.3333333%;
+        text-align: center;
+        position: relative;
+        &:last-child{
+          &:after{
+            display: none;
+          }
+        }
+        &:after {
+          background-color: #e8e8e8;
+          position: absolute;
+          top: 8px;
+          right: 0;
+          width: 1px;
+          height: 40px;
+          content: '';
+        }
+        &-title {
+          color: rgba(0, 0, 0, .45);
+        }
+        &-number {
+          color: rgba(0, 0, 0, .85);
+          font-size: 30px;
+          span {
+            font-size: 20px;
+            color: rgba(0, 0, 0, .45);
+          }
+        }
+      }
+    }
+  }
+}
+
+:host /deep/ .ant-avatar-lg {
+  width: 72px;
+  height: 72px;
+}
