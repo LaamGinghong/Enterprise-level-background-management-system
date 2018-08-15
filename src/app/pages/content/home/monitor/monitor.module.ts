@@ -12,6 +12,7 @@ import {ViserModule} from 'viser-ng';
 import {MonitorWordComponent} from './monitor-word/monitor-word.component';
 import {HttpClientModule} from '@angular/common/http';
 import {MonitorService} from './monitor.service';
+import { MonitorAirComponent } from './monitor-air/monitor-air.component';
 
 @NgModule({
   imports: [
@@ -22,7 +23,7 @@ import {MonitorService} from './monitor.service';
     ViserModule,
     HttpClientModule
   ],
-  declarations: [MonitorComponent, MonitorMapComponent, MonitorLineComponent, MonitorDashboardComponent, MonitorPieComponent, MonitorWordComponent],
+  declarations: [MonitorComponent, MonitorMapComponent, MonitorLineComponent, MonitorDashboardComponent, MonitorPieComponent, MonitorWordComponent, MonitorAirComponent],
   providers: [MonitorService]
 })
 export class MonitorModule {

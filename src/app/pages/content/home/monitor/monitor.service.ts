@@ -5,14 +5,21 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class MonitorService {
-  URL = '../../../../../../assets/world-population.json';
 
   constructor(
     private http: HttpClient
   ) {
   }
 
-  getData() {
-    return this.http.get(this.URL);
+  getData(url) {
+    return this.http.get(url);
+  }
+
+  getPopulation() {
+    return this.getData('../../../../../../assets/world-population.json');
+  }
+
+  getAirData() {
+    return this.getData('../../../../../../assets/airData.json');
   }
 }

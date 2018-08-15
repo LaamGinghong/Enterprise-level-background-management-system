@@ -47,7 +47,7 @@ export class MonitorWordComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.monitorService.getData().subscribe(data => {
+    this.monitorService.getPopulation().subscribe(data => {
       const dv = new DataSet.View().source(data);
       const range = dv.range('value');
       const min = range[0];
@@ -55,7 +55,7 @@ export class MonitorWordComponent implements OnInit {
       dv.transform({
         type: 'tag-cloud',
         fields: ['x', 'value'],
-        size: [440, 200],
+        size: [420, 200],
         font: 'Verdana',
         padding: 0,
         timeInterval: 5000, // max execute time
