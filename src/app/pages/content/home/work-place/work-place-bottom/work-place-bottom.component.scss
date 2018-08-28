@@ -1,0 +1,13 @@
+.work-place-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  &-left {
+    width: 65%;
+    padding-right: 20px;
+  }
+  &-right {
+    width: 35%;
+  }
+}

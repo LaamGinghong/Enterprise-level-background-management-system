@@ -5,8 +5,8 @@ import {WorkPlaceRoutingModule} from './work-place-routing.module';
 import {WorkPlaceTopComponent} from './work-place-top/work-place-top.component';
 import {NgZorroAntdModule} from 'ng-zorro-antd';
 import {WorkPlaceBottomComponent} from './work-place-bottom/work-place-bottom.component';
-import {WorkPlaceBottomLeftComponent} from './work-place-bottom/work-place-bottom-left/work-place-bottom-left.component';
-import {WorkPlaceBottomRightComponent} from './work-place-bottom/work-place-bottom-right/work-place-bottom-right.component';
+import {WorkPlaceBottomLeftProjectComponent} from './work-place-bottom/work-place-bottom-left-project/work-place-bottom-left-project.component';
+import {WorkPlaceBottomRightNavigationComponent} from './work-place-bottom/work-place-bottom-right-navigation/work-place-bottom-right-navigation.component';
 
 @NgModule({
   imports: [
@@ -14,7 +14,7 @@ import {WorkPlaceBottomRightComponent} from './work-place-bottom/work-place-bott
     WorkPlaceRoutingModule,
     NgZorroAntdModule
   ],
-  declarations: [WorkPlaceComponent, WorkPlaceTopComponent, WorkPlaceBottomComponent, WorkPlaceBottomLeftComponent, WorkPlaceBottomRightComponent]
+  declarations: [WorkPlaceComponent, WorkPlaceTopComponent, WorkPlaceBottomComponent, WorkPlaceBottomLeftProjectComponent, WorkPlaceBottomRightNavigationComponent]
 })
 export class WorkPlaceModule {
 }
