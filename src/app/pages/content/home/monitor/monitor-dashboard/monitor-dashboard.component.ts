@@ -67,7 +67,7 @@ export class MonitorDashboardComponent implements OnInit, OnDestroy {
     ]
   };
   updateOption = {};
-  clock: number;
+  clock: any;
 
   constructor() {
   }
