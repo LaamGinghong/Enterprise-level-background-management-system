@@ -10,6 +10,7 @@ import {WorkPlaceBottomRightNavigationComponent} from './work-place-bottom/work-
 import {WorkPlaceBottomLeftNewsComponent} from './work-place-bottom/work-place-bottom-left-news/work-place-bottom-left-news.component';
 import {WorkPlaceBottomRightIndexComponent} from './work-place-bottom/work-place-bottom-right-index/work-place-bottom-right-index.component';
 import {NgxEchartsModule} from 'ngx-echarts';
+import {WorkPlaceBottomRightTeamComponent} from './work-place-bottom/work-place-bottom-right-team/work-place-bottom-right-team.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,7 @@ import {NgxEchartsModule} from 'ngx-echarts';
     NgZorroAntdModule,
     NgxEchartsModule
   ],
-  declarations: [WorkPlaceComponent, WorkPlaceTopComponent, WorkPlaceBottomComponent, WorkPlaceBottomLeftProjectComponent, WorkPlaceBottomRightNavigationComponent, WorkPlaceBottomLeftNewsComponent, WorkPlaceBottomRightIndexComponent]
+  declarations: [WorkPlaceComponent, WorkPlaceTopComponent, WorkPlaceBottomComponent, WorkPlaceBottomLeftProjectComponent, WorkPlaceBottomRightNavigationComponent, WorkPlaceBottomLeftNewsComponent, WorkPlaceBottomRightIndexComponent, WorkPlaceBottomRightTeamComponent]
 })
 export class WorkPlaceModule {
 }

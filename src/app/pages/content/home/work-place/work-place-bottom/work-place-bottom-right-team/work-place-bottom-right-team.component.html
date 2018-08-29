@@ -1,0 +1,15 @@
+<div class="work-place-bottom-right-team">
+  <nz-card
+    [nzTitle]="'团队'"
+    [nzBordered]="false"
+  >
+    <div class="work-place-bottom-right-team-item" *ngFor="let item of teamBox">
+      <nz-avatar
+        [nzSize]="'small'"
+        [nzSrc]="item.img"
+        [nzIcon]="'anticon anticon-user'"
+      ></nz-avatar>
+      <span style="padding-left: 10px">{{item.name}}</span>
+    </div>
+  </nz-card>
+</div>
