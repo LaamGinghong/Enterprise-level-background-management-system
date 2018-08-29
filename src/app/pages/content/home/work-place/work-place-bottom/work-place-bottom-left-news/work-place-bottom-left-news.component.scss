@@ -1,0 +1,27 @@
+.work-place-bottom-left-news {
+  margin-top: 20px;
+  &-item {
+    border-bottom: 1px solid #e8e8e8;
+    padding: 16px 0;
+    &:last-child {
+      border-bottom: none;
+    }
+    &-action {
+      color: #444d56;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 5px 0;
+      display: inline-block;
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+    &-message {
+      vertical-align: bottom;
+      padding-left: 10px;
+      color: #586069;
+      font-size: 12px;
+    }
+  }
+}

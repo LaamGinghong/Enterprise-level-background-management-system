@@ -1,0 +1,21 @@
+<div class="work-place-bottom-left-news">
+  <nz-card
+    [nzBordered]="false"
+    [nzTitle]="'动态'"
+    [nzBodyStyle]="{padding:'0 20px'}"
+  >
+    <div class="work-place-bottom-left-news-item" *ngFor="let item of newsBox">
+      <div>
+        <div class="work-place-bottom-left-news-item-action">{{item.action}}</div>
+      </div>
+      <nz-avatar
+        [nzSize]="'small'"
+        [nzSrc]="item.img"
+        [nzShape]="'square'"
+        [nzIcon]="'anticon anticon-user'"
+        style="vertical-align: bottom"
+      ></nz-avatar>
+      <span class="work-place-bottom-left-news-item-message">{{item.author}} committed {{item.time}}</span>
+    </div>
+  </nz-card>
+</div>
