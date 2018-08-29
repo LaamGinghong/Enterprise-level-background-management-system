@@ -1,0 +1,55 @@
+.work-place-bottom-left-project {
+  &-item {
+    width: 33.3333333333%;
+    display: inline-block;
+    box-sizing: border-box;
+    box-shadow: 1px 0 0 0 #e8e8e8, 0 1px 0 0 #e8e8e8, 1px 1px 0 0 #e8e8e8, 1px 0 0 0 #e8e8e8 inset, 0 1px 0 0 #e8e8e8 inset;
+    transition: all .3s;
+    padding: 24px;
+    &:hover {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      position: relative;
+      z-index: 1;
+    }
+    &-title {
+      color: rgba(0, 0, 0, 0.85);
+      margin-left: 12px;
+      line-height: 24px;
+      height: 24px;
+      display: inline-block;
+      vertical-align: top;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all .3s;
+      &:hover {
+        color: #1890ff;
+        cursor: pointer;
+      }
+    }
+    &-content {
+      color: rgba(0, 0, 0, 0.45);
+      height: 44px;
+      line-height: 22px;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+    &-author {
+      display: inline-block;
+      color: rgba(0, 0, 0, 0.45);
+      width: 75%;
+      transition: all .3s;
+      cursor: pointer;
+      font-size: 12px;
+      &:hover {
+        color: #1890ff;
+      }
+    }
+    &-time {
+      display: inline-block;
+      color: rgba(0, 0, 0, 0.25);
+      width: 25%;
+      font-size: 12px;
+      text-align: right;
+    }
+  }
+}
