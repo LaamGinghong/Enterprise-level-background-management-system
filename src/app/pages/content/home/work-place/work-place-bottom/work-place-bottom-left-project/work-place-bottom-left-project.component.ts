@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {NzMessageService} from 'ng-zorro-antd';
 
 @Component({
   selector: 'app-work-place-bottom-left-project',
@@ -44,10 +45,15 @@ export class WorkPlaceBottomLeftProjectComponent implements OnInit {
     time: '30分钟前'
   }];
 
-  constructor() {
+  constructor(
+    private message: NzMessageService
+  ) {
   }
 
   ngOnInit() {
   }
 
+  showMessage(message: string) {
+    this.message.info(message, {nzDuration: 2000});
+  }
 }

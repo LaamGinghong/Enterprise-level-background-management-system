@@ -11,10 +11,17 @@
         [nzIcon]="'anticon anticon-user'"
         [nzSize]="'small'"
         [nzSrc]="item.img"
+        (click)="showMessage(item.title)"
       ></nz-avatar>
-      <span class="work-place-bottom-left-project-item-title">{{item.title}}</span>
-      <div class="work-place-bottom-left-project-item-content">{{item.text}}</div>
-      <span class="work-place-bottom-left-project-item-author">{{item.author}}</span>
+      <span
+        class="work-place-bottom-left-project-item-title"
+        (click)="showMessage(item.title)"
+      >{{item.title}}</span>
+      <span class="work-place-bottom-left-project-item-content">{{item.text}}</span>
+      <span
+        class="work-place-bottom-left-project-item-author"
+        (click)="showMessage(item.author)"
+      >{{item.author}}</span>
       <span class="work-place-bottom-left-project-item-time">{{item.time}}</span>
     </span>
   </nz-card>
