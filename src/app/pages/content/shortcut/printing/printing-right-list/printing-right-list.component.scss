@@ -1,0 +1,12 @@
+.printing-right-list {
+  margin-top: 20px;
+  ol {
+    padding-left: 18px;
+  }
+  ul {
+    padding-left: 36px;
+    li {
+      list-style: disc;
+    }
+  }
+}

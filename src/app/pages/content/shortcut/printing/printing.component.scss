@@ -5,4 +5,21 @@
     font-weight: normal;
     color: rgba(0, 0, 0, .85);
   }
+  &-left {
+    padding-right: 20px;
+    display: inline-block;
+    width: 33.33333333333333%;
+    vertical-align: top;
+  }
+  &-middle {
+    padding-right: 20px;
+    display: inline-block;
+    width: 33.33333333333333%;
+    vertical-align: top;
+  }
+  &-right {
+    display: inline-block;
+    width: 33.33333333333333%;
+    vertical-align: top;
+  }
 }

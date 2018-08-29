@@ -1,0 +1,15 @@
+<div class="printing-right-list">
+  <nz-card
+    [nzTitle]="'List'"
+    [nzBordered]="false"
+  >
+    <h4>list styled</h4>
+    <ol>
+      <li *ngFor="let item of listBox">{{item}}</li>
+    </ol>
+    <h4>Unstyled List</h4>
+    <ul>
+      <li *ngFor="let item of listBox">{{item}}</li>
+    </ul>
+  </nz-card>
+</div>

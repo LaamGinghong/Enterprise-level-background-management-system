@@ -1,0 +1,34 @@
+.printing-middle-border {
+  margin-top: 20px;
+  & div {
+    text-align: center;
+    padding: 8px;
+    width: 50%;
+    display: inline-block;
+    border-width: 1px;
+    border-style: solid;
+    margin-top: 10px;
+  }
+  &-primary {
+    border-color: #1890ff;
+  }
+  &-success {
+    border-radius: 50%;
+    border-color: #52c41a;
+    border-bottom: none !important;
+    border-right: none !important;
+    border-left: none !important;
+  }
+  &-error {
+    border-color: #f5222d;
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+  }
+  &-warning {
+    border-color: #fadb14;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-left: none !important;
+  }
+}
