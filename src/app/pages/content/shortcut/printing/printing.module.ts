@@ -7,6 +7,7 @@ import {PrintingRoutingModule} from './printing-routing.module';
   imports: [
     CommonModule,
     PrintingRoutingModule
+    SharingModule
   ],
   declarations: [PrintingComponent]
 })

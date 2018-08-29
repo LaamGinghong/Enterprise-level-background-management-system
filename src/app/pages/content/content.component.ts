@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { ContentService } from './content.service';
-import { DataStoreService } from '../../store/dataStore.service';
-import { NzMessageService, NzTabComponent } from 'ng-zorro-antd';
-import { flyIn, flyOut } from '../../../assets/sim-animations';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
+import {ContentService} from './content.service';
+import {DataStoreService} from '../../store/dataStore.service';
+import {NzMessageService, NzTabComponent} from 'ng-zorro-antd';
+import {flyIn, flyOut} from '../../../assets/sim-animations';
 
 @Component({
   selector: 'app-content',
@@ -76,7 +76,7 @@ export class ContentComponent implements OnInit {
 
   openMessage(word: string) { // 点击个人头像
     this.message.remove();
-    this.message.success(`您点击了${word}！`, { nzDuration: 2000 });
+    this.message.success(`您点击了${word}！`, {nzDuration: 2000});
     if (word === '登出') {
       const date = new Date();
       date.setTime(0);
