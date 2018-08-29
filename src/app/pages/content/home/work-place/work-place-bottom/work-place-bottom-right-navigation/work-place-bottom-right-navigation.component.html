@@ -2,5 +2,15 @@
   <nz-card
     [nzTitle]="'快速开始/便捷导航'"
     [nzBordered]="false"
-  ></nz-card>
+  >
+    <span
+      class="work-place-bottom-right-navigation-item"
+      *ngFor="let item of actionBox">{{item}}</span>
+    <button
+      nz-button
+      [nzType]="'dashed'"
+      [nzSize]="'small'"
+      (click)="addAction()"
+    >+ 添加</button>
+  </nz-card>
 </div>
