@@ -12,7 +12,7 @@
         [(ngModel)]="option.status"
         style="width: 200px"
       >
-        <nz-option *ngFor="let item of statusBox" [nzValue]="item.value" [nzLabel]="item.label"></nz-option>
+        <nz-option *ngFor="let item of statusBox" [nzValue]="item.value" [nzLabel]="item.text"></nz-option>
       </nz-select>
     </span>
     <span>调用次数:
@@ -30,8 +30,116 @@
       ></nz-date-picker>
     </span>
     <span>
-      <button nz-button [nzType]="'primary'">搜索</button>
-      <button nz-button [nzType]="'default'">重置</button>
+      <button nz-button [nzType]="'primary'" [nzLoading]="loadingStatus" (click)="search()">搜索</button>
+      <button nz-button [nzType]="'default'" (click)="reset()">重置</button>
     </span>
+  </div>
+  <div class="table-list-table-button">
+    <span>
+      <button nz-button [nzType]="'primary'" (click)="isVisible=true">+新建</button>
+      <nz-modal [nzTitle]="'新建规则'"
+                [(nzVisible)]="isVisible"
+                (nzOnCancel)="isVisible=false"
+                (nzOnOk)="handleOk()">
+        描述：
+        <input nz-input placeholder="请输入规则描述" [(ngModel)]="addDescription">
+      </nz-modal>
+    </span>
+    <span>
+      <button nz-button [nzType]="'default'">批量操作</button>
+    </span>
+    <span>
+      <nz-dropdown>
+      <button nz-button nz-dropdown>更多操作<i class="anticon anticon-down"></i></button>
+      <ul nz-menu>
+        <li nz-menu-item>
+          <a>删除</a>
+        </li>
+        <li nz-menu-item>
+          <a>批量审批</a>
+        </li>
+      </ul>
+    </nz-dropdown>
+    </span>
+  </div>
+  <div class="table-list-table-alert">
+    <nz-alert
+      [nzType]="'info'"
+      [nzShowIcon]="true"
+      [nzMessage]="alertMessage"
+    >
+      <ng-template #alertMessage>
+        已选择
+        <span style="color: #1890ff;font-weight: bolder">{{checkNum}}</span>
+        项,服务调用总计
+        <span style="font-weight: bolder">{{checkMoney}}</span>
+        万
+      </ng-template>
+    </nz-alert>
+  </div>
+  <div class="table-list-table-table">
+    <nz-table
+      #table
+      [nzData]="tableData"
+      [nzBordered]="true"
+      [nzShowQuickJumper]="true"
+      [nzShowSizeChanger]="true"
+      [nzTotal]="tableData.length"
+      [nzShowTotal]="tableDataTotal"
+      [(nzPageIndex)]="pageIndex"
+      [nzLoading]="loadingStatus"
+    >
+      <thead
+        (nzSortChange)="sort($event)"
+        [nzSingleSort]="true"
+      >
+      <tr>
+        <th
+          [nzShowCheckbox]="true"
+          [nzWidth]="'5%'"
+          [(nzChecked)]="allChecked"
+          [nzIndeterminate]="indeterminate"
+          (nzCheckedChange)="checkAll($event)"></th>
+        <th [nzWidth]="'15%'">规则编号</th>
+        <th [nzWidth]="'20%'">描述</th>
+        <th [nzShowSort]="true" [nzSortKey]="'number'" [nzWidth]="'15%'">服务调用次数</th>
+        <th [nzShowFilter]="true"
+            [nzFilters]="statusBox"
+            [nzFilterMultiple]="false"
+            [nzWidth]="'15%'"
+            (nzFilterChange)="filter($event)">
+          状态
+        </th>
+        <th [nzWidth]="'15%'" [nzShowSort]="true" [nzSortKey]="'time'">更新时间</th>
+        <th [nzWidth]="'15%'">操作</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of table.data">
+        <td
+          [nzShowCheckbox]="true"
+          [(nzChecked)]="item.checked"
+          (nzCheckedChange)="refreshStatus($event,item)"
+        ></td>
+        <td>{{item.orderId}}</td>
+        <td>{{item.description}}</td>
+        <td>{{item.number}}万</td>
+        <td>
+          <nz-badge
+            [nzStatus]="item.status|valueToStatus"
+            [nzText]="item.status|valueToText"
+          ></nz-badge>
+        </td>
+        <td>{{item.timeString}}</td>
+        <td>
+          <span (click)="action('配置')">配置</span>
+          <span (click)="action('订阅警报')">订阅警报</span>
+        </td>
+      </tr>
+      </tbody>
+    </nz-table>
+    <ng-template #tableDataTotal>
+      <span>共{{tableData.length}}条</span>
+    </ng-template>
   </div>
 </div>

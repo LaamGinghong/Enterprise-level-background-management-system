@@ -20,9 +20,9 @@ export class TableListService {
         orderId: `TradeCode${i}`,
         description: '这是一段描述',
         number: Math.round(Math.random() * 1000),
-        status: Math.floor(Math.random() * 4),
+        status: Math.ceil(Math.random() * 4),
         time: date,
-        timeString: `${date.getFullYear()}-${date.getMonth() > 10 ? date.getMonth() : `0${date.getMonth()}`}-${date.getDate() > 10 ? date.getDate() : `0${date.getDate()}`} ${date.getHours() > 10 ? date.getHours() : `0${date.getHours()}`}:${date.getMinutes() > 10 ? date.getMinutes() : `0${date.getMinutes()}`}:${date.getSeconds() > 10 ? date.getSeconds() : `0${date.getSeconds()}`}`
+        timeString: `${date.getFullYear()}-${date.getMonth() > 9 ? date.getMonth() : `0${date.getMonth()}`}-${date.getDate() > 9 ? date.getDate() : `0${date.getDate()}`} ${date.getHours() > 9 ? date.getHours() : `0${date.getHours()}`}:${date.getMinutes() > 9 ? date.getMinutes() : `0${date.getMinutes()}`}:${date.getSeconds() > 9 ? date.getSeconds() : `0${date.getSeconds()}`}`
       };
       tableData.push(option);
     }
