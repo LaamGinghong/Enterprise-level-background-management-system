@@ -7,7 +7,7 @@ const routes: Routes = [{
   component: ShortcutComponent,
   children: [{
     path: '',
-    redirectTo: 'printing',
+    redirectTo: 'basicForm',
     pathMatch: 'full'
   }, {
     path: 'printing',
