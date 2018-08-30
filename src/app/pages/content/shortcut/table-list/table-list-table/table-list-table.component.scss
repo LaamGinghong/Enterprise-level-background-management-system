@@ -1,0 +1,13 @@
+.table-list-table{
+  background: #fff;
+  &-select{
+    span{
+      display: inline-block;
+      margin: 10px 20px;
+      font-weight: 600;
+      button{
+        margin: 0 10px  ;
+      }
+    }
+  }
+}

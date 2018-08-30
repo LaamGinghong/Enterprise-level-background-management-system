@@ -1,0 +1,37 @@
+<div class="table-list-table">
+  <div class="table-list-table-select">
+    <span>规则编号:
+      <input nz-input placeholder="请输入规则编号" style="width: 200px" [(ngModel)]="option.orderId">
+    </span>
+    <span>使用状态:
+      <nz-select
+        [nzAllowClear]="true"
+        [nzPlaceHolder]="'请选择使用状态'"
+        [nzNotFoundContent]="'没有数据'"
+        [nzShowSearch]="true"
+        [(ngModel)]="option.status"
+        style="width: 200px"
+      >
+        <nz-option *ngFor="let item of statusBox" [nzValue]="item.value" [nzLabel]="item.label"></nz-option>
+      </nz-select>
+    </span>
+    <span>调用次数:
+      <nz-input-number
+        [nzStep]="1"
+        [nzPlaceHolder]="'请选择输入次数'"
+        [(ngModel)]="option.number"
+        style="width: 200px"></nz-input-number>
+    </span>
+    <span>更新日期:
+      <nz-date-picker
+        [nzShowTime]="true"
+        [nzStyle]="{width:'200px'}"
+        [(ngModel)]="option.date"
+      ></nz-date-picker>
+    </span>
+    <span>
+      <button nz-button [nzType]="'primary'">搜索</button>
+      <button nz-button [nzType]="'default'">重置</button>
+    </span>
+  </div>
+</div>
