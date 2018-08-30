@@ -16,13 +16,13 @@ export class WorkPlaceBottomRightNavigationComponent implements OnInit {
     this.initActionBox();
   }
 
-  initActionBox() {
+  initActionBox(): void {
     for (this.actionIndex; this.actionIndex <= 10; this.actionIndex++) {
       this.actionBox.push(`操作${this.actionIndex}`);
     }
   }
 
-  addAction() {
+  addAction(): void {
     this.actionBox.push(`操作${this.actionIndex}`);
     this.actionIndex++;
   }

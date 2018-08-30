@@ -129,7 +129,7 @@ export class AnalysisMiddleComponent implements OnInit {
     this.initPie();
   }
 
-  initLine() {
+  initLine(): void {
     for (let i = 0; i < 30; i++) {
       const now = new Date();
       now.setTime(now.getTime() + i * 24 * 60 * 60 * 1000);
@@ -139,7 +139,7 @@ export class AnalysisMiddleComponent implements OnInit {
     }
   }
 
-  initTable() {
+  initTable(): void {
     for (let i = 1; i <= 50; i++) {
       const option = {
         name: `搜索关键词-${i}`,
@@ -155,7 +155,7 @@ export class AnalysisMiddleComponent implements OnInit {
     }
   }
 
-  initPie() {
+  initPie(): void {
     let name = '';
     for (let i = 0; i < 6; i++) {
       switch (i) {
@@ -185,7 +185,7 @@ export class AnalysisMiddleComponent implements OnInit {
     }
   }
 
-  sortTable(e: { key: string, value?: string }) {
+  sortTable(e: { key: string, value?: string }): void {
     const des = this.getSort(e.key, e.value);
     const asc = this.getSort(e.key, e.value);
     switch (e.key) {
@@ -233,7 +233,7 @@ export class AnalysisMiddleComponent implements OnInit {
     }
   }
 
-  changePie(mark: number) {
+  changePie(mark: number): void {
     switch (mark) {
       case 1:
         this.updatePieOption = {

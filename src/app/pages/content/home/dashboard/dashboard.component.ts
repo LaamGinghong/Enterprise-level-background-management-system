@@ -47,7 +47,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   }
 
 
-  initTodo() {
+  initTodo(): void {
     setTimeout(() => {
       const top = this.chatBox.nativeElement.offsetTop + this.chatBox.nativeElement.childNodes[0].offsetHeight;
       const left = this.chatBox.nativeElement.offsetLeft;
@@ -56,7 +56,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     });
   }
 
-  operateItem(mark: number, index: number, item: object) {
+  operateItem(mark: number, index: number, item: object): void {
     if (mark) {
       this.messageArray.splice(index, 1);
     } else {

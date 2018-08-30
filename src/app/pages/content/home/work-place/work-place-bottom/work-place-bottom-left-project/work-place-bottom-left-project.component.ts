@@ -53,7 +53,7 @@ export class WorkPlaceBottomLeftProjectComponent implements OnInit {
   ngOnInit() {
   }
 
-  showMessage(message: string) {
+  showMessage(message: string): void {
     this.message.info(message, {nzDuration: 2000});
   }
 }

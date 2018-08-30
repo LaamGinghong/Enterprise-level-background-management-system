@@ -31,7 +31,7 @@ export class AnalysisCardComponent implements OnInit {
     dataZoom: {
       type: 'inside'
     },
-    color:['#975FE4']
+    color: ['#975FE4']
   };
 
   barChart = {
@@ -68,7 +68,7 @@ export class AnalysisCardComponent implements OnInit {
     this.initOrdinate();
   }
 
-  initAbscissa() {
+  initAbscissa(): void {
     for (let i = 0; i < 30; i++) {
       const now = new Date();
       now.setTime(now.getTime() + i * 24 * 60 * 60 * 1000);
@@ -76,7 +76,7 @@ export class AnalysisCardComponent implements OnInit {
     }
   }
 
-  initOrdinate() {
+  initOrdinate(): void {
     for (let i = 0; i < 30; i++) {
       this.ordinate.push(Math.round(Math.random() * 10));
     }

@@ -94,14 +94,14 @@ export class DashboardChartComponent implements OnInit {
     this.initLine();
   }
 
-  initBar() {
+  initBar(): void {
     for (let i = 1; i < 13; i++) {
       this.barAbscissa.push(`${i}月`);
       this.barOrdinate.push(Math.round(Math.random() * 1000));
     }
   }
 
-  initLine() {
+  initLine(): void {
     for (let i = 0; i < 24; i++) {
       this.lineAbscissa.push(i < 10 ? `0${i}:00` : `${i}:00`);
       this.lineOrdinate1.push(Math.round(Math.random() * 10));

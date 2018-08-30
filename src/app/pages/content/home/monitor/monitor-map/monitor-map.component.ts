@@ -22,7 +22,7 @@ export class MonitorMapComponent implements OnInit {
     this.countDown();
   }
 
-  initMap() {
+  initMap(): void {
     this.allTurnover = Math.round(Math.random() * 100000000000);
     this.allTurnoverString = this.allTurnover.toString(10).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     this.percent = (Math.random() * 100).toFixed(2);
@@ -30,7 +30,7 @@ export class MonitorMapComponent implements OnInit {
     this.secondTurnoverString = this.secondTurnover.toString(10).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   }
 
-  countDown() {
+  countDown(): void {
     const countDownSecond = setInterval(() => {
       if (this.second) {
         this.second--;

@@ -48,14 +48,14 @@ export class AnalysisBarComponent implements OnInit {
     this.initTable();
   }
 
-  initChart() {
+  initChart(): void {
     for (let i = 1; i <= 12; i++) {
       this.abscissa.push(`${i}月`);
       this.ordinate.push(Math.round(Math.random() * 2000));
     }
   }
 
-  initTable() {
+  initTable(): void {
     for (let i = 1; i <= 7; i++) {
       const number = Math.round(Math.random() * 20000);
       const item = {

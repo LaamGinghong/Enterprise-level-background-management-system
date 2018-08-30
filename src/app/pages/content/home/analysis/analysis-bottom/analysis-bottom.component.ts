@@ -56,7 +56,7 @@ export class AnalysisBottomComponent implements OnInit {
     this.initLine();
   }
 
-  initTabArray() {
+  initTabArray(): void {
     for (let i = 1; i <= 10; i++) {
       const math = (i * Math.random() * 10);
       const option = {
@@ -96,7 +96,7 @@ export class AnalysisBottomComponent implements OnInit {
     }
   }
 
-  initLine() {
+  initLine(): void {
     for (let i = 0; i <= 29; i++) {
       const now = new Date();
       now.setTime(now.getTime() + i * 24 * 60 * 60 * 1000);

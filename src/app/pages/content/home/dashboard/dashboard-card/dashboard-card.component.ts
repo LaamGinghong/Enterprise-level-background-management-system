@@ -15,7 +15,7 @@ export class DashboardCardComponent implements OnInit {
     this.initCardArray();
   }
 
-  initCardArray() {
+  initCardArray(): void {
     for (let i = 0; i < 10; i++) {
       const date = new Date();
       date.setTime(date.getTime() + i * 24 * 60 * 60 * 1000);

@@ -54,7 +54,7 @@ export class MonitorLineComponent implements OnInit, OnDestroy {
     clearInterval(this.clock);
   }
 
-  initAxis() {
+  initAxis(): void {
     for (let i = 0; i < 24; i++) {
       this.abscissa.push(i < 10 ? `0${i}:00` : `${i}:00`);
       this.ordinate.push(Math.round(Math.random() * 2000));
@@ -72,7 +72,7 @@ export class MonitorLineComponent implements OnInit, OnDestroy {
     this.word = this.variance > 50000 ? '活动情况十分不稳定' : '活动情况十分稳定';
   }
 
-  updateOrdinate() {
+  updateOrdinate(): void {
     this.clock = setInterval(() => {
       this.ordinate.shift();
       this.ordinate.push(Math.round(Math.random() * 2000));
