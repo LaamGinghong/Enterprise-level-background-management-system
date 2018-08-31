@@ -1,4 +1,10 @@
-<div class="search-content-container" #cardContainer appSearch>
+<div
+  class="search-content-container"
+  #cardContainer
+  appSearchContentContainer
+  [lastCardItem]="lastCardItem"
+  [(cardBox)]="cardBox"
+>
   <div class="search-content-container-item" *ngFor="let item of cardBox" #cardItem>
     <nz-card
       [nzHoverable]="true"

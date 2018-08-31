@@ -6,6 +6,7 @@ import {SharingModule} from '../../../../sharing/sharing.module';
 import {SearchContentComponent} from './search-content/search-content.component';
 import {SearchContentContainerComponent} from './search-content/search-content-container/search-content-container.component';
 import {SearchService} from './search.service';
+import {SearchContentContainerDirective} from './search-content/search-content-container/search-content-container.directive';
 
 @NgModule({
   imports: [
@@ -13,7 +14,7 @@ import {SearchService} from './search.service';
     SearchRoutingModule,
     SharingModule
   ],
-  declarations: [SearchComponent, SearchContentComponent, SearchContentContainerComponent],
+  declarations: [SearchComponent, SearchContentComponent, SearchContentContainerComponent, SearchContentContainerDirective],
   providers: [SearchService]
 })
 export class SearchModule {
