@@ -1,3 +1,36 @@
-<p>
-  search works!
-</p>
+<div class="search">
+  <div class="search-header">
+    <div class="search-header-title">搜索列表</div>
+    <div class="search-header-input">
+      <nz-input-group
+        [nzSearch]="true"
+        [nzSize]="'large'"
+        [nzSuffix]="suffixButton"
+      >
+        <input
+          nz-input
+          placeholder="请输入搜索内容！"
+        >
+      </nz-input-group>
+      <ng-template #suffixButton>
+        <button
+          nz-button
+          [nzType]="'primary'"
+          [nzSize]="'large'"
+          [nzSearch]="true"
+        >Search
+        </button>
+      </ng-template>
+    </div>
+    <div class="search-header-tabs">
+      <nz-tabset>
+        <nz-tab [nzTitle]="nzTitle" *ngFor="let item of tabs">
+          <ng-template #nzTitle>
+            <div style="padding: 14px 24px">{{item}}</div>
+          </ng-template>
+          <app-search-content></app-search-content>
+        </nz-tab>
+      </nz-tabset>
+    </div>
+  </div>
+</div>

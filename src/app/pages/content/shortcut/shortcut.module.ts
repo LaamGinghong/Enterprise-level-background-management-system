@@ -6,7 +6,7 @@ import {ShortcutRoutingModule} from './shortcut-routing.module';
 @NgModule({
   imports: [
     CommonModule,
-    ShortcutRoutingModule
+    ShortcutRoutingModule,
   ],
   declarations: [ShortcutComponent]
 })

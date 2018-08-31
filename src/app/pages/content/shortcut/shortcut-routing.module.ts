@@ -7,7 +7,7 @@ const routes: Routes = [{
   component: ShortcutComponent,
   children: [{
     path: '',
-    redirectTo: 'tableList',
+    redirectTo: 'search',
     pathMatch: 'full'
   }, {
     path: 'printing',

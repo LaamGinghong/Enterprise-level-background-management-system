@@ -1,0 +1,43 @@
+<div class="search-content-container" #cardContainer appSearch>
+  <div class="search-content-container-item" *ngFor="let item of cardBox" #cardItem>
+    <nz-card
+      [nzHoverable]="true"
+      [nzCover]="cardPic"
+    >
+      <nz-card-meta
+        [nzTitle]="item['name']"
+        [nzDescription]="cardDescription"
+      ></nz-card-meta>
+    </nz-card>
+    <ng-template #cardPic>
+      <img [src]="'../../../../../../../'+item['img']" [alt]="item['name']">
+    </ng-template>
+    <ng-template #cardDescription>
+      <div>{{item['text']}}</div>
+      <div>{{item['time']}}</div>
+      <div>
+        <span>
+          <nz-avatar
+            [nzIcon]="'anticon anticon-user'"
+            [nzSrc]="'../../../../../../../assets/head1.png'"
+            [nzSize]="'small'"
+          ></nz-avatar>
+        </span>
+        <span>
+          <nz-avatar
+            [nzIcon]="'anticon anticon-user'"
+            [nzSrc]="'../../../../../../../assets/head2.png'"
+            [nzSize]="'small'"
+          ></nz-avatar>
+        </span>
+        <span>
+          <nz-avatar
+            [nzIcon]="'anticon anticon-user'"
+            [nzSrc]="'../../../../../../../assets/head3.png'"
+            [nzSize]="'small'"
+          ></nz-avatar>
+        </span>
+      </div>
+    </ng-template>
+  </div>
+</div>

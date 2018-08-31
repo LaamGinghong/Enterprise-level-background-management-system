@@ -1,0 +1,21 @@
+.search-content{
+  background: #F0F2F5;
+  padding: 20px;
+  &-select{
+    background: #fff;
+    padding: 20px;
+    font-size: 15px;
+    &-bottom{
+      div{
+        display: inline-block;
+        font-size: 14px;
+        margin: 0 20px;
+      }
+    }
+  }
+}
+
+:host /deep/ .ant-tag{
+  font-size: 14px;
+  margin: 0 15px;
+}

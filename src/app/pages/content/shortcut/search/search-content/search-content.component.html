@@ -1,0 +1,33 @@
+<div class="search-content">
+  <div class="search-content-select">
+    <div class="search-content-select-top">
+      <strong>所属类目:</strong>
+      <nz-tag
+        *ngFor="let item of subject;let i=index"
+        [nzMode]="'checkable'"
+        [(nzChecked)]="item.checked"
+        (nzCheckedChange)="checkItem(i,$event)"
+        style="font-size: 15px"
+      >
+        {{ item.text }}
+      </nz-tag>
+    </div>
+    <nz-divider [nzDashed]="true"></nz-divider>
+    <div class="search-content-select-bottom">
+      <strong>其它选项:</strong>
+      <div>
+        活跃用户:
+        <nz-select style="width: 200px">
+          <nz-option [nzLabel]="'张三'" [nzValue]="'张三'"></nz-option>
+        </nz-select>
+      </div>
+      <div>
+        好评度:
+        <nz-select style="width: 200px;">
+          <nz-option [nzLabel]="'优秀'" [nzValue]="'优秀'"></nz-option>
+        </nz-select>
+      </div>
+    </div>
+  </div>
+  <app-search-content-container></app-search-content-container>
+</div>
