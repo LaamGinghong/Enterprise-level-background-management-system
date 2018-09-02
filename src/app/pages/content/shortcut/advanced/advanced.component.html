@@ -1,3 +1,83 @@
-<p>
-  advanced works!
-</p>
+<div class="advanced">
+    <div class="advanced-header">
+        <div class="advanced-header-top">
+            <span>
+              <nz-avatar [nzIcon]="'anticon anticon-user'" [nzShape]="'square'" [nzSrc]="'../../../../../assets/angular.png'"></nz-avatar>
+            </span>
+            <span class="advanced-header-top-order"><h1>单号：234231029431</h1></span>
+            <span>
+              <nz-button-group>
+                <button nz-button [nzType]="'default'">操作</button>
+                <button nz-button [nzType]="'default'">操作</button>
+              </nz-button-group>
+            </span>
+            <span>
+              <nz-dropdown [nzPlacement]="'bottomLeft'">
+                <button nz-button nz-dropdown [nzType]="'default'">
+                  ...
+                </button>
+                  <ul nz-menu>
+                    <li nz-menu-item>选项一</li>
+                    <li nz-menu-item>选项二</li>
+                    <li nz-menu-item>选项三</li>
+                  </ul>
+              </nz-dropdown>
+            </span>
+            <span><button nz-button [nzType]="'primary'">主操作</button></span>
+        </div>
+        <div class="advanced-header-box">
+            <div class="advanced-header-box-table">
+                <table>
+                    <tr>
+                        <td class="advanced-header-box-table-title">创建人:</td>
+                        <td class="advanced-header-box-table-value">李小龙</td>
+                        <td class="advanced-header-box-table-title">订购产品:</td>
+                        <td class="advanced-header-box-table-value">XX服务</td>
+                    </tr>
+                    <tr>
+                        <td class="advanced-header-box-table-title">创建时间:</td>
+                        <td class="advanced-header-box-table-value">2018-09-01</td>
+                        <td class="advanced-header-box-table-title">关联单据:</td>
+                        <td class="advanced-header-box-table-value" style="color:#1890ff">12421</td>
+                    </tr>
+                    <tr>
+                        <td class="advanced-header-box-table-title">生效日期:</td>
+                        <td class="advanced-header-box-table-value">2018-09-01~2018-09-31</td>
+                        <td class="advanced-header-box-table-title">备注:</td>
+                        <td class="advanced-header-box-table-value">请于两个工作日内确认</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="advanced-header-box-right">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>状态</th>
+                            <th>订单金额</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>待审批</td>
+                            <td>￥568.08</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="advanced-header-tab">
+            <nz-tabset>
+                <nz-tab [nzTitle]="details">
+                    <ng-template #details>
+                        <div style="padding: 15px 20px">详情</div>
+                    </ng-template>
+                </nz-tab>
+                <nz-tab [nzTitle]="rule">
+                    <ng-template #rule>
+                        <div style="padding: 15px 20px">规则</div>
+                    </ng-template>
+                </nz-tab>
+            </nz-tabset>
+        </div>
+    </div>
+</div>

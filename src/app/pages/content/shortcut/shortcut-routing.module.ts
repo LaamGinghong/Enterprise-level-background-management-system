@@ -7,7 +7,7 @@ const routes: Routes = [{
   component: ShortcutComponent,
   children: [{
     path: '',
-    redirectTo: 'search',
+    redirectTo: 'advanced',
     pathMatch: 'full'
   }, {
     path: 'printing',

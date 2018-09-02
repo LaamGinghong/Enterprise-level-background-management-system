@@ -1,0 +1,67 @@
+.advanced {
+    &-header {
+        padding: 20px;
+        padding-bottom: 0;
+        background: #fff;
+        &-top {
+            span,
+            h1 {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            h1 {
+                margin: 0;
+                font-size: 20px;
+                color: rgba($color: #000000, $alpha: 0.65)
+            }
+            span {
+                margin: 0 20px 0 0;
+            }
+            &-order {
+                width: 78%;
+            }
+        }
+        &-box {
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+            &-table {
+                width: 70%;
+                table {
+                    width: 100%;
+                }
+                &-title {
+                    color: rgba($color: #000000, $alpha: 0.85);
+                    width: 8%;
+                    padding: 5px 0
+                }
+                &-value {
+                    width: 42%;
+                    color: rgba($color: #000000, $alpha: 0.65);
+                    padding: 5px 0
+                }
+            }
+            &-right {
+                width: 20%;
+                table {
+                    width: 100%;
+                    text-align: right;
+                    thead {
+                        color: #bfbfbf;
+                        th {
+                            padding-bottom: 20px;
+                        }
+                    }
+                    tbody {
+                        color: #929292;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+:host /deep/ .ant-tabs-bar {
+    margin: 0;
+}
