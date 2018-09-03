@@ -4,6 +4,7 @@ import {AdvancedComponent} from './advanced.component';
 import {AdvancedRoutingModule} from './advanced-routing.module';
 import {SharingModule} from '../../../../sharing/sharing.module';
 import {AdvancedStepComponent} from './advanced-step/advanced-step.component';
+import {AdvancedUserMessageComponent} from './advanced-user-message/advanced-user-message.component';
 
 @NgModule({
   imports: [
@@ -11,7 +12,7 @@ import {AdvancedStepComponent} from './advanced-step/advanced-step.component';
     AdvancedRoutingModule,
     SharingModule
   ],
-  declarations: [AdvancedComponent, AdvancedStepComponent]
+  declarations: [AdvancedComponent, AdvancedStepComponent, AdvancedUserMessageComponent]
 })
 export class AdvancedModule {
 }
