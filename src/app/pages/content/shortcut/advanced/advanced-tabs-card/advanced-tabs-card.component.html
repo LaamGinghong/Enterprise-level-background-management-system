@@ -1,0 +1,41 @@
+<div class="advanced-tabs-card">
+  <nz-card style="width: 100%;">
+    <nz-card-tab>
+      <nz-tabset
+        [nzSize]="'large'"
+        [(nzSelectedIndex)]="index"
+        (nzSelectedIndexChange)="change($event)"
+      >
+        <nz-tab [nzTitle]="item" *ngFor="let item of tabs"></nz-tab>
+      </nz-tabset>
+    </nz-card-tab>
+    <nz-table
+      #table
+      [nzData]="tableData"
+      [nzShowPagination]="false"
+    >
+      <thead>
+      <tr>
+        <th>操作类型</th>
+        <th>操作人</th>
+        <th>执行结果</th>
+        <th>操作时间</th>
+        <th>备注</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of table.data">
+        <td>{{item.type|advancedTabsCardType}}</td>
+        <td>{{item.people|advancedTabsCardPeople}}</td>
+        <td>
+          <nz-badge
+            [nzStatus]="item.result|advancedTabsCardStatus"
+            [nzText]="item.result|advancedTabsCardResult"></nz-badge>
+        </td>
+        <td>{{item.time}}</td>
+        <td>{{item.remark}}</td>
+      </tr>
+      </tbody>
+    </nz-table>
+  </nz-card>
+</div>

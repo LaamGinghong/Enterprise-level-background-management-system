@@ -1,0 +1,13 @@
+.advanced-tabs-card {
+  margin: 20px;
+
+}
+
+:host /deep/ .ant-tabs-tab {
+  margin: 0 32px 0 0;
+  padding: 13px 16px;
+}
+
+:host /deep/ .ant-tabs-bar{
+  border: none;
+}

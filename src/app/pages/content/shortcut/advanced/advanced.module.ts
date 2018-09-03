@@ -5,6 +5,12 @@ import {AdvancedRoutingModule} from './advanced-routing.module';
 import {SharingModule} from '../../../../sharing/sharing.module';
 import {AdvancedStepComponent} from './advanced-step/advanced-step.component';
 import {AdvancedUserMessageComponent} from './advanced-user-message/advanced-user-message.component';
+import {AdvancedPhoneHistoryComponent} from './advanced-phone-history/advanced-phone-history.component';
+import { AdvancedTabsCardComponent } from './advanced-tabs-card/advanced-tabs-card.component';
+import { AdvancedTabsCardTypePipe } from './advanced-tabs-card/advanced-tabs-card-type.pipe';
+import { AdvancedTabsCardPeoplePipe } from './advanced-tabs-card/advanced-tabs-card-people.pipe';
+import { AdvancedTabsCardStatusPipe } from './advanced-tabs-card/advanced-tabs-card-status.pipe';
+import { AdvancedTabsCardResultPipe } from './advanced-tabs-card/advanced-tabs-card-result.pipe';
 
 @NgModule({
   imports: [
@@ -12,7 +18,7 @@ import {AdvancedUserMessageComponent} from './advanced-user-message/advanced-use
     AdvancedRoutingModule,
     SharingModule
   ],
-  declarations: [AdvancedComponent, AdvancedStepComponent, AdvancedUserMessageComponent]
+  declarations: [AdvancedComponent, AdvancedStepComponent, AdvancedUserMessageComponent, AdvancedPhoneHistoryComponent, AdvancedTabsCardComponent, AdvancedTabsCardTypePipe, AdvancedTabsCardPeoplePipe, AdvancedTabsCardStatusPipe, AdvancedTabsCardResultPipe]
 })
 export class AdvancedModule {
 }
