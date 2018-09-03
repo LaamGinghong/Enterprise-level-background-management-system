@@ -1,0 +1,21 @@
+<div class="advanced-step">
+  <nz-card
+    [nzTitle]="'流程进度'"
+    [nzBordered]="false"
+  >
+    <nz-steps [nzCurrent]="1" [nzProgressDot]="true">
+      <nz-step [nzTitle]="'创建项目'" [nzStatus]="'finish'" [nzDescription]="create"></nz-step>
+      <nz-step [nzTitle]="'部门初审'" [nzStatus]="'process'" [nzDescription]="check"></nz-step>
+      <nz-step [nzTitle]="'财务复核'" [nzStatus]="'error'"></nz-step>
+      <nz-step [nzTitle]="'完成'" [nzStatus]="'wait'"></nz-step>
+    </nz-steps>
+    <ng-template #create>
+      <div>李小龙<span style="padding: 0 10px"><i class="anticon anticon-wechat"></i></span></div>
+      <div>2016-12-12 12:32</div>
+    </ng-template>
+    <ng-template #check>
+      <div>张小凡<span style="padding: 0 10px;color: #00C701;"><i class="anticon anticon-wechat"></i></span></div>
+      <a style="color: #1890ff" (click)="message.info('催一下',{nzDuration:2000})">催一下</a>
+    </ng-template>
+  </nz-card>
+</div>
