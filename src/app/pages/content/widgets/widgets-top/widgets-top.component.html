@@ -1,0 +1,47 @@
+<div class="widgets-top" nz-row [nzGutter]="8">
+  <div class="widgets-top-item" nz-col [nzSpan]="8">
+    <nz-card>
+      <div class="widgets-top-item-icon"><i class="anticon anticon-pay-circle"></i></div>
+      <h3>99.999</h3>
+      <span>Games played last month</span>
+      <div class="widgets-top-item-progress">
+        <nz-progress
+          [nzShowInfo]="false"
+          [nzStatus]="'active'"
+          [nzPercent]="70"
+          [nzStrokeWidth]="5"
+        ></nz-progress>
+      </div>
+    </nz-card>
+  </div>
+  <div class="widgets-top-item" nz-col [nzSpan]="8">
+    <nz-card>
+      <div class="widgets-top-item-icon"><i class="anticon anticon-pie-chart"></i></div>
+      <h3>300</h3>
+      <span>Coffee cups per day</span>
+      <div class="widgets-top-item-progress">
+        <nz-progress
+          [nzShowInfo]="false"
+          [nzStatus]="'success'"
+          [nzPercent]="30"
+          [nzStrokeWidth]="5"
+        ></nz-progress>
+      </div>
+    </nz-card>
+  </div>
+  <div class="widgets-top-item" nz-col [nzSpan]="8">
+    <nz-card>
+      <div class="widgets-top-item-icon"><i class="anticon anticon-cloud"></i></div>
+      <h3>1000Gb</h3>
+      <span>Average Monthly Uploads</span>
+      <div class="widgets-top-item-progress">
+        <nz-progress
+          [nzShowInfo]="false"
+          [nzStatus]="'exception'"
+          [nzPercent]="90"
+          [nzStrokeWidth]="5"
+        ></nz-progress>
+      </div>
+    </nz-card>
+  </div>
+</div>

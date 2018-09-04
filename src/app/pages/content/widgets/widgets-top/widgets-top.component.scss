@@ -1,0 +1,17 @@
+.widgets-top {
+  margin-top: 20px;
+  &-item {
+    &-icon {
+      text-align: right;
+      color: #bfbfbf;
+      font-size: 24px;
+    }
+    h3{
+      font-size: 22px;
+    }
+    span{
+      color: #bfbfbf;
+      font-size: 14px;
+    }
+  }
+}
