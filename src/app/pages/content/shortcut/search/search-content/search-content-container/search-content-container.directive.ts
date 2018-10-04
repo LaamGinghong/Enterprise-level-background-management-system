@@ -31,7 +31,7 @@ export class SearchContentContainerDirective {
   }
 
   @HostListener('scroll', ['$event'])
-  onScroll(e: any) {
+  onScroll(e: any): void {
     this.subjectScroll.next(e);
   }
 
