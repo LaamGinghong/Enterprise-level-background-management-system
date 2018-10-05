@@ -42,12 +42,19 @@ export class ContentComponent implements OnInit {
     });
   }
 
-  initLoadStatus() { // 初始化登陆状态
-    this.loadingStatus = !!document.cookie;
-    this.name = document.cookie.split('=')[1];
+  initLoadStatus(): void { // 初始化登陆状态
+    if (document.cookie.indexOf('username') > 0) {
+      const cookies = document.cookie.split(';');
+      cookies.forEach((item: string) => {
+        if (item.indexOf('username') > 0) {
+          this.loadingStatus = !!item;
+          this.name = item.split('=')[1];
+        }
+      });
+    }
   }
 
-  initMenuData() { // 初始化菜单
+  initMenuData(): void { // 初始化菜单
     this.contentService.getData().subscribe((data: { success: boolean, value: Array<object> }) => {
       if (data.success) {
         this.dataStore.setMenuData(data.value);
@@ -56,7 +63,7 @@ export class ContentComponent implements OnInit {
     });
   }
 
-  initTabArray() {
+  initTabArray(): void {
     this.tabArray.push({
       id: '00101',
       name: '仪表盘',
@@ -64,17 +71,17 @@ export class ContentComponent implements OnInit {
     });
   }
 
-  openHandler(item: { id: string, name: string, icon: string, children: Array<object>, isOpen: boolean }) { // 打开menu一级菜单
+  openHandler(item: { id: string, name: string, icon: string, children: Array<object>, isOpen: boolean }): void { // 打开menu一级菜单
     this.menuData.forEach((val: { id: string, name: string, icon: string, children: Array<object>, isOpen: boolean }) => {
       val.isOpen = item.id === val.id;
     });
   }
 
-  changeMenu() { // 更改大小菜单
+  changeMenu(): void { // 更改大小菜单
     this.menuStatus = !this.menuStatus;
   }
 
-  openMessage(word: string) { // 点击个人头像
+  openMessage(word: string): void { // 点击个人头像
     this.message.remove();
     this.message.success(`您点击了${word}！`, {nzDuration: 2000});
     if (word === '登出') {
@@ -85,7 +92,7 @@ export class ContentComponent implements OnInit {
     }
   }
 
-  openItem(item: { id: string, name: string, icon?: string, children?: Array<object>, isOpen?: boolean, url?: string, isTitle?: boolean, breadCrumb: Array<string> }, content) { // 打开菜单item
+  openItem(item: { id: string, name: string, icon?: string, children?: Array<object>, isOpen?: boolean, url?: string, isTitle?: boolean, breadCrumb: Array<string> }, content): void { // 打开菜单item
     if (!item.isTitle) {
       if (item.name === '全屏') {
         const fullScreen = content.requestFullscreen || content.webkitRequestFullScreen || content.mozRequestFullScreen || content.msRequestFullScreen;
@@ -114,7 +121,7 @@ export class ContentComponent implements OnInit {
   }
 
 
-  closeTab(item: { id: string, name: string, icon?: string, children?: Array<object>, isOpen?: boolean, url?: string, isHover?: boolean }) { // 删除tab栏item
+  closeTab(item: { id: string, name: string, icon?: string, children?: Array<object>, isOpen?: boolean, url?: string, isHover?: boolean }): void { // 删除tab栏item
     item.isHover = false;
     this.tabArray.forEach((value, index, array) => {
       if (value.id === item.id) {
@@ -131,7 +138,7 @@ export class ContentComponent implements OnInit {
     this.router.navigate([`/pages/content${this.tabArray[this.selectedIndex].url}`]);
   }
 
-  changeSelectedIndex(e: { index: number, tab: NzTabComponent }) {
+  changeSelectedIndex(e: { index: number, tab: NzTabComponent }): void {
     this.selectedIndex = e.index;
     this.router.navigate([`/pages/content${this.tabArray[this.selectedIndex].url}`]);
   }
