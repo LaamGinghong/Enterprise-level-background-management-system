@@ -4,6 +4,7 @@ import { LoginComponent } from './login.component';
 import { LoginRoutingModule } from './login-routing.module';
 import { FormsModule } from '@angular/forms';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
+import { LoginDirective } from './login.directive';
 
 @NgModule({
   imports: [
@@ -12,7 +13,7 @@ import { NgZorroAntdModule } from 'ng-zorro-antd';
     FormsModule,
     NgZorroAntdModule
   ],
-  declarations: [LoginComponent]
+  declarations: [LoginComponent, LoginDirective]
 })
 export class LoginModule {
 }

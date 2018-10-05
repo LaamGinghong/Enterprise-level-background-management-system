@@ -35,16 +35,4 @@ export class LoginComponent implements OnInit {
     this.message.remove();
     this.message.error('这些都是骗人的', {nzDuration: 2000});
   }
-
-  login(str: string) {
-    if (str) {
-      const date = new Date();
-      date.setTime(date.getTime() + 10 * 24 * 60 * 60 * 1000);
-      document.cookie = `username=${str};expires=${date};path=/`;
-      this.router.navigate(['/pages/content']);
-    } else {
-      this.message.remove();
-      this.message.error('请登录', {nzDuration: 2000});
-    }
-  }
 }

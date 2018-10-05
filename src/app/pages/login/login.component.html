@@ -47,7 +47,7 @@
       <span class="login-container-select-message" (click)="fake()">忘记密码？</span>
     </div>
     <div class="login-container-button">
-      <button nz-button nzType="primary" (click)="login(inputValue)">登录</button>
+      <button nz-button nzType="primary" appLogin="true" [userName]="inputValue">登录</button>
     </div>
     <div class="login-container-help">
       <div class="login-container-help-otherType">
