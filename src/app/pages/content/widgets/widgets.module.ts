@@ -5,6 +5,7 @@ import {WidgetsRoutingModule} from './widgets-routing.module';
 import {WidgetsTopComponent} from './widgets-top/widgets-top.component';
 import {SharingModule} from '../../../sharing/sharing.module';
 import {WidgetsPersonalComponent} from './widgets-personal/widgets-personal.component';
+import {WidgetsGridComponent} from './widgets-grid/widgets-grid.component';
 
 @NgModule({
   imports: [
@@ -12,7 +13,7 @@ import {WidgetsPersonalComponent} from './widgets-personal/widgets-personal.comp
     WidgetsRoutingModule,
     SharingModule
   ],
-  declarations: [WidgetsComponent, WidgetsTopComponent, WidgetsPersonalComponent]
+  declarations: [WidgetsComponent, WidgetsTopComponent, WidgetsPersonalComponent, WidgetsGridComponent]
 })
 export class WidgetsModule {
 }
