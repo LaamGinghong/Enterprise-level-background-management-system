@@ -23,5 +23,66 @@
         }
       }
     }
+    &-message {
+      position: relative;
+      padding: 24px;
+      &-img {
+        display: inline-block;
+        position: absolute;
+        background: #e6d9d8;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        text-align: center;
+        left: 50%;
+        margin-left: -40px;
+        top: -40px;
+        img {
+          max-width: 100%;
+          padding: 8px;
+        }
+      }
+    }
+    &-footer {
+      background: #4D4142;
+      display: flex;
+      justify-content: space-around;
+      &-item {
+        width: 33.3333333333%;
+        color: white;
+        text-align: center;
+        padding: 12px 16px;
+        font-size: 16px;
+      }
+    }
+    &-img {
+      background: url("../../../../../assets/bg9.jpg") center center;
+      background-size: cover;
+      min-height: 200px;
+      &-mask {
+        background: rgba(0, 0, 0, .15);
+        min-height: 200px;
+        color: white;
+        text-align: center;
+        padding: 40px 0;
+        &-message {
+          img {
+            width: 32px;
+            margin-bottom: 10px;
+          }
+          h3{
+            color: white;
+          }
+        }
+      }
+    }
+    &-item{
+      padding: 10px 0;
+      transition: all .5s;
+      cursor: pointer;
+      &:hover{
+        background: #e6d9d8;
+      }
+    }
   }
 }
