@@ -43,10 +43,10 @@ export class ContentComponent implements OnInit {
   }
 
   initLoadStatus(): void { // 初始化登陆状态
-    if (document.cookie.indexOf('username') > 0) {
+    if (document.cookie.indexOf('username') >= 0) {
       const cookies = document.cookie.split(';');
       cookies.forEach((item: string) => {
-        if (item.indexOf('username') > 0) {
+        if (item.indexOf('username') >= 0) {
           this.loadingStatus = !!item;
           this.name = item.split('=')[1];
         }
