@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb95882b-dae2-40dc-ab64-2b6701d4c270" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/databases.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/menu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/assets/menuData.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/assets/menuData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/app/pages/content/content.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/pages/content/content.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/app/pages/content/content.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/pages/content/content.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/app/store/dataStore.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/store/dataStore.service.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,6 +20,7 @@
     <session id="1813950846">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.9" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -47,13 +42,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="3382" />
+          <entry key="js" value="3400" />
           <entry key="www" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="3384" />
+          <entry key="JavaScript" value="3402" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -61,17 +56,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/routes/menu.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -135,11 +120,6 @@
               <item name="back" type="b2602c69:ProjectViewProjectNode" />
               <item name="back" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="back" type="b2602c69:ProjectViewProjectNode" />
-              <item name="back" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -192,16 +172,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1541055859298</updated>
-      <workItem from="1541055870151" duration="13643000" />
+      <workItem from="1541055870151" duration="14517000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13643000" />
+    <option name="totallyTimeSpent" value="14517000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1654373" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -218,7 +197,7 @@
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50421494" side_tool="true" weight="0.32934782" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49578503" weight="0.3286334" />
-      <window_info active="true" anchor="bottom" id="运行" order="11" visible="true" weight="0.2548807" />
+      <window_info anchor="bottom" id="运行" order="11" weight="0.2548807" />
       <window_info anchor="bottom" id="TypeScript" order="12" weight="0.32934782" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="找到" order="14" />
@@ -309,8 +288,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/menu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="700">
+          <caret line="28" column="19" lean-forward="true" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
         </state>
       </provider>
     </entry>

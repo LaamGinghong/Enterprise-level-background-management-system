@@ -55,9 +55,15 @@ export class ContentComponent implements OnInit {
   }
 
   initMenuData(): void { // 初始化菜单
-    this.contentService.getData().subscribe((data: { success: boolean, value: Array<object> }) => {
+    this.contentService.getData().subscribe((data: { success: boolean, message: object }) => {
       if (data.success) {
-        this.dataStore.setMenuData(data.value);
+        const array = [];
+        for (let i in data.message) {
+          if (data.message.hasOwnProperty(i)) {
+            array.push(data.message[i]);
+          }
+        }
+        this.dataStore.setMenuData(array);
         this.menuData = this.dataStore.getMenuData;
       }
     });

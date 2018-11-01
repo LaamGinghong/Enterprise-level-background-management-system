@@ -6,12 +6,6 @@ export class DataStoreService {
   @observable menuData: Array<object>;
 
   constructor() {
-    if (localStorage.menuData) {
-      this.menuData = JSON.parse(localStorage.menuData);
-    }
-    autorun(() => {
-      localStorage.menuData = JSON.stringify(this.menuData);
-    });
   }
 
   @computed get getMenuData() {
