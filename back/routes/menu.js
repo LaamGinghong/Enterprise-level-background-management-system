@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
-var conn = require('../databases');
-var mysql = conn.getDbCon();
+var {query} = require('../query.js');
 
 router.get('/', (request, response, next) => {
     let message;
@@ -40,13 +39,4 @@ router.get('/', (request, response, next) => {
         }
     })
 });
-
-let query = (sql, values) => {
-    return new Promise((resolve, reject) => {
-        mysql.query(sql, values, (error, result) => {
-            error ? reject(error) : resolve(result);
-        });
-    });
-};
-
 module.exports = router;
