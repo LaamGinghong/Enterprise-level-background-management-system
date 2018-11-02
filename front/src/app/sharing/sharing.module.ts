@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 import {NgZorroAntdModule} from 'ng-zorro-antd';
 import {NgxEchartsModule} from 'ngx-echarts';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {SharingService} from './sharing.service';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  declarations: []
+  declarations: [],
+  providers: [SharingService]
 })
 export class SharingModule {
 }

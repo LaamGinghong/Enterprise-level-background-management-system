@@ -7,7 +7,7 @@ const routes: Routes = [{
   component: ContentComponent,
   children: [{
     path: '',
-    redirectTo: 'widgets',
+    redirectTo: 'home',
     pathMatch: 'full'
   }, {
     path: 'home',

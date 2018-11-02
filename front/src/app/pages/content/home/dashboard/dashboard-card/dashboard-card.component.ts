@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {DashboardService} from '../dashboard.service';
+import {SharingService} from '../../../../../sharing/sharing.service';
 
 @Component({
   selector: 'app-dashboard-card',
@@ -8,7 +10,9 @@ import {Component, OnInit} from '@angular/core';
 export class DashboardCardComponent implements OnInit {
   cardArray = [];
 
-  constructor() {
+  constructor(
+    private dashboardService: DashboardService,
+  ) {
   }
 
   ngOnInit() {
@@ -16,14 +20,18 @@ export class DashboardCardComponent implements OnInit {
   }
 
   initCardArray(): void {
-    for (let i = 0; i < 10; i++) {
-      const date = new Date();
-      date.setTime(date.getTime() + i * 24 * 60 * 60 * 1000);
-      const option = {
-        number: Math.round(Math.random() * 10),
-        date: date.toLocaleDateString()
-      };
-      this.cardArray.push(option);
-    }
+    this.dashboardService.getDashboardCardLeft().subscribe((result: { success: boolean, message: Array<object> }) => {
+      if (result.success) {
+        // this.cardArray = result.message;
+        const option = {
+          today: SharingService.dateToString(new Date())
+        };
+        this.dashboardService.getDashboardCardRight(option).subscribe((res: { success: boolean, message: Array<object> }) => {
+          console.log(res);
+        });
+      }
+    }, error => {
+      console.error(error);
+    });
   }
 }

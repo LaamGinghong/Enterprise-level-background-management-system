@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {query} = require('../query');
+const {query} = require('../../query');
 
 router.get('/', (request, response, next) => {
     let message;
