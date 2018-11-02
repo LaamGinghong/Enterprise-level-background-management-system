@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable, Subject} from 'rxjs';
+import {environment} from '../../../environments/environment';
 
 @Injectable()
 export class ContentService {
@@ -11,7 +12,7 @@ export class ContentService {
 
 
   getData(): Observable<object> {
-    return this.http.get('http://localhost/menu');
+    return this.http.get(environment.url.localhost + '/menu');
   }
 
   broadcastSelectItem(content) {
