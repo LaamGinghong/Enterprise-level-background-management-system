@@ -15,7 +15,8 @@ router.get('/', (request, response, next) => {
                     name: item.name,
                     url: item.url,
                     icon: item.icon,
-                    children: []
+                    children: [],
+                    type: !!item.type
                 }
             }
             if (item.parent) {
