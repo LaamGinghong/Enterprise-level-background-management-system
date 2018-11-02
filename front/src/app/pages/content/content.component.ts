@@ -98,8 +98,8 @@ export class ContentComponent implements OnInit {
     }
   }
 
-  openItem(item: { id: string, name: string, icon?: string, children?: Array<object>, isOpen?: boolean, url?: string, isTitle?: boolean, breadCrumb: Array<string> }, content): void { // 打开菜单item
-    if (!item.isTitle) {
+  openItem(item: { id: string, name: string, icon?: string, children?: Array<object>, isOpen?: boolean, url?: string, type?: boolean, breadCrumb: Array<string> }, content): void { // 打开菜单item
+    if (!item.type) {
       if (item.name === '全屏') {
         const fullScreen = content.requestFullscreen || content.webkitRequestFullScreen || content.mozRequestFullScreen || content.msRequestFullScreen;
         if (fullScreen) {

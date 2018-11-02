@@ -90,8 +90,8 @@
         </div>
         <ul nz-menu [nzMode]="'inline'" style="height:100%">
           <ng-template ngFor let-item [ngForOf]="menuData">
-            <li nz-menu-item *ngIf="!item['children'].length" [nzDisabled]="item['isTitle']" style="cursor: default"
-                (click)="openItem(item)" [style.cursor]="!item['isTitle']?'pointer':'default'">
+            <li nz-menu-item *ngIf="!item['children'].length" [nzDisabled]="item['type']" style="cursor: default"
+                (click)="openItem(item)" [style.cursor]="!item['type']?'pointer':'default'">
               <i [className]="item['icon']"></i> {{item['name']}}
             </li>
             <li nz-submenu *ngIf="item['children'].length" [(nzOpen)]="item['isOpen']"
