@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-var {query} = require('../query.js');
+var {query} = require('../query');
 
 router.get('/', (request, response, next) => {
     let message;
@@ -30,13 +30,14 @@ router.get('/', (request, response, next) => {
             success: true,
             message: result
         };
-        response.setHeader('Access-Control-Allow-Origin', '*');
-        response.send(JSON.stringify(message));
     }).catch(error => {
         throw message = {
             success: false,
             message: error
         }
+    }).finally(() => {
+        response.setHeader('Access-Control-Allow-Origin', '*');
+        response.send(JSON.stringify(message));
     })
 });
 module.exports = router;
