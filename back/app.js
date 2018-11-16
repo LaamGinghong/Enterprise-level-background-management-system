@@ -6,7 +6,6 @@ var logger = require('morgan');
 
 var menu = require('./routes/menu');
 var dashboardCardLeft = require('./routes/dashboard/dashboardCardLeft');
-var dashboardCardRight = require('./routes/dashboard/dashboardCardRight');
 
 var app = express();
 
@@ -22,7 +21,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/menu', menu);
 app.use('/dashboardCardLeft', dashboardCardLeft);
-app.use('/dashboardCardRight', dashboardCardRight);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
