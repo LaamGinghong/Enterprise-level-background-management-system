@@ -11,10 +11,10 @@ router.get('/', (request, response, next) => {
             message: value
         };
     }).catch(error => {
-        throw message = {
+        throw new Error({
             success: false,
             message: error
-        };
+        });
     }).finally(() => {
         response.setHeader('Access-Control-Allow-Origin', '*');
         response.send(JSON.stringify(message));
