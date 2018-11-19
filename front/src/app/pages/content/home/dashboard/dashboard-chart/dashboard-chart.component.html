@@ -1,8 +1,8 @@
 <div class="dashboard-chart">
   <nz-card style="width: 49.4%" [nzTitle]="'最新文章柱状图'">
-    <div class="dashboard-chart-bar" echarts [options]="barChart"></div>
+    <div class="dashboard-chart-bar" echarts [options]="barOption" [merge]="barMerge"></div>
   </nz-card>
   <nz-card style="width: 49.4%" [nzTitle]="'最新文章折线图'">
-    <div class="dashboard-chart-line" echarts [options]="lineChart"></div>
+    <div class="dashboard-chart-line" echarts></div>
   </nz-card>
 </div>
