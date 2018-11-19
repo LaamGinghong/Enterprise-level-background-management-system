@@ -17,11 +17,7 @@ export class DashboardService {
     return this.http.get(environment.url.localhost + url, {params});
   }
 
-  getDashboardCardLeft(): Observable<object> {
-    return this.getData('/dashboardCardLeft');
-  }
-
-  getDashboardCardRight(data: object): Observable<object> {
-    return this.getData('/dashboardCardRight', data);
+  getDashboardCard(): Observable<object> {
+    return this.getData('/dashboardCard');
   }
 }

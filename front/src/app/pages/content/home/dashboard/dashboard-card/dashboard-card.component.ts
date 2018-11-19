@@ -20,18 +20,10 @@ export class DashboardCardComponent implements OnInit {
   }
 
   initCardArray(): void {
-    this.dashboardService.getDashboardCardLeft().subscribe((result: { success: boolean, message: Array<object> }) => {
+    this.dashboardService.getDashboardCard().subscribe((result: { success: boolean, message: Array<object> }) => {
       if (result.success) {
-        // this.cardArray = result.message;
-        const option = {
-          today: SharingService.dateToString(new Date())
-        };
-        this.dashboardService.getDashboardCardRight(option).subscribe((res: { success: boolean, message: Array<object> }) => {
-          console.log(res);
-        });
+        this.cardArray = result.message;
       }
-    }, error => {
-      console.error(error);
     });
   }
 }
