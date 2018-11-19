@@ -6,6 +6,7 @@ const logger = require('morgan');
 
 const menu = require('./routes/menu');
 const dashboardCard = require('./routes/dashboard/dashboard-card');
+const dashboardArticle = require('./routes/dashboard/dashboard-article');
 
 const app = express();
 
@@ -20,7 +21,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/menu', menu);
-app.use('/dashboardCard', dashboardCard)
+app.use('/dashboardCard', dashboardCard);
+app.use('/dashboardArticle', dashboardArticle);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
