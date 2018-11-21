@@ -30,4 +30,12 @@ export class DashboardService {
   getDashboardRidership(): Observable<object> {
     return this.getData('/dashboardRidership');
   }
+
+  getDashboardMessage(): Observable<object> {
+    return this.getData('/dashboardMessage');
+  }
+
+  getDashboardMessageDelete(data: object): Observable<object> {
+    return this.getData('/dashboardMessageDelete', data);
+  }
 }

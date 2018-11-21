@@ -43,28 +43,30 @@
   </div>
   <div class="dashboard-todo" #todo>
     <nz-card [nzTitle]="'未读信息'">
-      <div class="dashboard-todo-item" *ngFor="let item of messageArray;let i=index">
-        <div class="dashboard-todo-item-left">
-          <img [src]="item.url">
+      <ng-template ngFor let-item [ngForOf]="messageArray">
+        <div class="dashboard-todo-item" *ngIf="!item.isDelete">
+          <div class="dashboard-todo-item-left">
+            <img [src]="item.url" alt="图片">
+          </div>
+          <div class="dashboard-todo-item-middle">
+            <h4 [style.textDecoration]="item.isActive?'line-through':'none'">{{item.name}}</h4>
+            <p [style.textDecoration]="item.isActive?'line-through':'none'">{{item.message}}</p>
+          </div>
+          <div class="dashboard-todo-item-right">
+            <nz-dropdown [nzPlacement]="'topRight'" [nzClickHide]="false">
+              <span nz-dropdown><i class="anticon anticon-ellipsis"></i></span>
+              <ul nz-menu>
+                <li nz-menu-item (click)="activeItem(item)">
+                  {{item['isActive'] ? 'Active' : 'Complete'}}
+                </li>
+                <li nz-menu-item (click)="deleteItem(item)">
+                  Delete
+                </li>
+              </ul>
+            </nz-dropdown>
+          </div>
         </div>
-        <div class="dashboard-todo-item-middle">
-          <h4 [style.textDecoration]="item['isActive']?'line-through':'none'">{{item.name}}</h4>
-          <p [style.textDecoration]="item['isActive']?'line-through':'none'">{{item.message}}</p>
-        </div>
-        <div class="dashboard-todo-item-right">
-          <nz-dropdown [nzPlacement]="'topRight'" [nzClickHide]="false">
-            <span nz-dropdown><i class="anticon anticon-ellipsis"></i></span>
-            <ul nz-menu>
-              <li nz-menu-item (click)="operateItem(0,i,item)">
-                {{item['isActive']?'Active':'Complete'}}
-              </li>
-              <li nz-menu-item (click)="operateItem(1,i,item)">
-                Delete
-              </li>
-            </ul>
-          </nz-dropdown>
-        </div>
-      </div>
+      </ng-template>
     </nz-card>
   </div>
 </div>
