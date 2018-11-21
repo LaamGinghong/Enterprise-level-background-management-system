@@ -9,6 +9,7 @@ const dashboardCard = require('./routes/dashboard/dashboard-card');
 const dashboardArticle = require('./routes/dashboard/dashboard-article');
 const dashboardRidership = require('./routes/dashboard/dashboard-ridership');
 const dashboardMessage = require('./routes/dashboard/dashboard-message');
+const dashboardMessageDelete = require('./routes/dashboard/dashboard-message-delete');
 
 const app = express();
 
@@ -27,6 +28,7 @@ app.use('/dashboardCard', dashboardCard);
 app.use('/dashboardArticle', dashboardArticle);
 app.use('/dashboardRidership', dashboardRidership);
 app.use('/dashboardMessage', dashboardMessage);
+app.use('/dashboardMessageDelete', dashboardMessageDelete);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
