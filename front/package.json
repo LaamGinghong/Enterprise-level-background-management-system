@@ -29,6 +29,7 @@
     "mobx-angular": "^3.0.1",
     "ng-zorro-antd": "^1.6.0",
     "ngx-echarts": "^4.0.0-beta.0",
+    "node-sass": "^4.10.0",
     "reflect-metadata": "^0.1.12",
     "rxjs": "^6.0.0",
     "viser-ng": "^2.3.0",
