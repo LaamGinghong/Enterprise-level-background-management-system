@@ -3,7 +3,7 @@ const router = express.Router();
 const url = require('url');
 const {query} = require('../../query');
 
-router.get('/', (request, response, next) => {
+router.get('/', (request, response) => {
     let message;
     let errorMessage;
     const params = url.parse(request.url, true).query;

@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const {query} = require('../../query');
 
-router.get('/', (request, response, next) => {
+router.get('/', (request, response) => {
     let message;
     const updateNumberSql = 'update dashboard_card set number = case id when 1 then ? when 2 then ? when 3 then ? when 4 then ? END where id in (1,2,3,4)';
     const numberValue = [];

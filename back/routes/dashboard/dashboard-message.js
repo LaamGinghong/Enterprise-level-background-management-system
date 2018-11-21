@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const {query} = require('../../query');
 
-router.get('/', (request, response, next) => {
+router.get('/', (request, response) => {
     let message;
     const updateSql = 'update dashboard_message set isDelete = 0';
     query(updateSql).then(() => {

@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const {query} = require('../../query');
 
-router.get('/', (request, response, next) => {
+router.get('/', (request, response) => {
     let message;
     const updateSql = 'update dashboard_article set value = case id when 1 then ? ' +
         'when 2 then ? when 3 then ? when 4 then ? when 5 then ? when 6 then ? ' +

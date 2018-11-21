@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const {query} = require('../../query');
 
-router.get('/', (request, response, next) => {
+router.get('/', (request, response) => {
     let message;
     let updateSql = 'update dashboard_ridership set value = case id';
     for (let i = 1; i <= 48; i++) {
