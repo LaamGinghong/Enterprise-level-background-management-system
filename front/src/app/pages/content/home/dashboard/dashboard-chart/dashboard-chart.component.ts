@@ -144,7 +144,6 @@ export class DashboardChartComponent implements OnInit {
     setTimeout(() => {
       const top = this.dashboardService.chatBox.nativeElement.offsetTop + this.dashboardService.chatBox.nativeElement.childNodes[0].offsetHeight;
       const left = this.dashboardService.chatBox.nativeElement.offsetLeft;
-      console.log(top, left);
       this.renderer2.setStyle(this.dashboardService.todo.nativeElement, 'top', `${top}px`);
       this.renderer2.setStyle(this.dashboardService.todo.nativeElement, 'left', `${left}px`);
     });
