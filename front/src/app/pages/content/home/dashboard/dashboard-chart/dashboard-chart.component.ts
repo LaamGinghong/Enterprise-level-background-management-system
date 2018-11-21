@@ -84,8 +84,8 @@ export class DashboardChartComponent implements OnInit {
         this.barOption.legend['data'] = result.message.map((item: { name }) => {
           return item.name;
         });
-        const barAbscissa = result.message[0].value.map((value: { month: string }) => {
-          return value.month;
+        const barAbscissa = result.message[0].value.map((item: { month: string }) => {
+          return item.month;
         });
         this.barOption.xAxis.forEach((item: object) => {
           item['data'] = barAbscissa;
@@ -109,21 +109,29 @@ export class DashboardChartComponent implements OnInit {
   }
 
   initLine(): void {
-    this.dashboardService.getDashboardRidership().subscribe((result: { success: boolean, message: object }) => {
+    this.dashboardService.getDashboardRidership().subscribe((result: { success: boolean, message: Array<{ name: string, value: Array<object> }> }) => {
       if (result.success) {
-        const legend = [];
-        for (const i in result.message) {
-          if (result.message.hasOwnProperty(i)) {
-            const lineAbscissa = [];
-            legend.push(i);
-            result.message[i].forEach((item: { time: string, value: number }) => {
-              lineAbscissa.push(item.time);
-            });
-            this.lineOption.xAxis.forEach((item: object) => {
-              item['data'] = lineAbscissa;
-            });
-          }
-        }
+        this.lineOption.legend['data'] = result.message.map((item: { name }) => {
+          return item.name;
+        });
+        const lineAbscissa = result.message[0].value.map((item: { time: string }) => {
+          return item.time;
+        });
+        this.lineOption.xAxis.forEach((item: object) => {
+          item['data'] = lineAbscissa;
+        });
+        const series = [];
+        result.message.forEach((item: { name: string, value: Array<object> }) => {
+          const option = {
+            name: item.name,
+            type: 'line',
+            data: item.value.map((value: { value: number }) => {
+              return value.value;
+            })
+          };
+          series.push(option);
+        });
+        this.lineOption.series = series;
         this.lineMerge = this.lineOption;
       }
     });

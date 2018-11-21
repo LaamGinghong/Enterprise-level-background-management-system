@@ -24,16 +24,22 @@ router.get('/', (request, response, next) => {
                 }
                 option[item['name']].push(item);
             });
+            const array = [];
             for (const i in option) {
                 if (option.hasOwnProperty(i)) {
                     option[i].forEach(item => {
                         delete item['name'];
                     });
+                    const object = {
+                        name: i,
+                        value: option[i]
+                    };
+                    array.push(object);
                 }
             }
             message = {
                 success: true,
-                message: option
+                message: array
             }
         }).catch(error => {
             throw new Error({
