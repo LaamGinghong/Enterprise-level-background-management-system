@@ -1,0 +1,24 @@
+const express = require('express');
+const router = express.Router();
+const {query} = require('../../query');
+
+router.get('/', (request, response, next) => {
+    let message;
+    const selectSql = 'select * from dashboard_message';
+    query(selectSql).then(value => {
+        message = {
+            success: true,
+            message: value
+        };
+    }).catch(error => {
+        throw new Error({
+            success: false,
+            message: error
+        });
+    }).finally(() => {
+        response.setHeader('Access-Control-Allow-Origin', '*');
+        response.send(JSON.stringify(message));
+    })
+});
+
+module.exports = router;
