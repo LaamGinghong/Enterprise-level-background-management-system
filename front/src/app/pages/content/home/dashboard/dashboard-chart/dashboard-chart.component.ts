@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Renderer2} from '@angular/core';
 import {DashboardService} from '../dashboard.service';
 
 @Component({
@@ -69,7 +69,8 @@ export class DashboardChartComponent implements OnInit {
   lineMerge: object;
 
   constructor(
-    private dashboardService: DashboardService
+    private dashboardService: DashboardService,
+    private renderer2: Renderer2
   ) {
   }
 
@@ -133,7 +134,19 @@ export class DashboardChartComponent implements OnInit {
         });
         this.lineOption.series = series;
         this.lineMerge = this.lineOption;
+        this.initTodo();
       }
+    });
+  }
+
+
+  initTodo(): void {
+    setTimeout(() => {
+      const top = this.dashboardService.chatBox.nativeElement.offsetTop + this.dashboardService.chatBox.nativeElement.childNodes[0].offsetHeight;
+      const left = this.dashboardService.chatBox.nativeElement.offsetLeft;
+      console.log(top, left);
+      this.renderer2.setStyle(this.dashboardService.todo.nativeElement, 'top', `${top}px`);
+      this.renderer2.setStyle(this.dashboardService.todo.nativeElement, 'left', `${left}px`);
     });
   }
 }

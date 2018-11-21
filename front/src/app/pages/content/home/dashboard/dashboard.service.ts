@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {ElementRef, Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {environment} from '../../../../../environments/environment';
@@ -6,6 +6,8 @@ import {SharingService} from '../../../../sharing/sharing.service';
 
 @Injectable()
 export class DashboardService {
+  chatBox: ElementRef;
+  todo: ElementRef;
 
   constructor(
     private http: HttpClient

@@ -1,11 +1,12 @@
-import {AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
+import {Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
+import {DashboardService} from './dashboard.service';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent implements OnInit, AfterViewInit {
+export class DashboardComponent implements OnInit {
   messageArray = [{
     name: '苏先生',
     message: '请告诉我，我应该说点什么好？',
@@ -35,25 +36,14 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   @ViewChild('todo') todo: ElementRef;
 
   constructor(
-    private renderer2: Renderer2
+    private renderer2: Renderer2,
+    private dashboardService: DashboardService
   ) {
   }
 
   ngOnInit() {
-  }
-
-  ngAfterViewInit() {
-    this.initTodo();
-  }
-
-
-  initTodo(): void {
-    setTimeout(() => {
-      const top = this.chatBox.nativeElement.offsetTop + this.chatBox.nativeElement.childNodes[0].offsetHeight;
-      const left = this.chatBox.nativeElement.offsetLeft;
-      this.renderer2.setStyle(this.todo.nativeElement, 'top', `${top}px`);
-      this.renderer2.setStyle(this.todo.nativeElement, 'left', `${left}px`);
-    });
+    this.dashboardService.chatBox = this.chatBox;
+    this.dashboardService.todo = this.todo;
   }
 
   operateItem(mark: number, index: number, item: object): void {
