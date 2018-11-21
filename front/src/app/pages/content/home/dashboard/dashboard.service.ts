@@ -38,4 +38,8 @@ export class DashboardService {
   getDashboardMessageDelete(data: object): Observable<object> {
     return this.getData('/dashboardMessageDelete', data);
   }
+
+  getDashboardMessageActive(data: object): Observable<object> {
+    return this.getData('/dashboardMessageActive', data);
+  }
 }

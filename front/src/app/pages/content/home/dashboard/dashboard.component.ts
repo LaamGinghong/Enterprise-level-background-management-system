@@ -34,6 +34,17 @@ export class DashboardComponent implements OnInit {
     });
   }
 
+  activeItem(value: { id: number, isActive: number }): void {
+    const option = {
+      id: value.id,
+      isActive: Number(!value.isActive)
+    };
+    this.dashboardService.getDashboardMessageActive(option).subscribe((result: { success: boolean, message: string }) => {
+      this.notification.create(result.success ? 'success' : 'error', '删除', result.message);
+      if (result.success) {
+        value.isActive = Number(!value.isActive);
+      }
+    });
   }
 
   deleteItem(value: { id: number, isDelete: number }): void {
