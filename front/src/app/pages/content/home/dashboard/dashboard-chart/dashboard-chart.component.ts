@@ -35,6 +35,39 @@ export class DashboardChartComponent implements OnInit {
   };
   barMerge: object;
 
+  lineOption = {
+    xAxis: [
+      {
+        type: 'category',
+        axisTick: {
+          alignWithLabel: true
+        }
+      }
+    ],
+    tooltip: {
+      trigger: 'axis',
+      axisPointer: {
+        type: 'line'
+      }
+    },
+    legend: {
+      top: '2%'
+    },
+    yAxis: [
+      {
+        type: 'value'
+      }
+    ],
+    series: [],
+    dataZoom: [
+      {
+        filterMode: 'filter',
+        start: 40,
+        end: 70
+      }]
+  };
+  lineMerge: object;
+
   constructor(
     private dashboardService: DashboardService
   ) {
@@ -76,5 +109,23 @@ export class DashboardChartComponent implements OnInit {
   }
 
   initLine(): void {
+    this.dashboardService.getDashboardRidership().subscribe((result: { success: boolean, message: object }) => {
+      if (result.success) {
+        const legend = [];
+        for (const i in result.message) {
+          if (result.message.hasOwnProperty(i)) {
+            const lineAbscissa = [];
+            legend.push(i);
+            result.message[i].forEach((item: { time: string, value: number }) => {
+              lineAbscissa.push(item.time);
+            });
+            this.lineOption.xAxis.forEach((item: object) => {
+              item['data'] = lineAbscissa;
+            });
+          }
+        }
+        this.lineMerge = this.lineOption;
+      }
+    });
   }
 }

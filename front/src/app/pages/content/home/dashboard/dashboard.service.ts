@@ -24,4 +24,8 @@ export class DashboardService {
   getDashboardArticle(): Observable<object> {
     return this.getData('/dashboardArticle');
   }
+
+  getDashboardRidership(): Observable<object> {
+    return this.getData('/dashboardRidership');
+  }
 }
