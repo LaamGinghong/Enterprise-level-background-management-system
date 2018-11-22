@@ -4,13 +4,8 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
-const menu = require('./routes/menu');
-const dashboardCard = require('./routes/dashboard/dashboard-card');
-const dashboardArticle = require('./routes/dashboard/dashboard-article');
-const dashboardRidership = require('./routes/dashboard/dashboard-ridership');
-const dashboardMessage = require('./routes/dashboard/dashboard-message');
-const dashboardMessageDelete = require('./routes/dashboard/dashboard-message-delete');
-const dashboardMessageActive = require('./routes/dashboard/dashboard-message-active');
+const common = require('./routes/common');
+const dashboard = require('./routes/dashboard');
 
 const app = express();
 
@@ -24,13 +19,8 @@ app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/menu', menu);
-app.use('/dashboardCard', dashboardCard);
-app.use('/dashboardArticle', dashboardArticle);
-app.use('/dashboardRidership', dashboardRidership);
-app.use('/dashboardMessage', dashboardMessage);
-app.use('/dashboardMessageDelete', dashboardMessageDelete);
-app.use('/dashboardMessageActive', dashboardMessageActive);
+app.use('/common', common);
+app.use('/dashboard', dashboard);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

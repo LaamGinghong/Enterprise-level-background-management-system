@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-var {query} = require('../query');
+const {query} = require('../query');
 
-router.get('/', (request, response, next) => {
+router.get('/menu', (request, response, next) => {
     let message;
     let result = {};
     const sql = 'SELECT mt.*,mi.id as cid,mi.name as cName,mi.parent,mi.url as cUrl,mi.breadCrumb as cBreadCrumb FROM menu_title  mt left join  menu_item mi on mt.id = mi.parent;';
@@ -33,10 +33,11 @@ router.get('/', (request, response, next) => {
             message: result
         };
     }).catch(error => {
-        throw new Error({
+        message = {
             success: false,
-            message: error
-        });
+            message: error.message
+        };
+        throw new Error('发现错误：' + error.message);
     }).finally(() => {
         response.setHeader('Access-Control-Allow-Origin', '*');
         response.send(JSON.stringify(message));
