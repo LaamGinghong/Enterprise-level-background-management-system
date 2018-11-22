@@ -1,2 +1,5 @@
 back/node_modules/
 front/node_modules/
+.idea
+back/.idea
+front/.idea
