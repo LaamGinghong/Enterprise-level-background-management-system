@@ -16,16 +16,21 @@ router.get('/getSaleOrVolume', (request, response) => {
 			}
 			option[item.name].push(item);
 		});
+		const array = [];
 		for (const i in option) {
 			if (option.hasOwnProperty(i)) {
 				option[i].forEach(item => {
 					delete item.name;
 				});
+				array.push({
+					name: i,
+					value: option[i]
+				});
 			}
 		}
 		message = {
 			success: true,
-			message: option
+			message: array
 		};
 	}).catch(error => {
 		message = {
