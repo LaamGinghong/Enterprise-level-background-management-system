@@ -20,26 +20,26 @@ export class DashboardService {
   }
 
   getDashboardCard(): Observable<object> {
-    return this.getData('/dashboardCard');
+    return this.getData('/dashboard/card');
   }
 
   getDashboardArticle(): Observable<object> {
-    return this.getData('/dashboardArticle');
+    return this.getData('/dashboard/article');
   }
 
   getDashboardRidership(): Observable<object> {
-    return this.getData('/dashboardRidership');
+    return this.getData('/dashboard/ridership');
   }
 
   getDashboardMessage(): Observable<object> {
-    return this.getData('/dashboardMessage');
+    return this.getData('/dashboard/message');
   }
 
   getDashboardMessageDelete(data: object): Observable<object> {
-    return this.getData('/dashboardMessageDelete', data);
+    return this.getData('/dashboard/message/delete', data);
   }
 
   getDashboardMessageActive(data: object): Observable<object> {
-    return this.getData('/dashboardMessageActive', data);
+    return this.getData('/dashboard/message/active', data);
   }
 }

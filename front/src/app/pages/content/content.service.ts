@@ -12,7 +12,7 @@ export class ContentService {
 
 
   getData(): Observable<object> {
-    return this.http.get(environment.url.localhost + '/menu');
+    return this.http.get(environment.url.localhost + '/common/menu');
   }
 
   broadcastSelectItem(content) {
