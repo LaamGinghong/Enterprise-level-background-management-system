@@ -6,6 +6,7 @@ const logger = require('morgan');
 
 const common = require('./routes/common');
 const dashboard = require('./routes/dashboard');
+const analysis = require('./routes/analysis');
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/common', common);
 app.use('/dashboard', dashboard);
+app.use('/analysis', analysis);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
