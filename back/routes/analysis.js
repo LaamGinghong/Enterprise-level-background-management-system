@@ -4,25 +4,38 @@ const url = require('url');
 const {query} = require('../query');
 
 router.get('/getSaleOrVolume', (request, response) => {
-    let message;
-    let updateSql = 'update analysis_sale_volume set month = case id ';
-    for (let i = 1; i <= 12; i++) {
-        updateSql += ` when ${i} then ?`;
-    }
-    updateSql += ' END where id in (';
-    const updateValues = [];
-    for (let i = 1; i <= 12; i++) {
-        updateSql += i === 12 ? `${i})` : `${i},`;
-        updateValues.push(i);
-    }
-    query(updateSql, updateValues).then(() => {
-
-    }).catch(error => {
-        message = {
-            success: false,
-            message: error.message
-        };
-        throw new Error('发生错误：' + error.message);
-    })
+	let message;
+	const params = url.parse(request.url, true).query;
+	const type = params.type;
+	const selectSql = 'select * from analysis_sale_volume where type = ?';
+	query(selectSql, [type]).then(value => {
+		const option = {};
+		value.forEach(item => {
+			if (!option[item.name]) {
+				option[item.name] = [];
+			}
+			option[item.name].push(item);
+		});
+		for (const i in option) {
+			if (option.hasOwnProperty(i)) {
+				option[i].forEach(item => {
+					delete item.name;
+				});
+			}
+		}
+		message = {
+			success: true,
+			message: option
+		};
+	}).catch(error => {
+		message = {
+			success: false,
+			message: error.message
+		};
+		throw new Error('发现错误：' + error.message);
+	}).finally(() => {
+		response.setHeader('Access-Control-Allow-Origin', '*');
+		response.send(JSON.stringify(message));
+	});
 });
 module.exports = router;
