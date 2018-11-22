@@ -53,7 +53,7 @@ export class DashboardComponent implements OnInit {
       isDelete: Number(!value.isDelete)
     };
     this.dashboardService.getDashboardMessageDelete(option).subscribe((result: { success: boolean, message: string }) => {
-      this.notification.create(result.success ? 'success' : 'error', '删除', result.message);
+      this.notification.create(result.success ? 'success' : 'error', '修改', result.message);
       if (result.success) {
         value.isDelete = 1;
       }
