@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import * as endOfWeek from 'date-fns/end_of_week';
 import * as endOfMonth from 'date-fns/end_of_month';
 import * as endOfYear from 'date-fns/end_of_year';
+import {AnalysisService} from '../analysis.service';
 
 @Component({
   selector: 'app-analysis-bar',
@@ -16,20 +17,15 @@ export class AnalysisBarComponent implements OnInit {
     '本月': [new Date(), endOfMonth(new Date())],
     '本年': [new Date(), endOfYear(new Date())]
   };
-  abscissa = [];
-  ordinate = [];
   option = {
     xAxis: {
       type: 'category',
-      data: this.abscissa,
+      data: []
     },
     yAxis: {
       type: 'value',
     },
-    series: [{
-      data: this.ordinate,
-      type: 'bar'
-    }],
+    series: [],
     tooltip: {
       trigger: 'axis',
       axisPointer: {
@@ -38,9 +34,12 @@ export class AnalysisBarComponent implements OnInit {
     },
     color: ['#1890FF']
   };
+  merge: object;
   tableData = [];
 
-  constructor() {
+  constructor(
+    private analysisService: AnalysisService
+  ) {
   }
 
   ngOnInit() {
@@ -48,11 +47,26 @@ export class AnalysisBarComponent implements OnInit {
     this.initTable();
   }
 
-  initChart(): void {
-    for (let i = 1; i <= 12; i++) {
-      this.abscissa.push(`${i}月`);
-      this.ordinate.push(Math.round(Math.random() * 2000));
-    }
+  initChart(type: number = 0): void {
+    this.analysisService
+      .getSaleOrVolume({type})
+      .subscribe((result: {
+        success: boolean,
+        message: Array<{ month: string, value: number }>
+      }) => {
+        if (result.success) {
+          this.option.xAxis.data = result.message.map((item: { month: string }) => {
+            return item.month;
+          });
+          this.option.series = [{
+            type: 'bar',
+            data: result.message.map((item: { value: number }) => {
+              return item.value;
+            })
+          }];
+          this.merge = this.option;
+        }
+      });
   }
 
   initTable(): void {

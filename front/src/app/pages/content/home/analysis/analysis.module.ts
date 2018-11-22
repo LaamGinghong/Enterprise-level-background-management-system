@@ -7,6 +7,7 @@ import {AnalysisBarComponent} from './analysis-bar/analysis-bar.component';
 import {AnalysisMiddleComponent} from './analysis-middle/analysis-middle.component';
 import {AnalysisBottomComponent} from './analysis-bottom/analysis-bottom.component';
 import {SharingModule} from '../../../../sharing/sharing.module';
+import {AnalysisService} from './analysis.service';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import {SharingModule} from '../../../../sharing/sharing.module';
     AnalysisRoutingModule,
     SharingModule
   ],
-  declarations: [AnalysisComponent, AnalysisCardComponent, AnalysisBarComponent, AnalysisMiddleComponent, AnalysisBottomComponent]
+  declarations: [AnalysisComponent, AnalysisCardComponent, AnalysisBarComponent, AnalysisMiddleComponent, AnalysisBottomComponent],
+  providers: [AnalysisService]
 })
 export class AnalysisModule {
 }

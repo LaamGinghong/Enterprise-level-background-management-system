@@ -14,7 +14,7 @@ export class DashboardService {
   ) {
   }
 
-  getData(url: string, data?: object): Observable<object> {
+  getData(url: string, data?: any): Observable<object> {
     const params = SharingService.valueToHttpParams(data);
     return this.http.get(environment.url.localhost + url, {params});
   }
